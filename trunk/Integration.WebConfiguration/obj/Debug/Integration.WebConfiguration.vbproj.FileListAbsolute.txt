@@ -1,0 +1,10 @@
+E:\SkyDriver\SkyDrive\Aplicaciones\Integration.System\Integration.WebConfiguration\bin\Integration.WebConfiguration.dll
+E:\SkyDriver\SkyDrive\Aplicaciones\Integration.System\Integration.WebConfiguration\bin\Integration.WebConfiguration.pdb
+E:\SkyDriver\SkyDrive\Aplicaciones\Integration.System\Integration.WebConfiguration\bin\Integration.WebConfiguration.xml
+E:\SkyDriver\SkyDrive\Aplicaciones\Integration.System\Integration.WebConfiguration\obj\Debug\ResolveAssemblyReference.cache
+E:\SkyDriver\SkyDrive\Aplicaciones\Integration.System\Integration.WebConfiguration\obj\Debug\Integration.WebConfiguration.Resources.resources
+E:\SkyDriver\SkyDrive\Aplicaciones\Integration.System\Integration.WebConfiguration\obj\Debug\GenerateResource.read.1.tlog
+E:\SkyDriver\SkyDrive\Aplicaciones\Integration.System\Integration.WebConfiguration\obj\Debug\GenerateResource.write.1.tlog
+E:\SkyDriver\SkyDrive\Aplicaciones\Integration.System\Integration.WebConfiguration\obj\Debug\Integration.WebConfiguration.dll
+E:\SkyDriver\SkyDrive\Aplicaciones\Integration.System\Integration.WebConfiguration\obj\Debug\Integration.WebConfiguration.xml
+E:\SkyDriver\SkyDrive\Aplicaciones\Integration.System\Integration.WebConfiguration\obj\Debug\Integration.WebConfiguration.pdb

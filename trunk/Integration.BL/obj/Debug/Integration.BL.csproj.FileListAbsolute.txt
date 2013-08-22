@@ -1,0 +1,24 @@
+E:\SkyDriver\SkyDrive\Aplicaciones\Integration.System\Integration.BL\bin\Debug\Integration.BL.dll
+E:\SkyDriver\SkyDrive\Aplicaciones\Integration.System\Integration.BL\bin\Debug\Integration.BL.pdb
+E:\SkyDriver\SkyDrive\Aplicaciones\Integration.System\Integration.BL\bin\Debug\Integration.BE.dll
+E:\SkyDriver\SkyDrive\Aplicaciones\Integration.System\Integration.BL\bin\Debug\Integration.DAService.dll
+E:\SkyDriver\SkyDrive\Aplicaciones\Integration.System\Integration.BL\bin\Debug\Integration.Conection.dll
+E:\SkyDriver\SkyDrive\Aplicaciones\Integration.System\Integration.BL\bin\Debug\Integration.BE.pdb
+E:\SkyDriver\SkyDrive\Aplicaciones\Integration.System\Integration.BL\bin\Debug\Integration.DAService.pdb
+E:\SkyDriver\SkyDrive\Aplicaciones\Integration.System\Integration.BL\bin\Debug\Integration.Conection.pdb
+E:\SkyDriver\SkyDrive\Aplicaciones\Integration.System\Integration.BL\bin\Debug\Integration.Conection.xml
+E:\SkyDriver\SkyDrive\Aplicaciones\Integration.System\Integration.BL\obj\Debug\ResolveAssemblyReference.cache
+E:\SkyDriver\SkyDrive\Aplicaciones\Integration.System\Integration.BL\obj\Debug\Integration.BL.dll
+E:\SkyDriver\SkyDrive\Aplicaciones\Integration.System\Integration.BL\obj\Debug\Integration.BL.pdb
+E:\Proyectos\Tramite documentario\IntegrationSystem\Integration.BL\bin\Debug\Integration.BL.dll
+E:\Proyectos\Tramite documentario\IntegrationSystem\Integration.BL\bin\Debug\Integration.BL.pdb
+E:\Proyectos\Tramite documentario\IntegrationSystem\Integration.BL\bin\Debug\Integration.BE.dll
+E:\Proyectos\Tramite documentario\IntegrationSystem\Integration.BL\bin\Debug\Integration.DAService.dll
+E:\Proyectos\Tramite documentario\IntegrationSystem\Integration.BL\bin\Debug\Integration.Conection.dll
+E:\Proyectos\Tramite documentario\IntegrationSystem\Integration.BL\bin\Debug\Integration.BE.pdb
+E:\Proyectos\Tramite documentario\IntegrationSystem\Integration.BL\bin\Debug\Integration.DAService.pdb
+E:\Proyectos\Tramite documentario\IntegrationSystem\Integration.BL\bin\Debug\Integration.Conection.pdb
+E:\Proyectos\Tramite documentario\IntegrationSystem\Integration.BL\bin\Debug\Integration.Conection.xml
+E:\Proyectos\Tramite documentario\IntegrationSystem\Integration.BL\obj\Debug\Integration.BL.csprojResolveAssemblyReference.cache
+E:\Proyectos\Tramite documentario\IntegrationSystem\Integration.BL\obj\Debug\Integration.BL.dll
+E:\Proyectos\Tramite documentario\IntegrationSystem\Integration.BL\obj\Debug\Integration.BL.pdb

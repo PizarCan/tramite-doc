@@ -1,0 +1,354 @@
+﻿.Cabecera
+{
+	text-align: left;
+	font-family: Verdana;
+	font-size: 18px;
+	background-color: #F93;
+	color: White;
+	width: auto;
+	font-weight: bold;
+	height: 20px;
+	text-transform: uppercase;
+	border-right: #ffcc66 1px outset;
+	border-top: #ffcc66 2px outset;
+	border-left: #ffcc66 2px outset;
+	border-bottom: #ffcc66 2px outset;
+}
+.CabeceraTabla
+{
+	text-align: Center;
+	font-family: Verdana;
+	font-size: 11px;
+	background-color: #F93;
+	color: White;
+	width: auto;
+	font-weight: bold;
+	height: 20px;
+	text-transform: uppercase;
+	border-right: #ffcc66 1px outset;
+	border-top: #ffcc66 2px outset;
+	border-left: #ffcc66 2px outset;
+	border-bottom: #ffcc66 2px outset;
+}
+
+.SubCabeceraTabla
+{
+	 text-align :Center;
+	 font-family :Verdana;
+	 font-size : 11px;
+	 background-color : #F93;
+	 color :White ;
+	 width:auto ;
+	 font-weight:bold;
+	 height:20px;
+	 text-transform:uppercase ;
+}
+
+.CeldaInformacion
+{
+	text-align: center;
+	font-family: Arial;
+	font-size: 14px;
+	background-color: #F93;
+	color: #FFFFFF;
+	font-weight: bold;
+	height: 20px;
+	text-transform: uppercase;
+	border-right: #ffcc66 1px outset;
+	border-top: #ffcc66 2px outset;
+	border-left: #ffcc66 2px outset;
+	border-bottom: #ffcc66 2px outset;
+}
+ 
+.CeldaEtiqueta
+{
+	text-align: left;
+	font-family: Verdana;
+	font-size: 9px;
+	background: #FFC977;
+	font-weight: bold;
+	text-transform: uppercase;
+	vertical-align: middle;
+	width: 20%;
+	color: #315313;
+	height: 20px;
+	border-right: #D9F7BF 1px outset;
+	border-top: #D9F7BF 2px outset;
+	border-left: #D9F7BF 2px outset;
+	border-bottom: #D9F7BF 2px outset;
+}
+
+  .Boton
+ {
+	background-color:#C7C7C7;
+	Font-Size:10px;
+	Font-family:Verdana;
+	Color:#2A3D19;
+	Border-Width:1px;
+	Border-Style:Solid;
+	Border-Color:#5D9927;
+	font-weight:bold;
+}
+
+   .Boton:hover
+ {
+	background-color:#B6EE84;
+	Font-Size:10px;
+	Font-family:Verdana;
+	Color:#2A3D19;
+	Border-Width:1px;
+	Border-Style:Solid;
+	Border-Color:#5D9927;
+	font-weight:bold;
+}
+
+.Texto
+{
+	font-family:Verdana;
+	font-size:9px;
+	text-transform:uppercase;
+	text-decoration:none;
+	width:auto;
+	color:#2A3D19;
+	}
+	
+.TextoControl
+{
+	font-family:Verdana;
+	font-size:9px;
+	text-transform:uppercase;
+	text-decoration:none;
+	width:auto;
+	color:#2A3D19;
+	}
+	
+.SingOut
+{
+	 text-align :center;
+	 font-family :Verdana;
+	 font-size : 9px;
+	 background-color : #76C42F;
+	 color : #FFFFFF;
+	 width:30%;
+	 font-weight:bold;
+	 height:20px;
+	 text-transform:uppercase ;
+ }
+ 
+ .SingOut:hover
+{
+	 text-align :center;
+	 font-family :Verdana;
+	 font-size : 9px;
+	 background-color :#353A3E;
+	 color : #FFFFFF;
+	 width:30%;
+	 font-weight:bold;
+	 height:20px;
+	 text-transform:uppercase ;
+	 text-decoration:underline;
+ }
+ 
+.Back
+{
+	 font-family :Verdana;
+	 font-size : 11px;
+	 color : #2A3D19;
+ }
+ 
+ .Back:hover
+{
+	 font-family :Verdana;
+	 font-size : 11px;
+	 color : #2A3D19;
+	 font-weight:bold;
+	 text-decoration:underline;
+ }
+ 
+ 
+ .CabeceraGrid
+{
+	 text-align :Center;
+	 font-family :Verdana;
+	 font-size : 8px;
+	 background-color : #FFC977;
+	 color :White ;
+	 font-weight:bold;
+	 height:15px;
+	 text-transform:uppercase ;
+}
+
+.FilaGrid
+{
+	font-family: Verdana;
+	font-size: 9px;
+	background-color: #ffffcc;
+}
+
+.FilaGrid:hover
+{
+	 font-family :Verdana;
+	 font-size : 9px;
+	 background-color: #94D55B;
+	 color:White;
+}
+
+.ajax__tab_lightblue-theme .ajax__tab_header 
+{
+    font-family:arial,helvetica,clean,sans-serif;
+    font-size:small;
+    
+}
+.ajax__tab_lightblue-theme .ajax__tab_header .ajax__tab_outer /*TAG INACTIVO*/
+{
+    background-color:#CEDEEF;
+    margin:0px 0.16em 0px 0px;
+    padding:1px 0px 1px 0px;
+    vertical-align:bottom;
+    border:solid 1px #99AABD; /*COLOR DE BORDE*/
+    border-bottom-width:0px;
+    font-family:verdana,tahoma,helvetica;
+    font-size:10px;
+    
+}
+.ajax__tab_lightblue-theme .ajax__tab_header .ajax__tab_tab
+{    
+    color:#000;
+    padding:0.35em 0.75em;    
+    margin-right:0.01em;
+}
+.ajax__tab_lightblue-theme .ajax__tab_hover .ajax__tab_outer /*TAG OVER*/
+{
+    background-color: #bfdaff;
+}
+.ajax__tab_lightblue-theme .ajax__tab_active .ajax__tab_tab 
+{
+    color:#000;
+}
+.ajax__tab_lightblue-theme .ajax__tab_active .ajax__tab_outer /*TAG ACTIVO*/
+{
+    background-color: #FFFFFF;
+    font-family:verdana,tahoma,helvetica;
+    font-size:11px;
+    font-weight:bold;
+}
+.ajax__tab_lightblue-theme .ajax__tab_body 
+{
+    font-family:verdana,tahoma,helvetica;
+    font-size:10px;
+    padding:10px 10px;
+    background-color:#ffffff;    
+    border:solid 1px #99AABD;
+    border-top-width:0px;
+    height:100%;
+}
+.flot 
+{
+	position: absolute;
+	top: 1800px;
+	left: 110px
+	
+}
+.CajaDialogo
+{
+    background-color: #FFFFFF;
+    border-width: 4px;
+    border-style: outset;
+    border-color: Yellow;
+    padding: 0px;
+    font-family:verdana,tahoma,helvetica;
+    font-size : 11px;
+}
+.CajaDialogo div
+{
+    margin: 5px;
+    text-align: center;
+    font-family:verdana,tahoma,helvetica;
+    font-size : 11px;
+}
+
+.Error
+{
+	color:Red;	
+	font-family:verdana,tahoma,helvetica;
+    font-size:10px;
+    padding:10px 10px;
+    background-color:#ffffff;   
+}
+.Menu
+{
+	text-align: left;
+	font-family: Verdana;
+	font-size: 11px;
+	background-color: #F93;
+	color: White;
+	font-weight: bold;
+	height: 15px;
+	text-transform: uppercase;
+	border-right: #ffffff thin solid;
+	border-top: #ffffff thin solid;
+	border-left: #ffffff thin solid;
+	border-bottom: #ffffff thin solid;
+}
+.CeldaInformacion2
+{
+	text-align: left;
+	font-family: Verdana;
+	font-size: 9px;
+	background-color: #76C42F;
+	color: #FFFFFF;
+	font-weight: bold;
+	text-transform: uppercase;
+	border-right: #76c42f 1px outset;
+	border-top: #76c42f 2px outset;
+	border-left: #76c42f 2px outset;
+	border-bottom: #76c42f 2px outset;
+}
+
+
+A {
+	font-family: Verdana;
+	font-size: 10px;
+	font-style: normal;
+	color: #000000;
+	text-decoration: none;
+}
+A:hover {
+	font-family: Verdana;
+	font-size: 10px;
+	font-style: normal;
+	color: blue;
+	text-decoration: none;
+}
+.SubTitle
+{
+	font-size: 14px;
+	color: black;
+	font-family: arial;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-align: center;
+}
+/* color de Campos de Items*/
+.Titulo
+{
+	font-size: 10px;
+	font-weight:bold;
+	color: #7B8C48;
+	font-family: verdana;
+	}
+.FilaTitulo
+{
+	font-size: 10px;
+	font-weight:bold;
+	text-transform: uppercase;
+	color: #333333;
+	font-family: verdana;
+	}
+.Contenido
+{
+	font-size: 9px;
+	color: #333333;
+	font-family: verdana;
+	}	
+/*-----------------------------------*/

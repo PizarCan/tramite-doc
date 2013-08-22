@@ -1,0 +1,11 @@
+E:\SkyDriver\SkyDrive\Aplicaciones\Integration.System\Integration.WebConfiguration.Tests\bin\Debug\Integration.WebConfiguration.Tests.dll.config
+E:\SkyDriver\SkyDrive\Aplicaciones\Integration.System\Integration.WebConfiguration.Tests\bin\Debug\Integration.WebConfiguration.Tests.dll
+E:\SkyDriver\SkyDrive\Aplicaciones\Integration.System\Integration.WebConfiguration.Tests\bin\Debug\Integration.WebConfiguration.Tests.pdb
+E:\SkyDriver\SkyDrive\Aplicaciones\Integration.System\Integration.WebConfiguration.Tests\bin\Debug\Integration.WebConfiguration.Tests.xml
+E:\SkyDriver\SkyDrive\Aplicaciones\Integration.System\Integration.WebConfiguration.Tests\bin\Debug\Integration.WebConfiguration.dll
+E:\SkyDriver\SkyDrive\Aplicaciones\Integration.System\Integration.WebConfiguration.Tests\bin\Debug\Integration.WebConfiguration.pdb
+E:\SkyDriver\SkyDrive\Aplicaciones\Integration.System\Integration.WebConfiguration.Tests\bin\Debug\Integration.WebConfiguration.xml
+E:\SkyDriver\SkyDrive\Aplicaciones\Integration.System\Integration.WebConfiguration.Tests\obj\Debug\ResolveAssemblyReference.cache
+E:\SkyDriver\SkyDrive\Aplicaciones\Integration.System\Integration.WebConfiguration.Tests\obj\Debug\Integration.WebConfiguration.Tests.dll
+E:\SkyDriver\SkyDrive\Aplicaciones\Integration.System\Integration.WebConfiguration.Tests\obj\Debug\Integration.WebConfiguration.Tests.xml
+E:\SkyDriver\SkyDrive\Aplicaciones\Integration.System\Integration.WebConfiguration.Tests\obj\Debug\Integration.WebConfiguration.Tests.pdb

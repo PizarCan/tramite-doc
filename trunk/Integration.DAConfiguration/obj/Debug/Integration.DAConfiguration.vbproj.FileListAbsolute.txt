@@ -1,0 +1,10 @@
+E:\SkyDriver\SkyDrive\Aplicaciones\Integration.System\Integration.DAConfiguration\bin\Debug\Integration.DAConfiguration.dll
+E:\SkyDriver\SkyDrive\Aplicaciones\Integration.System\Integration.DAConfiguration\bin\Debug\Integration.DAConfiguration.pdb
+E:\SkyDriver\SkyDrive\Aplicaciones\Integration.System\Integration.DAConfiguration\bin\Debug\Integration.DAConfiguration.xml
+E:\SkyDriver\SkyDrive\Aplicaciones\Integration.System\Integration.DAConfiguration\obj\Debug\ResolveAssemblyReference.cache
+E:\SkyDriver\SkyDrive\Aplicaciones\Integration.System\Integration.DAConfiguration\obj\Debug\Integration.DAConfiguration.Resources.resources
+E:\SkyDriver\SkyDrive\Aplicaciones\Integration.System\Integration.DAConfiguration\obj\Debug\GenerateResource.read.1.tlog
+E:\SkyDriver\SkyDrive\Aplicaciones\Integration.System\Integration.DAConfiguration\obj\Debug\GenerateResource.write.1.tlog
+E:\SkyDriver\SkyDrive\Aplicaciones\Integration.System\Integration.DAConfiguration\obj\Debug\Integration.DAConfiguration.dll
+E:\SkyDriver\SkyDrive\Aplicaciones\Integration.System\Integration.DAConfiguration\obj\Debug\Integration.DAConfiguration.xml
+E:\SkyDriver\SkyDrive\Aplicaciones\Integration.System\Integration.DAConfiguration\obj\Debug\Integration.DAConfiguration.pdb
