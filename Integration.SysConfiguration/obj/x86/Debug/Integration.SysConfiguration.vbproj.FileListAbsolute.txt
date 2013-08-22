@@ -1,0 +1,16 @@
+E:\SkyDriver\SkyDrive\Aplicaciones\Integration.System\Integration.SysConfiguration\bin\Debug\Integration.SysConfiguration.exe
+E:\SkyDriver\SkyDrive\Aplicaciones\Integration.System\Integration.SysConfiguration\bin\Debug\Integration.SysConfiguration.pdb
+E:\SkyDriver\SkyDrive\Aplicaciones\Integration.System\Integration.SysConfiguration\bin\Debug\Integration.SysConfiguration.xml
+E:\SkyDriver\SkyDrive\Aplicaciones\Integration.System\Integration.SysConfiguration\obj\x86\Debug\ResolveAssemblyReference.cache
+E:\SkyDriver\SkyDrive\Aplicaciones\Integration.System\Integration.SysConfiguration\obj\x86\Debug\Integration.SysConfiguration.Resources.resources
+E:\SkyDriver\SkyDrive\Aplicaciones\Integration.System\Integration.SysConfiguration\obj\x86\Debug\GenerateResource.read.1.tlog
+E:\SkyDriver\SkyDrive\Aplicaciones\Integration.System\Integration.SysConfiguration\obj\x86\Debug\GenerateResource.write.1.tlog
+E:\SkyDriver\SkyDrive\Aplicaciones\Integration.System\Integration.SysConfiguration\obj\x86\Debug\Integration.SysConfiguration.exe.licenses
+E:\SkyDriver\SkyDrive\Aplicaciones\Integration.System\Integration.SysConfiguration\obj\x86\Debug\Integration.SysConfiguration.exe
+E:\SkyDriver\SkyDrive\Aplicaciones\Integration.System\Integration.SysConfiguration\obj\x86\Debug\Integration.SysConfiguration.xml
+E:\SkyDriver\SkyDrive\Aplicaciones\Integration.System\Integration.SysConfiguration\obj\x86\Debug\Integration.SysConfiguration.pdb
+E:\SkyDriver\SkyDrive\Aplicaciones\Integration.System\Integration.SysConfiguration\obj\x86\Debug\Integration.SysConfiguration.frmWizConfiguration.resources
+E:\SkyDriver\SkyDrive\Aplicaciones\Integration.System\Integration.SysConfiguration\obj\x86\Debug\Integration.SysConfiguration.FrmWizRegServer.resources
+D:\Informacion\Victor Jhairo\Skydrive\Aplicaciones\Integration.System\Integration.SysConfiguration\obj\x86\Debug\Integration.SysConfiguration.exe
+D:\Informacion\Victor Jhairo\Skydrive\Aplicaciones\Integration.System\Integration.SysConfiguration\obj\x86\Debug\Integration.SysConfiguration.xml
+D:\Informacion\Victor Jhairo\Skydrive\Aplicaciones\Integration.System\Integration.SysConfiguration\obj\x86\Debug\Integration.SysConfiguration.pdb
