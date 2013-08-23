@@ -43,7 +43,12 @@ Partial Class Login
             lblError.Text = "Usuario y/o Clave Incorrecto.!!"
         Else
             lblError.Text = "Bienvenido Sr." + Response.cPerAlias
-
+            '############  Permisos Mesa de Partes#################
+            Session("PerMesaPartes") = False
+            Session("RegPersona") = False
+            Session("MesaPartesArea") = False
+            Session("AcuRegistro") = False
+            Session("AcuMonitor") = False
 
 
 
