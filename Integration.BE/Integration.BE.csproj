@@ -42,6 +42,8 @@
   <ItemGroup>
     <Compile Include="Login\BE_Req_Login.cs" />
     <Compile Include="Login\BE_Res_Login.cs" />
+    <Compile Include="Permisos\BE_Req_Permisos.cs" />
+    <Compile Include="Permisos\BE_Res_Permisos.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
