@@ -14,3 +14,14 @@ E:\SkyDriver\SkyDrive\Aplicaciones\Integration.System\Integration.SysConfigurati
 D:\Informacion\Victor Jhairo\Skydrive\Aplicaciones\Integration.System\Integration.SysConfiguration\obj\x86\Debug\Integration.SysConfiguration.exe
 D:\Informacion\Victor Jhairo\Skydrive\Aplicaciones\Integration.System\Integration.SysConfiguration\obj\x86\Debug\Integration.SysConfiguration.xml
 D:\Informacion\Victor Jhairo\Skydrive\Aplicaciones\Integration.System\Integration.SysConfiguration\obj\x86\Debug\Integration.SysConfiguration.pdb
+E:\Proyectos\Tramite documentario\IntegrationSystem\Integration.SysConfiguration\obj\x86\Debug\Integration.SysConfiguration.frmWizConfiguration.resources
+E:\Proyectos\Tramite documentario\IntegrationSystem\Integration.SysConfiguration\obj\x86\Debug\Integration.SysConfiguration.FrmWizRegServer.resources
+E:\Proyectos\Tramite documentario\IntegrationSystem\Integration.SysConfiguration\obj\x86\Debug\Integration.SysConfiguration.Resources.resources
+E:\Proyectos\Tramite documentario\IntegrationSystem\Integration.SysConfiguration\obj\x86\Debug\Integration.SysConfiguration.vbproj.GenerateResource.Cache
+E:\Proyectos\Tramite documentario\IntegrationSystem\Integration.SysConfiguration\obj\x86\Debug\Integration.SysConfiguration.exe
+E:\Proyectos\Tramite documentario\IntegrationSystem\Integration.SysConfiguration\obj\x86\Debug\Integration.SysConfiguration.xml
+E:\Proyectos\Tramite documentario\IntegrationSystem\Integration.SysConfiguration\obj\x86\Debug\Integration.SysConfiguration.pdb
+E:\Proyectos\Tramite documentario\IntegrationSystem\Integration.SysConfiguration\bin\Debug\Integration.SysConfiguration.exe.config
+E:\Proyectos\Tramite documentario\IntegrationSystem\Integration.SysConfiguration\bin\Debug\Integration.SysConfiguration.exe
+E:\Proyectos\Tramite documentario\IntegrationSystem\Integration.SysConfiguration\bin\Debug\Integration.SysConfiguration.pdb
+E:\Proyectos\Tramite documentario\IntegrationSystem\Integration.SysConfiguration\bin\Debug\Integration.SysConfiguration.xml

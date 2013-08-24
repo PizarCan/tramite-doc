@@ -9,6 +9,7 @@ Imports System.Web.UI.WebControls
 Imports Integration.BL
 Imports Integration.Conection
 Imports Integration.BE.Login
+Imports Integration.BE.PerUsuGruAcc
 Imports Microsoft.VisualBasic
 
 Partial Class Login
@@ -30,108 +31,53 @@ Partial Class Login
 
         Dim ObjEncrypt As clsCrypt = New clsCrypt()
         Dim Request As BE_Req_Login = New BE_Req_Login()
-        Dim Response As BE_Res_Login = New BE_Res_Login()
+        Dim Respons As BE_Res_Login = New BE_Res_Login()
         Dim objBl As BL_Login = New BL_Login()
 
         Dim Pass = ObjEncrypt.EncryptByCode(cPerUsuCodigo, cPerUsuPassword)
 
         Request.cPerUsuCodigo = cPerUsuCodigo
         Request.cPerUsuClave = cPerUsuPassword
-        Response = objBl.ValidateUser(Request)
+        Respons = objBl.ValidateUser(Request)
 
-        If (IsNothing(Response.cPerCodigo)) Then
+        If (IsNothing(Respons.cPerCodigo)) Then
             lblError.Text = "Usuario y/o Clave Incorrecto.!!"
+            Get_User_Valido = False
         Else
-            lblError.Text = "Bienvenido Sr." + Response.cPerAlias
+            lblError.Text = "Bienvenido Sr." + Respons.cPerAlias
+            Session("cPerCodigo") = Respons.cPerCodigo
+            Session("cPerUsuCodigo") = Respons.cPerKey
+            Session("Nombre") = Respons.cPerAlias
             '############  Permisos Mesa de Partes#################
             Session("PerMesaPartes") = False
             Session("RegPersona") = False
             Session("MesaPartesArea") = False
             Session("AcuRegistro") = False
             Session("AcuMonitor") = False
-
-
-
+            Dim ObjPU As BL_PerUsuGruAcc = New BL_PerUsuGruAcc()
+            Dim ReqPermisos As BE_Req_PerUsuGruAcc = New BE_Req_PerUsuGruAcc()
+            Dim ListaPermisos As New List(Of BE_Res_PerUsuGruAcc)
+            ReqPermisos.cPerCodigo = Respons.cPerCodigo
+            ReqPermisos.nObjTipo = 1001
+            ReqPermisos.nSisGruTipo = 1004
+            ListaPermisos = ObjPU.obtenerPermisos(ReqPermisos)
+            If ListaPermisos.Count > 0 Then
+                For Each ResPermisos As BE_Res_PerUsuGruAcc In ListaPermisos
+                    If ResPermisos.cIntNombre = "MNUMESAPARTES" Or ResPermisos.cIntNombre = "MNUMESA" Then Session("PerMesaPartes") = True
+                    If ResPermisos.cIntNombre = "MNUREGPERSONA" Then Session("RegPersona") = True
+                    If ResPermisos.cIntNombre = "MNUMESA" Then Session("MesaPartesArea") = True
+                    If ResPermisos.cIntNombre = "MNUREGACUERDOS" Then Session("AcuRegistro") = True
+                    If ResPermisos.cIntNombre = "MNUACUMONITOR" Then Session("AcuMonitor") = True
+                Next
+            End If
+            Get_User_Valido = True
+            If Session("PerMesaPartes") = False Then
+                Response.Redirect("Forms/RegDocArea.aspx")
+            Else
+                Response.Redirect("Forms/RegDocumento.aspx")
+            End If
         End If
 
-
-
-        Using cn As New SqlConnection(TramiteDocumentario.MiConexion)
-            Dim Clase As New TramiteDocumentario.clsTraDoc
-            Dim Rs As DataTable
-            Try
-                If cPerUsuCodigo <> String.Empty And cPerUsuPassword <> String.Empty Then
-                    Dim Cript As New Cnseuss.ClsCrypt
-                    Dim Rows As Integer
-                    Dim i As Integer
-                    Dim Clave As String
-
-                    cPerUsuCodigo = cPerUsuCodigo.Replace("'", "''")
-                    cPerUsuPassword = cPerUsuPassword.Replace("'", "''")
-                    Clave = Cript.EncryptByCode(cPerUsuCodigo, cPerUsuPassword)
-
-                    If cn.State = ConnectionState.Closed Then
-                        cn.Open()
-                    End If
-                    Dim MyTrans As SqlTransaction
-                    MyTrans = cn.BeginTransaction
-                    Rs = Clase.CodUsuario(cPerUsuCodigo, Clave.Replace("'", "''"), MyTrans, cn)
-                    If Rs.Rows.Count > 0 Then
-                        Session("PerCodigo") = Rs.Rows.Item(0).Item(0)
-                        Rs = Clase.DatUsuario(Session("PerCodigo"), MyTrans, cn)
-                        Rows = Rs.Rows.Count
-                        If Rows > 0 Then
-                            '############  Permisos Mesa de Partes#################
-                            Session("PerMesaPartes") = False
-                            Session("RegPersona") = False
-                            Session("MesaPartesArea") = False
-                            Session("AcuRegistro") = False
-                            Session("AcuMonitor") = False
-                            Dim rs2 As DataTable
-                            Clase = New TramiteDocumentario.clsTraDoc
-                            rs2 = Clase.ObjPerPermios(Session("PerCodigo"), MyTrans, cn)
-                            If rs2.Rows.Count > 0 Then
-                                For i = 0 To rs2.Rows.Count - 1
-                                    If rs2.Rows.Item(i).Item(0) = "MNUMESAPARTES" Or rs2.Rows.Item(i).Item(0) = "MNUMESA" Then Session("PerMesaPartes") = True
-                                    If rs2.Rows.Item(i).Item(0) = "MNUREGPERSONA" Then Session("RegPersona") = True
-                                    If rs2.Rows.Item(i).Item(0) = "MNUMESA" Then Session("MesaPartesArea") = True
-                                    If rs2.Rows.Item(i).Item(0) = "MNUREGACUERDOS" Then Session("AcuRegistro") = True
-                                    If rs2.Rows.Item(i).Item(0) = "MNUACUMONITOR" Then Session("AcuMonitor") = True
-                                Next
-                            End If
-                            '########################################
-
-                            Session("Nombre") = Rs.Rows.Item(0).Item(2) & Space(2) & Rs.Rows.Item(0).Item(1)
-                            Session("CodUO") = Rs.Rows.Item(0).Item(4)
-                            Session("UOCodigo") = Val(Rs.Rows.Item(0).Item(4))
-                            Session("Login") = "Ingresar"
-                            clsConsultasComunes.UserCode = Session("PerCodigo")
-                            Get_User_Valido = True
-                            'HttpContext.Current.Application.Add("cPerCodigo", Session("PerCodigo"))
-                            If Session("PerMesaPartes") = False Then
-                                'Response.Write("<script Language=JavaScript>window.open('RegDocArea.aspx','NuevaVentana2','scrollbars=yes,status=yes,height=700,width=780,resizable=yes')</script>")
-                                Response.Redirect("www.google.com.pe")
-                                clsConsultasComunes.PageRetunr = "Forms/RegDocArea.aspx"
-                            Else
-                                Response.Redirect("Forms/RegDocumento.aspx")
-                                'Response.Write("<script Language=JavaScript>window.open('RegDocumento.aspx','NuevaVentana2','scrollbars=yes,status=yes,height=700,width=780,resizable=yes')</script>")
-                                clsConsultasComunes.PageRetunr = "Forms/RegDocumento.aspx"
-                            End If
-                        End If
-
-                        MyTrans.Commit()
-                    Else
-                        MyTrans.Rollback()
-                        'Response.Write("<script language='javascript'>")
-                        'Response.Write("alert ('Usuario y/o Clave Incorrecta')")
-                        'Response.Write("</script>")
-                    End If
-                End If
-            Catch ex As Exception
-                Throw
-            End Try
-            Clase = Nothing
-        End Using
     End Function
 
 End Class

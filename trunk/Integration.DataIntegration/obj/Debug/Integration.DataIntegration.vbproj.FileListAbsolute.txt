@@ -24,3 +24,12 @@ E:\SkyDriver\SkyDrive\Aplicaciones\Integration.System\Integration.DataIntegratio
 E:\SkyDriver\SkyDrive\Aplicaciones\Integration.System\Integration.DataIntegration\obj\Debug\Integration.DataIntegration.dll
 E:\SkyDriver\SkyDrive\Aplicaciones\Integration.System\Integration.DataIntegration\obj\Debug\Integration.DataIntegration.xml
 E:\SkyDriver\SkyDrive\Aplicaciones\Integration.System\Integration.DataIntegration\obj\Debug\Integration.DataIntegration.pdb
+E:\Proyectos\Tramite documentario\IntegrationSystem\Integration.DataIntegration\bin\Debug\Integration.DataIntegration.dll
+E:\Proyectos\Tramite documentario\IntegrationSystem\Integration.DataIntegration\bin\Debug\Integration.DataIntegration.pdb
+E:\Proyectos\Tramite documentario\IntegrationSystem\Integration.DataIntegration\bin\Debug\Integration.DataIntegration.xml
+E:\Proyectos\Tramite documentario\IntegrationSystem\Integration.DataIntegration\obj\Debug\Integration.DataIntegration.Resources.resources
+E:\Proyectos\Tramite documentario\IntegrationSystem\Integration.DataIntegration\obj\Debug\Integration.DataIntegration.vbproj.GenerateResource.Cache
+E:\Proyectos\Tramite documentario\IntegrationSystem\Integration.DataIntegration\obj\Debug\Integration.DataIntegration.dll
+E:\Proyectos\Tramite documentario\IntegrationSystem\Integration.DataIntegration\obj\Debug\Integration.DataIntegration.xml
+E:\Proyectos\Tramite documentario\IntegrationSystem\Integration.DataIntegration\obj\Debug\Integration.DataIntegration.pdb
+E:\Proyectos\Tramite documentario\IntegrationSystem\Integration.DataIntegration\obj\Debug\Integration.DataIntegration.vbprojResolveAssemblyReference.cache

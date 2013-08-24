@@ -9,3 +9,14 @@ E:\SkyDriver\SkyDrive\Aplicaciones\Integration.System\Integration.WebConfigurati
 E:\SkyDriver\SkyDrive\Aplicaciones\Integration.System\Integration.WebConfiguration.Tests\obj\Debug\Integration.WebConfiguration.Tests.dll
 E:\SkyDriver\SkyDrive\Aplicaciones\Integration.System\Integration.WebConfiguration.Tests\obj\Debug\Integration.WebConfiguration.Tests.xml
 E:\SkyDriver\SkyDrive\Aplicaciones\Integration.System\Integration.WebConfiguration.Tests\obj\Debug\Integration.WebConfiguration.Tests.pdb
+E:\Proyectos\Tramite documentario\IntegrationSystem\Integration.WebConfiguration.Tests\bin\Debug\Integration.WebConfiguration.Tests.dll.config
+E:\Proyectos\Tramite documentario\IntegrationSystem\Integration.WebConfiguration.Tests\bin\Debug\Integration.WebConfiguration.Tests.dll
+E:\Proyectos\Tramite documentario\IntegrationSystem\Integration.WebConfiguration.Tests\bin\Debug\Integration.WebConfiguration.Tests.pdb
+E:\Proyectos\Tramite documentario\IntegrationSystem\Integration.WebConfiguration.Tests\bin\Debug\Integration.WebConfiguration.Tests.xml
+E:\Proyectos\Tramite documentario\IntegrationSystem\Integration.WebConfiguration.Tests\bin\Debug\Integration.WebConfiguration.dll
+E:\Proyectos\Tramite documentario\IntegrationSystem\Integration.WebConfiguration.Tests\bin\Debug\Integration.WebConfiguration.pdb
+E:\Proyectos\Tramite documentario\IntegrationSystem\Integration.WebConfiguration.Tests\bin\Debug\Integration.WebConfiguration.xml
+E:\Proyectos\Tramite documentario\IntegrationSystem\Integration.WebConfiguration.Tests\obj\Debug\Integration.WebConfiguration.Tests.vbprojResolveAssemblyReference.cache
+E:\Proyectos\Tramite documentario\IntegrationSystem\Integration.WebConfiguration.Tests\obj\Debug\Integration.WebConfiguration.Tests.dll
+E:\Proyectos\Tramite documentario\IntegrationSystem\Integration.WebConfiguration.Tests\obj\Debug\Integration.WebConfiguration.Tests.xml
+E:\Proyectos\Tramite documentario\IntegrationSystem\Integration.WebConfiguration.Tests\obj\Debug\Integration.WebConfiguration.Tests.pdb

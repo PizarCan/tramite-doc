@@ -8,3 +8,11 @@ E:\SkyDriver\SkyDrive\Aplicaciones\Integration.System\Integration.DAConfiguratio
 E:\SkyDriver\SkyDrive\Aplicaciones\Integration.System\Integration.DAConfiguration\obj\Debug\Integration.DAConfiguration.dll
 E:\SkyDriver\SkyDrive\Aplicaciones\Integration.System\Integration.DAConfiguration\obj\Debug\Integration.DAConfiguration.xml
 E:\SkyDriver\SkyDrive\Aplicaciones\Integration.System\Integration.DAConfiguration\obj\Debug\Integration.DAConfiguration.pdb
+E:\Proyectos\Tramite documentario\IntegrationSystem\Integration.DAConfiguration\bin\Debug\Integration.DAConfiguration.dll
+E:\Proyectos\Tramite documentario\IntegrationSystem\Integration.DAConfiguration\bin\Debug\Integration.DAConfiguration.pdb
+E:\Proyectos\Tramite documentario\IntegrationSystem\Integration.DAConfiguration\bin\Debug\Integration.DAConfiguration.xml
+E:\Proyectos\Tramite documentario\IntegrationSystem\Integration.DAConfiguration\obj\Debug\Integration.DAConfiguration.Resources.resources
+E:\Proyectos\Tramite documentario\IntegrationSystem\Integration.DAConfiguration\obj\Debug\Integration.DAConfiguration.vbproj.GenerateResource.Cache
+E:\Proyectos\Tramite documentario\IntegrationSystem\Integration.DAConfiguration\obj\Debug\Integration.DAConfiguration.dll
+E:\Proyectos\Tramite documentario\IntegrationSystem\Integration.DAConfiguration\obj\Debug\Integration.DAConfiguration.xml
+E:\Proyectos\Tramite documentario\IntegrationSystem\Integration.DAConfiguration\obj\Debug\Integration.DAConfiguration.pdb

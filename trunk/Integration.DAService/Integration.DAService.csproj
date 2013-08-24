@@ -44,7 +44,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAConstante.cs" />
     <Compile Include="DALogin.cs" />
+    <Compile Include="DAPerUsuGruAcc.cs" />
+    <Compile Include="DAUniOrgPerExt.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
