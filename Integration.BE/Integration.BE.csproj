@@ -40,12 +40,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Constante\BE_Req_Constante.cs" />
+    <Compile Include="Constante\BE_Res_Constante.cs" />
     <Compile Include="Login\BE_Req_Login.cs" />
     <Compile Include="Login\BE_Res_Login.cs" />
-    <Compile Include="Permisos\BE_Req_Permisos.cs" />
-    <Compile Include="Permisos\BE_Res_Permisos.cs" />
+    <Compile Include="PerUsuGruAcc\BE_Req_PerUsuGruAcc.cs" />
+    <Compile Include="PerUsuGruAcc\BE_Res_PerUsuGruAcc.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UniOrgPerExt\BE_Req_UniOrgPerExt.cs" />
+    <Compile Include="UniOrgPerExt\BE_Res_UniOrgPerExt.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

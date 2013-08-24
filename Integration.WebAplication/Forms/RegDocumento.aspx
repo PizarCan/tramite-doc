@@ -1,9 +1,18 @@
 ﻿<%@ Page Language="VB" AutoEventWireup="false" CodeFile="RegDocumento.aspx.vb" Inherits="Forms_RegDocumento" %>
 
+<%@ Register Assembly="DevExpress.Web.v12.2, Version=12.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a"
+    Namespace="DevExpress.Web.ASPxGridView" TagPrefix="dx" %>
+
+<%@ Register assembly="DevExpress.Web.v12.2, Version=12.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" namespace="DevExpress.Web.ASPxEditors" tagprefix="dx" %>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>WebForm1</title>
+    <title>Registrar un documento</title>
+    <script language="jscript">
+        function clickButton() {
+        }   
+    </script>
     <link href="../Styles/Estilous.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -14,30 +23,30 @@
             <td align="center" colspan="2">
                 <object codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0"
                     height="180" width="770" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000">
-                    <param name="_cx" value="20373">
-                    <param name="_cy" value="4763">
-                    <param name="FlashVars" value="">
-                    <param name="Movie" value="CabTramite.swf">
-                    <param name="Src" value="CabTramite.swf">
-                    <param name="WMode" value="Window">
-                    <param name="Play" value="-1">
-                    <param name="Loop" value="-1">
-                    <param name="Quality" value="High">
-                    <param name="SAlign" value="">
-                    <param name="Menu" value="-1">
-                    <param name="Base" value="">
-                    <param name="AllowScriptAccess" value="always">
-                    <param name="Scale" value="ShowAll">
-                    <param name="DeviceFont" value="0">
-                    <param name="EmbedMovie" value="0">
-                    <param name="BGColor" value="">
-                    <param name="SWRemote" value="">
-                    <param name="MovieData" value="">
-                    <param name="SeamlessTabbing" value="1">
-                    <param name="Profile" value="0">
-                    <param name="ProfileAddress" value="">
-                    <param name="ProfilePort" value="0">
-                    <param name="AllowNetworking" value="all">
+                    <param name="_cx" value="20373" />
+                    <param name="_cy" value="4763" />
+                    <param name="FlashVars" value="" />
+                    <param name="Movie" value="CabTramite.swf" />
+                    <param name="Src" value="CabTramite.swf" />
+                    <param name="WMode" value="Window" />
+                    <param name="Play" value="-1" />
+                    <param name="Loop" value="-1" />
+                    <param name="Quality" value="High" />
+                    <param name="SAlign" value="" />
+                    <param name="Menu" value="-1" />
+                    <param name="Base" value="" />
+                    <param name="AllowScriptAccess" value="always" />
+                    <param name="Scale" value="ShowAll" />
+                    <param name="DeviceFont" value="0" />
+                    <param name="EmbedMovie" value="0" />
+                    <param name="BGColor" value="" />
+                    <param name="SWRemote" value="" />
+                    <param name="MovieData" value="" />
+                    <param name="SeamlessTabbing" value="1" />
+                    <param name="Profile" value="0" />
+                    <param name="ProfileAddress" value="" />
+                    <param name="ProfilePort" value="0" />
+                    <param name="AllowNetworking" value="all" />
                     <embed src="CabTramite.swf" width="770" height="180"> </embed>
                 </object>
             </td>
@@ -50,8 +59,10 @@
             <td valign="top" width="150">
                 <table cellspacing="0" cellpadding="0" width="150" border="0">
                     <tr>
-                        <td>
-                            <!--#include file="mnuTramiteDoc2.html"-->
+                        <td> 
+                            <%
+                                Response.WriteFile("mnuTramiteDoc2.html")
+                             %>
                         </td>
                     </tr>
                 </table>
@@ -131,7 +142,8 @@
                                         Persona Que Envía:
                                     </td>
                                     <td>
-                                        <asp:TextBox ID="txtNombre" runat="server" Width="288px"></asp:TextBox><asp:DataGrid
+                                        <asp:TextBox ID="txtNombre" runat="server" Width="288px"></asp:TextBox>
+                                        <asp:DataGrid
                                             ID="dgNombre" runat="server" Width="440px" Height="56px" Font-Size="8pt" BackColor="White"
                                             Font-Names="Courier New" GridLines="None" BorderColor="White" ShowHeader="False"
                                             AutoGenerateColumns="False" PageSize="4">

@@ -16,5 +16,11 @@ namespace Integration.BL
             return ObjLogin.ValidaterUser(Request);
             
         }
+        public Boolean ValidaInicioSesion(BE_Req_Login Request)
+        {
+            DALogin ObjLogin = new DALogin();
+            return ObjLogin.ValidaInicioSesion(Request);
+        }
+
     }
 }

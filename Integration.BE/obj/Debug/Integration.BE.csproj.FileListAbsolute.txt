@@ -3,3 +3,7 @@ E:\SkyDriver\SkyDrive\Aplicaciones\Integration.System\Integration.BE\bin\Debug\I
 E:\SkyDriver\SkyDrive\Aplicaciones\Integration.System\Integration.BE\obj\Debug\ResolveAssemblyReference.cache
 E:\SkyDriver\SkyDrive\Aplicaciones\Integration.System\Integration.BE\obj\Debug\Integration.BE.dll
 E:\SkyDriver\SkyDrive\Aplicaciones\Integration.System\Integration.BE\obj\Debug\Integration.BE.pdb
+E:\Proyectos\Tramite documentario\IntegrationSystem\Integration.BE\bin\Debug\Integration.BE.dll
+E:\Proyectos\Tramite documentario\IntegrationSystem\Integration.BE\bin\Debug\Integration.BE.pdb
+E:\Proyectos\Tramite documentario\IntegrationSystem\Integration.BE\obj\Debug\Integration.BE.dll
+E:\Proyectos\Tramite documentario\IntegrationSystem\Integration.BE\obj\Debug\Integration.BE.pdb

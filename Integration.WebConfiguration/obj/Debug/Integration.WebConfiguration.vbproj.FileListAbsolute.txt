@@ -8,3 +8,12 @@ E:\SkyDriver\SkyDrive\Aplicaciones\Integration.System\Integration.WebConfigurati
 E:\SkyDriver\SkyDrive\Aplicaciones\Integration.System\Integration.WebConfiguration\obj\Debug\Integration.WebConfiguration.dll
 E:\SkyDriver\SkyDrive\Aplicaciones\Integration.System\Integration.WebConfiguration\obj\Debug\Integration.WebConfiguration.xml
 E:\SkyDriver\SkyDrive\Aplicaciones\Integration.System\Integration.WebConfiguration\obj\Debug\Integration.WebConfiguration.pdb
+E:\Proyectos\Tramite documentario\IntegrationSystem\Integration.WebConfiguration\bin\Integration.WebConfiguration.dll
+E:\Proyectos\Tramite documentario\IntegrationSystem\Integration.WebConfiguration\bin\Integration.WebConfiguration.pdb
+E:\Proyectos\Tramite documentario\IntegrationSystem\Integration.WebConfiguration\bin\Integration.WebConfiguration.xml
+E:\Proyectos\Tramite documentario\IntegrationSystem\Integration.WebConfiguration\obj\Debug\Integration.WebConfiguration.Resources.resources
+E:\Proyectos\Tramite documentario\IntegrationSystem\Integration.WebConfiguration\obj\Debug\Integration.WebConfiguration.vbproj.GenerateResource.Cache
+E:\Proyectos\Tramite documentario\IntegrationSystem\Integration.WebConfiguration\obj\Debug\Integration.WebConfiguration.dll
+E:\Proyectos\Tramite documentario\IntegrationSystem\Integration.WebConfiguration\obj\Debug\Integration.WebConfiguration.xml
+E:\Proyectos\Tramite documentario\IntegrationSystem\Integration.WebConfiguration\obj\Debug\Integration.WebConfiguration.pdb
+E:\Proyectos\Tramite documentario\IntegrationSystem\Integration.WebConfiguration\obj\Debug\Integration.WebConfiguration.vbprojResolveAssemblyReference.cache

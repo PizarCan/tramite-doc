@@ -12,7 +12,6 @@ E:\Proyectos\Tramite documentario\IntegrationSystem\Integration.DAService\bin\De
 E:\Proyectos\Tramite documentario\IntegrationSystem\Integration.DAService\bin\Debug\Integration.DAService.pdb
 E:\Proyectos\Tramite documentario\IntegrationSystem\Integration.DAService\bin\Debug\Integration.BE.dll
 E:\Proyectos\Tramite documentario\IntegrationSystem\Integration.DAService\bin\Debug\Integration.BE.pdb
-E:\Proyectos\Tramite documentario\IntegrationSystem\Integration.DAService\bin\Debug\Integration.Conection.pdb
-E:\Proyectos\Tramite documentario\IntegrationSystem\Integration.DAService\bin\Debug\Integration.Conection.xml
 E:\Proyectos\Tramite documentario\IntegrationSystem\Integration.DAService\obj\Debug\Integration.DAService.dll
 E:\Proyectos\Tramite documentario\IntegrationSystem\Integration.DAService\obj\Debug\Integration.DAService.pdb
+E:\Proyectos\Tramite documentario\IntegrationSystem\Integration.DAService\obj\Debug\Integration.DAService.csprojResolveAssemblyReference.cache

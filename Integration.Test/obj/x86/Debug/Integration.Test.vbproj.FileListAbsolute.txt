@@ -46,8 +46,6 @@ E:\Proyectos\Tramite documentario\IntegrationSystem\Integration.Test\bin\Debug\I
 E:\Proyectos\Tramite documentario\IntegrationSystem\Integration.Test\bin\Debug\Integration.DAService.pdb
 E:\Proyectos\Tramite documentario\IntegrationSystem\Integration.Test\bin\Debug\Integration.DataIntegration.pdb
 E:\Proyectos\Tramite documentario\IntegrationSystem\Integration.Test\bin\Debug\Integration.DataIntegration.xml
-E:\Proyectos\Tramite documentario\IntegrationSystem\Integration.Test\bin\Debug\Integration.Conection.pdb
-E:\Proyectos\Tramite documentario\IntegrationSystem\Integration.Test\bin\Debug\Integration.Conection.xml
 E:\Proyectos\Tramite documentario\IntegrationSystem\Integration.Test\obj\x86\Debug\Integration.Test.vbprojResolveAssemblyReference.cache
 E:\Proyectos\Tramite documentario\IntegrationSystem\Integration.Test\obj\x86\Debug\Integration.Test.Form1.resources
 E:\Proyectos\Tramite documentario\IntegrationSystem\Integration.Test\obj\x86\Debug\Integration.Test.Resources.resources

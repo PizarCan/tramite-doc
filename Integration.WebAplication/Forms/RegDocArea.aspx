@@ -24,7 +24,7 @@
                 <table cellspacing="0" cellpadding="0" width="150" border="0">
                     <tr>
                         <td>
-                            <!--#include file="mnuTramiteDoc.html"-->
+                            <%Response.WriteFile("mnuTramiteDoc.html")%>
                         </td>
                     </tr>
                 </table>
@@ -119,8 +119,8 @@
                                         <td>
                                         </td>
                                         <td style="text-align: right">
-                                            <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/frmAcuAsociar.aspx"
-                                                Target="_blank">Asociar Acuerdos</asp:HyperLink>
+                                           <%-- <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/frmAcuAsociar.aspx"
+                                                Target="_blank">Asociar Acuerdos</asp:HyperLink>--%>
                                         </td>
                                     </tr>
                                 </table>

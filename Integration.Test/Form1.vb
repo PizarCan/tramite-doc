@@ -9,7 +9,7 @@ Public Class Form1
     Private Sub Button1_Click(sender As System.Object, e As System.EventArgs) Handles Button1.Click
         Dim user As String = Me.TextBox1.Text
         Dim Pass As String = Me.TextBox2.Text
-        Dim dr As SqlDataReader
+        'Dim dr As SqlDataReader
         Dim dt As New DataTable
         Dim objInterface As New Integration.DataIntegration.clsInterface
 

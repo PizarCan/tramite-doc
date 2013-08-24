@@ -54,5 +54,44 @@ namespace Integration.DAService
         return Item;
         }
 
+        public Boolean ValidaInicioSesion(BE_Req_Login Request)
+        {
+            BE_Res_Login Item = new BE_Res_Login();
+            Boolean Retorna = false;
+            try
+            {
+                clsConection Obj = new clsConection();
+                string Cadena = Obj.GetConexionString("Naylamp");
+
+                using (SqlConnection cn = new SqlConnection(Cadena))
+                {
+                    cn.Open();
+
+                    using (SqlCommand cm = new SqlCommand())
+                    {
+                        cm.CommandText = "sp_User_InicioSesion";
+                        cm.CommandType = CommandType.StoredProcedure;
+                        cm.Parameters.AddWithValue("cPerUsuCodigo", Request.cPerUsuCodigo);
+                        cm.Connection = cn;
+                        using (SqlDataReader dr = cm.ExecuteReader())
+                        {
+                            while (dr.Read())
+                            {
+                                Item.cPerCodigo = dr.GetString(dr.GetOrdinal("cPerCodigo")).Trim();
+                                Retorna = true;
+                            }
+                        }
+
+                    }
+                }
+
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            return Retorna;
+        }
+
     }
 }
