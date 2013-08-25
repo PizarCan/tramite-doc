@@ -32,7 +32,7 @@ EndProject
 Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Integration.WebAplication", "Integration.WebAplication\", "{4E5315A4-4575-46A4-83F3-5D9F8F59548A}"
 	ProjectSection(WebsiteProperties) = preProject
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
-		ProjectReferences = "{B3B11ABC-5F97-4A78-BA7E-863EEB94D877}|Integration.BE.dll;{2D489151-55C0-4B5B-A2BD-8551FC7C7561}|Integration.BL.dll;{381DAA73-F188-4B47-BADC-88B1265C1101}|Integration.DAService.dll;"
+		ProjectReferences = "{B3B11ABC-5F97-4A78-BA7E-863EEB94D877}|Integration.BE.dll;{2D489151-55C0-4B5B-A2BD-8551FC7C7561}|Integration.BL.dll;{381DAA73-F188-4B47-BADC-88B1265C1101}|Integration.DAService.dll;{0C91D6EF-8BAA-4180-AE15-315F26FD535D}|Integration.DAConfiguration.dll;"
 		Debug.AspNetCompiler.VirtualPath = "/Integration.WebAplication"
 		Debug.AspNetCompiler.PhysicalPath = "Integration.WebAplication\"
 		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\Integration.WebAplication\"

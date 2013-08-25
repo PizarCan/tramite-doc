@@ -46,6 +46,7 @@
   <ItemGroup>
     <Compile Include="DAConstante.cs" />
     <Compile Include="DALogin.cs" />
+    <Compile Include="DAPersona.cs" />
     <Compile Include="DAPerUsuGruAcc.cs" />
     <Compile Include="DAUniOrgPerExt.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -2,9 +2,11 @@
 Imports System.Data
 Imports Integration.BL
 Imports Integration.Conection
+Imports Integration.DAConfiguration
 Imports Integration.BE.Login
 Imports Integration.BE.UniOrgPerExt
 Imports Integration.BE.Constante
+Imports Integration.BE.Persona
 
 Partial Class Forms_RegDocumento
     Inherits System.Web.UI.Page
@@ -146,5 +148,63 @@ Partial Class Forms_RegDocumento
         Call EnabledTrue()
         Call Limpiar()
         Session("NumCopias") = 0
+    End Sub
+
+    Protected Sub txtNombre_TextChanged(sender As Object, e As System.EventArgs) Handles txtNombre.TextChanged
+        If txtNombre.Text.Trim.Length > 3 Then
+            Dim Clase As New clsConfiguration
+            Dim Request As BE_Req_Persona = New BE_Req_Persona()
+            Dim objBL As BL_Persona = New BL_Persona()
+            Dim Rs As DataTable = New DataTable()
+            Request.cPerApellido = Clase.DBTilde(txtNombre.Text)
+            Rs = objBL.ListaPeronas_BycPerApellido(Request)
+            If Rs.Rows.Count > 0 Then
+                Ocultar(False)
+                dgNombre.DataSource = Rs
+                dgNombre.DataBind()
+            Else
+                Response.Write("No Hay Registros")
+                Ocultar(True)
+            End If
+        End If
+    End Sub
+
+    Protected Sub dgNombre_SelectedIndexChanged(sender As Object, e As System.EventArgs) Handles dgNombre.SelectedIndexChanged
+        txtPerRemite.Text = dgNombre.SelectedItem.Cells(2).Text
+        lblCodPerRemite.Text = dgNombre.SelectedItem.Cells(1).Text
+        Ocultar(True)
+    End Sub
+
+    Protected Sub txtDestino_TextChanged(sender As Object, e As System.EventArgs) Handles txtDestino.TextChanged
+        If txtDestino.Text.Trim.Length > 3 Then
+            Dim Clase As New clsConfiguration
+            Dim Request As BE_Req_Persona = New BE_Req_Persona()
+            Dim objBL As BL_Persona = New BL_Persona()
+            Dim Rs As DataTable = New DataTable()
+            Request.cPerApellido = Clase.DBTilde(txtNombre.Text)
+            Request.cPerRelTipo = "1,2,14"
+            Rs = objBL.ListaPeronas_BycPerApellido_cPerRelTipo(Request)
+            If Rs.Rows.Count > 0 Then
+                Ocultar2(False)
+                dgNombre2.DataSource = Rs
+                dgNombre2.DataBind()
+            Else
+                Response.Write("No Hay Registros")
+                Ocultar2(True)
+            End If 
+        End If
+    End Sub
+
+    Protected Sub dgNombre2_SelectedIndexChanged(sender As Object, e As System.EventArgs) Handles dgNombre2.SelectedIndexChanged
+        txtDestino.Text = dgNombre2.SelectedItem.Cells(2).Text
+        lblCodPerDestino.Text = dgNombre2.SelectedItem.Cells(1).Text
+        cboInstDestino.DataValueField = "cPerCodigo"
+        cboInstDestino.DataTextField = "cPerNombre"
+
+
+
+        btnGrabar.Enabled = True
+        Ocultar2(True)
+
     End Sub
 End Class

@@ -37,7 +37,7 @@ Partial Class Login
         Dim Pass = ObjEncrypt.EncryptByCode(cPerUsuCodigo, cPerUsuPassword)
 
         Request.cPerUsuCodigo = cPerUsuCodigo
-        Request.cPerUsuClave = cPerUsuPassword
+        Request.cPerUsuClave = Pass
         Respons = objBl.ValidateUser(Request)
 
         If (IsNothing(Respons.cPerCodigo)) Then
