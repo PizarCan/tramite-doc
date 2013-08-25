@@ -52,6 +52,7 @@ Partial Class Forms_RegDocumento
             Next
             cboTipDoc.Items.Add(i)
             cboTipDoc.Items(i).Text = "<Seleccione>"
+            cboTipDoc.Items.Insert(0, "<Seleccione>")
             cboTipDoc.Items(i).Value = 0
             cboTipDoc.SelectedItem.Value = 0
         End If
@@ -84,7 +85,7 @@ Partial Class Forms_RegDocumento
         Dim objBL As BL_UniOrgPerExt = New BL_UniOrgPerExt()
         Dim ListaUniOrg As New List(Of BE_Res_UniOrgPerExt)
         Request.cPerCodigo = PerCodigo
-        ListaUniOrg = objBl.obtenerPermisos(Request)
+        ListaUniOrg = objBL.ObtenerUniOrgBycPerCodigo(Request)
         If ListaUniOrg.Count > 0 Then
             Dim i As Integer = 0
             For Each ResUniOrg As BE_Res_UniOrgPerExt In ListaUniOrg
@@ -198,13 +199,208 @@ Partial Class Forms_RegDocumento
     Protected Sub dgNombre2_SelectedIndexChanged(sender As Object, e As System.EventArgs) Handles dgNombre2.SelectedIndexChanged
         txtDestino.Text = dgNombre2.SelectedItem.Cells(2).Text
         lblCodPerDestino.Text = dgNombre2.SelectedItem.Cells(1).Text
-        cboInstDestino.DataValueField = "cPerCodigo"
-        cboInstDestino.DataTextField = "cPerNombre"
 
+        cboInstDestino.Items.Clear()
+        cboAreaDestino.Items.Clear()
 
-
+        Dim Request As BE_Req_UniOrgPerExt = New BE_Req_UniOrgPerExt()
+        Dim objBL As BL_UniOrgPerExt = New BL_UniOrgPerExt()
+        Dim ListaUniOrg As New List(Of BE_Res_UniOrgPerExt)
+        Request.cPerCodigo = dgNombre2.SelectedItem.Cells(1).Text
+        ListaUniOrg = objBL.ObtenerInstitucionesBycPerCodigo(Request)
+        If ListaUniOrg.Count > 0 Then
+            Dim i As Integer = 0
+            For Each ResUniOrg As BE_Res_UniOrgPerExt In ListaUniOrg
+                cboInstDestino.Items.Add(i)
+                cboInstDestino.Items(i).Text = ResUniOrg.cPernombre
+                cboInstDestino.Items(i).Value = ResUniOrg.cPerCodigo
+                i = i + 1
+            Next
+        End If
+        cboInstDestino.Items.Insert(0, "Seleccione Institucion")
         btnGrabar.Enabled = True
         Ocultar2(True)
 
+    End Sub
+
+    Protected Sub cboInstDestino_SelectedIndexChanged(sender As Object, e As System.EventArgs) Handles cboInstDestino.SelectedIndexChanged
+        If Val(cboInstDestino.SelectedValue) <> 0 Then
+
+            Dim Request As BE_Req_UniOrgPerExt = New BE_Req_UniOrgPerExt()
+            Dim objBL As BL_UniOrgPerExt = New BL_UniOrgPerExt()
+            Dim ListaUniOrg As New List(Of BE_Res_UniOrgPerExt)
+            Request.cPerCodigo = dgNombre2.SelectedItem.Cells(1).Text
+            Request.cUniCodigo = cboInstDestino.SelectedValue
+            ListaUniOrg = objBL.ObtenerAreaByPersonaInstitucion(Request)
+            If ListaUniOrg.Count > 0 Then
+                Dim i As Integer = 0
+                For Each ResUniOrg As BE_Res_UniOrgPerExt In ListaUniOrg
+                    cboAreaDestino.Items.Add(i)
+                    cboAreaDestino.Items(i).Text = ResUniOrg.cIntDescripcion
+                    cboAreaDestino.Items(i).Value = ResUniOrg.nUniOrgCodigo
+                    i = i + 1
+                Next
+            End If
+
+        End If
+    End Sub
+
+    Protected Sub btnGrabar_Click(sender As Object, e As System.EventArgs) Handles btnGrabar.Click
+        'If Val(cboTipDoc.SelectedValue) <> 0 AndAlso txtPerRemite.Text <> "" AndAlso Val(cboAreaDestino.SelectedValue) <> 0 AndAlso txtAsunto.Text <> "" AndAlso txtDetalle.Text <> "" AndAlso txtNumDocumento.Text <> "" AndAlso txtFecha.Text <> "" AndAlso lblCodPerDestino.Text.Trim <> "" AndAlso lblCodPerRemite.Text.Trim <> "" AndAlso lblCodPerRegistra.Text.Trim Then
+        '    Dim NewCodDoc As String
+        '    Dim FechaActual As String
+        '    Dim PerRelSolicita As Integer
+
+        '    Using cn As New SqlConnection(MiConexion)
+        '        Dim Clase As New clsTraDoc
+        '        Dim clsComunes As New clsConsultasComunes
+        '        Dim clsInsert As New clsInserciones
+        '        Dim MyTrans As SqlTransaction
+        '        Dim Rs As DataTable
+        '        Dim UORemCodigo As Integer = 1
+        '        Dim Reader As SqlDataReader
+        '        If cn.State = ConnectionState.Closed Then
+        '            cn.Open()
+        '        End If
+        '        MyTrans = cn.BeginTransaction
+        '        Try
+        '            'Buscar Existencia del Documento
+        '            If Clase.objBusNumDocumento(Trim(txtNumDocumento.Text), cboTipDoc.SelectedValue, MyTrans, cn).Rows.Count > 0 Then
+        '                Response.Write("<P style=Color:Red>Ya Existe El Número de Documento</P>")
+        '                Exit Sub
+        '            End If
+        '            NewCodDoc = Clase.objGeneraCodDoc(MyTrans, cn)
+        '            Session("DocCodReg") = NewCodDoc
+        '            FechaActual = Clase.FecActual(MyTrans, cn)
+        '            Rs = Clase.objTipPersona(lblCodPerRemite.Text, MyTrans, cn)
+        '            If Rs.Rows.Count > 0 Then
+        '                If Val(Rs.Rows.Item(0).Item(1)) > 0 Then
+        '                    PerRelSolicita = 1
+        '                ElseIf Val(Rs.Rows.Item(0).Item(2)) > 0 Then
+        '                    PerRelSolicita = 2
+        '                ElseIf Val(Rs.Rows.Item(0).Item(3)) > 0 Then
+        '                    PerRelSolicita = 3
+        '                Else : PerRelSolicita = 4
+        '                End If
+        '            Else : PerRelSolicita = 4
+        '            End If
+
+        '            Rs = Clase.objMostAdminist(lblCodPerRemite.Text, MyTrans, cn)
+        '            If Rs.Rows.Count > 0 Then
+        '                UORemCodigo = Rs.Rows.Item(0).Item(4)
+        '            Else
+        '                Reader = Clase.objMostDocentes(lblCodPerRemite.Text, MyTrans, cn)
+        '                If Reader.HasRows Then
+        '                    Reader.Read()
+        '                    UORemCodigo = Reader.GetInt32(1)
+        '                End If
+        '                Reader.Close()
+        '            End If
+        '            Dim DocPerTipo As Integer
+
+        '            DocPerTipo = 8
+        '            If Session("MesaPartesArea") = True Then DocPerTipo = 4
+
+        '            'Periodo Actual
+        '            Dim PrdActual As Integer
+        '            Dim Reader2 As SqlDataReader
+        '            Reader2 = clsComunes.ObjPeriodoActual(1, MyTrans, cn)
+        '            If Reader2.HasRows Then
+        '                Reader2.Read()
+        '                PrdActual = Reader2("nPrdCodigo")
+        '            End If
+        '            Reader2.Close()
+
+
+        '            Clase.objRecibirDoc(MyTrans, cn, NewCodDoc, FechaActual, txtObservacion.Text, cboTipDoc.SelectedValue, 6318, _
+        '            lblCodPerRemite.Text, PerRelSolicita, lblCodPerDestino.Text, cboAreaDestino.SelectedValue, txtAsunto.Text, _
+        '            txtDetalle.Text, txtFecha.Text, txtFecha.Text, txtNumDocumento.Text, lblCodPerRegistra.Text, UORemCodigo, , , DocPerTipo, PrdActual)
+
+        '            'DocPeriodo
+
+        '            clsInsert.objInsertDocPeriodo(NewCodDoc, PrdActual, PrdActual, MyTrans, cn)
+
+        '            Clase.objTransanccion(406304, Session("PerCodigo"), MyTrans, cn, "Doc:" & NewCodDoc & "Destino:" & lblCodPerDestino.Text)
+
+        '            'Enviar Mail
+        '            Dim clsMail As New clsMails
+        '            Reader = clsMail.objMosPerMails(lblCodPerDestino.Text, MyTrans, cn)
+        '            If Reader.HasRows Then
+        '                Reader.Read()
+        '                Dim Destino As String = Reader.GetString(0)
+        '                Dim Mensaje As String = ""
+
+        '                Mensaje = cboTipDoc.SelectedItem.Text & " Nº:" & txtNumDocumento.Text & vbCrLf & _
+        '                        "Fecha :" & Space(2) & txtFecha.Text & vbCrLf & _
+        '                        "De : " & txtPerRemite.Text & vbCrLf & _
+        '                        "Para : " & txtDestino.Text & vbCrLf & _
+        '                        "Asunto : " & txtAsunto.Text & vbCrLf & vbCrLf & _
+        '                        "Revise El Sistema de Trámite Documentario Para Obtener más detalles"
+
+        '                clsMail.objEnviarMail("seuss@uss.edu.pe", Destino, "Documento Pendiente", Mensaje, "jbarahona@uss.edu.pe", "123654")
+
+        '            End If
+        '            Reader.Close()
+        '            MyTrans.Commit()
+        '            Call EnabledFalse()
+        '            Session("Suma") = 0
+
+        '            Response.Write("<script language='javascript'>")
+        '            Response.Write("alert ('Documento Enviado')")
+        '            Response.Write("</script>")
+        '        Catch ex As Exception
+        '            MyTrans.Rollback()
+        '            Response.Write("<script language='javascript'>")
+        '            Response.Write("alert ('No Se Completo La Tranzacción')")
+        '            Response.Write("</script>")
+        '        End Try
+        '    End Using
+        'Else
+        '    Response.Write("Faltan Algunos Datos")
+        'End If
+    End Sub
+
+    Protected Sub btnImprimir_Click(sender As Object, e As System.EventArgs) Handles btnImprimir.Click
+
+    End Sub
+
+    Protected Sub btnConCopia_Click(sender As Object, e As System.EventArgs) Handles btnConCopia.Click
+
+    End Sub
+
+    Protected Sub cboTipDoc_SelectedIndexChanged(sender As Object, e As System.EventArgs) Handles cboTipDoc.SelectedIndexChanged
+        If Val(cboTipDoc.SelectedValue) <> 0 Then
+            'Using cn As New SqlConnection(MiConexion)
+            '    Dim Clase As New clsTraDoc
+
+            '    Try
+            '        If cn.State = ConnectionState.Closed Then
+            '            cn.Open()
+            '        End If
+
+            '        Dim nPrdCodigo As Integer
+            '        Dim Reader As SqlDataReader
+            '        Dim clsComunes As New clsConsultasComunes
+            '        Dim MyTrans As SqlTransaction = cn.BeginTransaction
+            '        Reader = clsComunes.ObjPeriodoActual(1, MyTrans, cn)
+
+            '        If Reader.HasRows Then
+            '            Reader.Read()
+            '            nPrdCodigo = Reader("nPrdCodigo")
+            '        End If
+            '        Reader.Close()
+
+
+            '        txtNumDocumento.Text = Clase.objDocIdentifica(cboTipDoc.SelectedValue, Session("PerCodigo"), nPrdCodigo, MyTrans, cn)
+
+            '        MyTrans.Commit()
+            '        Clase = Nothing
+            '    Catch ex As SqlException
+            '        Response.Write(ex.Message)
+            '    End Try
+            'End Using
+        Else
+            txtNumDocumento.Text = ""
+        End If
     End Sub
 End Class
