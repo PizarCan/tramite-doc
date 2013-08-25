@@ -249,7 +249,7 @@
                                     </td>
                                     <td style="width: 103px">
                                         <asp:Button ID="btnNuevo" TabIndex="1" runat="server" Width="110px" Text="Nuevo"
-                                            Enabled="False" CssClass="Boton"></asp:Button>
+                                            Enabled="false" CssClass="Boton"></asp:Button>
                                     </td>
                                     <td style="width: 81px">
                                         <asp:Button ID="btnGrabar" runat="server" Width="110px" Text="Grabar" Enabled="False"

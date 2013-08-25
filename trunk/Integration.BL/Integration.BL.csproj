@@ -41,7 +41,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BL_Constante.cs" />
+    <Compile Include="BL_Documento.cs" />
     <Compile Include="BL_Login.cs" />
+    <Compile Include="BL_Periodo.cs" />
     <Compile Include="BL_Persona.cs" />
     <Compile Include="BL_PerUsuGruAcc.cs" />
     <Compile Include="BL_UniOrgPerExt.cs" />

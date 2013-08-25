@@ -42,8 +42,12 @@
   <ItemGroup>
     <Compile Include="Constante\BE_Req_Constante.cs" />
     <Compile Include="Constante\BE_Res_Constante.cs" />
+    <Compile Include="Documento\BE_Req_Documento.cs" />
+    <Compile Include="Documento\BE_Res_Documento.cs" />
     <Compile Include="Login\BE_Req_Login.cs" />
     <Compile Include="Login\BE_Res_Login.cs" />
+    <Compile Include="Periodo\BE_Req_Periodo.cs" />
+    <Compile Include="Periodo\BE_Res_Periodo.cs" />
     <Compile Include="Persona\BE_Req_Persona.cs" />
     <Compile Include="Persona\BE_Res_Persona.cs" />
     <Compile Include="PerUsuGruAcc\BE_Req_PerUsuGruAcc.cs" />

@@ -45,7 +45,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAConstante.cs" />
+    <Compile Include="DADocumento.cs" />
     <Compile Include="DALogin.cs" />
+    <Compile Include="DAPeriodo.cs" />
     <Compile Include="DAPersona.cs" />
     <Compile Include="DAPerUsuGruAcc.cs" />
     <Compile Include="DAUniOrgPerExt.cs" />
