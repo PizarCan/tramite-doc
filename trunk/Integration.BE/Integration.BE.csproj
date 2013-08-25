@@ -44,6 +44,8 @@
     <Compile Include="Constante\BE_Res_Constante.cs" />
     <Compile Include="Login\BE_Req_Login.cs" />
     <Compile Include="Login\BE_Res_Login.cs" />
+    <Compile Include="Persona\BE_Req_Persona.cs" />
+    <Compile Include="Persona\BE_Res_Persona.cs" />
     <Compile Include="PerUsuGruAcc\BE_Req_PerUsuGruAcc.cs" />
     <Compile Include="PerUsuGruAcc\BE_Res_PerUsuGruAcc.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
