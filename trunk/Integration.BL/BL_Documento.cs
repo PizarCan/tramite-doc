@@ -17,5 +17,30 @@ namespace Integration.BL
             return ObjCorrelativo.getCorrelativoBynDocTipo_nPrdCodigo(Request);
 
         }
+        public BE_Res_Documento getDocumentoBycDocNDoc_nDocTipo(BE_Req_Documento Request)
+        {
+
+            DADocumento ObjDocumento = new DADocumento();
+            return ObjDocumento.getDocumentoBycDocNDoc_nDocTipo(Request);
+
+        }
+        public BE_Res_Documento getTipoPersona(BE_Req_Documento Request)
+        {
+
+            DADocumento ObjDocumento = new DADocumento();
+            return ObjDocumento.getTipoPersona(Request);
+
+        }
+        public DateTime getFechaActual()
+        {
+            DADocumento ObjDocumento = new DADocumento();
+            return ObjDocumento.getFechaActual();
+        }
+        public Boolean setDocumento(BE_Req_Documento Request)
+        {
+            DADocumento ObjDocumento = new DADocumento();
+            return ObjDocumento.setDocumento(Request);
+        }
+
     }
 }
