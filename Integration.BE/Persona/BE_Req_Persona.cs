@@ -10,6 +10,9 @@ namespace Integration.BE.Persona
         public string cPerApellido { get; set; }
         public int nPerRelTipo { get; set; }
         public string cPerRelTipo { get; set; }
-
+        public string cPerNombre { get; set; }
+        public string cUbiGeoCodigo { get; set; }
+        public int nPerTipo { get; set; }
+        public string cPerCodigo { get; set; }
     }
 }

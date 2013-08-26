@@ -30,6 +30,7 @@ Partial Class Forms_RegDocumento
                 If Session("RegPersona") = True Then btnCrearPersona.Visible = True Else btnCrearPersona.Visible = False
             End If
         End If
+        btnGrabar.Attributes.Add("onclick", "javascript:if(confirm('Está Seguro de Grabar')== false) return false;")
     End Sub
 
     Private Function cboTipDocumentos(ByVal nConCodigo As Integer, ByVal nConValor As Integer, Optional ByVal ConLeft As Integer = 0, Optional ByVal ConValLeft As Integer = 0, Optional ByVal ConRight As Integer = 0, Optional ByVal ConValRight As Integer = 0, Optional ByVal NotIn As String = "") As Integer
@@ -46,6 +47,7 @@ Partial Class Forms_RegDocumento
         ListaDocumentos = objBL.ListarConstantes(Request)
         If ListaDocumentos.Count > 0 Then
             cboTipDoc.Items.Insert(0, "<Seleccione>")
+            cboTipDoc.Items(0).Value = 0
             Dim i As Integer = 1
             For Each ResDocumentos As BE_Res_Constante In ListaDocumentos
                 cboTipDoc.Items.Add(i)
@@ -208,6 +210,7 @@ Partial Class Forms_RegDocumento
         ListaUniOrg = objBL.ObtenerInstitucionesBycPerCodigo(Request)
         If ListaUniOrg.Count > 0 Then
             cboInstDestino.Items.Insert(0, "Seleccione Institucion")
+            cboInstDestino.Items(0).Value = 0
             Dim i As Integer = 1
             For Each ResUniOrg As BE_Res_UniOrgPerExt In ListaUniOrg
                 cboInstDestino.Items.Add(i)
@@ -244,24 +247,105 @@ Partial Class Forms_RegDocumento
     End Sub
 
     Protected Sub btnGrabar_Click(sender As Object, e As System.EventArgs) Handles btnGrabar.Click
-        If Val(cboTipDoc.SelectedValue) <> 0 AndAlso txtPerRemite.Text <> "" AndAlso Val(cboAreaDestino.SelectedValue) <> 0 AndAlso txtAsunto.Text <> "" AndAlso txtDetalle.Text <> "" AndAlso txtNumDocumento.Text <> "" AndAlso txtFecha.Text <> "" AndAlso lblCodPerDestino.Text.Trim <> "" AndAlso lblCodPerRemite.Text.Trim <> "" AndAlso lblCodPerRegistra.Text.Trim Then
-            'Dim NewCodDoc As String
-            'Dim FechaActual As String
-            'Dim PerRelSolicita As Integer
+        If Val(cboTipDoc.SelectedValue) <> 0 AndAlso txtPerRemite.Text <> "" AndAlso Val(cboAreaDestino.SelectedValue) <> 0 AndAlso txtAsunto.Text <> "" AndAlso txtDetalle.Text <> "" AndAlso txtNumDocumento.Text <> "" AndAlso txtFecha.Text <> "" AndAlso lblCodPerDestino.Text.Trim <> "" AndAlso lblCodPerRemite.Text.Trim <> "" AndAlso lblCodPerRegistra.Text.Trim <> "" Then
+            Dim NewCodDoc As String
+            Dim FechaActual As DateTime
+            Dim PerRelSolicita As Integer
 
             Dim UORemCodigo As Integer = 1
-            'Buscar Existencia del Documento
-            'If Clase.objBusNumDocumento(Trim(txtNumDocumento.Text), cboTipDoc.SelectedValue, MyTrans, cn).Rows.Count > 0 Then
-            '    Response.Write("<P style=Color:Red>Ya Existe El Número de Documento</P>")
-            '    Exit Sub
-            'End If
 
-            'GENERA NUEVO NUMERO
-            'NewCodDoc = Clase.objGeneraCodDoc(MyTrans, cn)
-            'Session("DocCodReg") = NewCodDoc
-            'FechaActual = Clase.FecActual(MyTrans, cn)
+            'BUSCAR SI EXISTE EL NUM DE DOCUMENTO
+            Dim ReqDocumento As BE_Req_Documento = New BE_Req_Documento()
+            Dim objBLDoc As BL_Documento = New BL_Documento()
+            Dim ResDocumento As BE_Res_Documento = New BE_Res_Documento()
+            ReqDocumento.nDocTipo = cboTipDoc.SelectedValue
+            ReqDocumento.cDocNDoc = Trim(txtNumDocumento.Text)
+            ResDocumento = objBLDoc.getDocumentoBycDocNDoc_nDocTipo(ReqDocumento)
 
-            'Rs = Clase.objTipPersona(lblCodPerRemite.Text, MyTrans, cn)
+            If ResDocumento.cDocCodigo <> "" Then
+                Response.Write("<P style=Color:Red>Ya Existe El Número de Documento</P>")
+                Exit Sub
+            End If
+
+            'GENERAR NUEVO NUMERO
+            Dim Clase As New clsConfiguration
+            NewCodDoc = Clase.objGeneraCodDoc(objBLDoc.getFechaActual)
+            Session("DocCodReg") = NewCodDoc
+            'FechaActual = Format(objBLDoc.getFechaActual, "MM/dd/yyyy HH:mm:ss")
+            FechaActual = objBLDoc.getFechaActual
+
+            ReqDocumento.cPerCodigo = lblCodPerRemite.Text
+            ResDocumento = objBLDoc.getTipoPersona(ReqDocumento)
+
+            If ResDocumento.cPerCodigo <> "" Then
+                If Val(ResDocumento.nAdministrativo) > 0 Then
+                    PerRelSolicita = 1
+                    'ElseIf Val(Rs.Rows.Item(0).Item(2)) > 0 Then
+                    '    PerRelSolicita = 2
+                ElseIf Val(ResDocumento.nAlumno) > 0 Then
+                    PerRelSolicita = 3
+                Else
+                    PerRelSolicita = 4
+                End If
+            End If
+
+            Dim ReqUniOrgPerExt As BE_Req_UniOrgPerExt = New BE_Req_UniOrgPerExt()
+            Dim BLUniOrg As BL_UniOrgPerExt = New BL_UniOrgPerExt()
+            Dim ListaUniOrg As New List(Of BE_Res_UniOrgPerExt)
+            ReqUniOrgPerExt.cPerCodigo = lblCodPerRemite.Text
+            ListaUniOrg = BLUniOrg.ObtenerUniOrgBycPerCodigo(ReqUniOrgPerExt)
+            If ListaUniOrg.Count > 0 Then
+                UORemCodigo = ListaUniOrg(0).nUniOrgCodigo
+            End If
+            Dim DocPerTipo As Integer
+            DocPerTipo = 8
+            If Session("MesaPartesArea") = True Then DocPerTipo = 4
+            Dim nPrdCodigo As Integer = 0
+            Dim ReqPeriodo As BE_Req_Periodo = New BE_Req_Periodo()
+            Dim objBL As BL_Periodo = New BL_Periodo()
+            Dim ResPeriodo As BE_Res_Periodo = New BE_Res_Periodo()
+            ReqPeriodo.nPrdActividad = 1
+            ResPeriodo = objBL.get_PeriodoActual_ByActividad(ReqPeriodo)
+            Dim PrdActual As Integer
+            PrdActual = ResPeriodo.nPrdCodigo
+
+            'Registrar Documento
+            ReqDocumento.cDocCodigo = NewCodDoc
+            ReqDocumento.dDocFecha = FechaActual
+            ReqDocumento.cDocObserv = txtObservacion.Text
+            ReqDocumento.nDocTipo = cboTipDoc.SelectedValue
+            ReqDocumento.nDocEstado = 6318
+            ReqDocumento.CodPerSolicita = lblCodPerRemite.Text
+            ReqDocumento.PerRelSolicita = PerRelSolicita
+            ReqDocumento.CodPerRecibe = lblCodPerDestino.Text
+            ReqDocumento.CodUODestino = cboAreaDestino.SelectedValue
+            ReqDocumento.Asunto = txtAsunto.Text
+            ReqDocumento.Detalle = txtDetalle.Text
+            ReqDocumento.dFechaIni = txtFecha.Text
+            ReqDocumento.dFechaFin = txtFecha.Text
+            ReqDocumento.cDocNDoc = txtNumDocumento.Text
+            ReqDocumento.CodPerRegistra = lblCodPerRegistra.Text
+            ReqDocumento.CodUORemite = UORemCodigo
+            ReqDocumento.nDocPerTipo = DocPerTipo
+            ReqDocumento.nPrdCodigo = PrdActual
+            Dim registra As Boolean = False
+
+            If (objBLDoc.setDocumento(ReqDocumento)) Then
+                registra = True
+            End If
+
+            'Clase.objTransanccion(406304, Session("PerCodigo"), MyTrans, cn, "Doc:" & NewCodDoc & "Destino:" & lblCodPerDestino.Text)
+
+
+            If registra Then
+                Response.Write("<script language='javascript'>")
+                Response.Write("alert ('Documento Enviado')")
+                Response.Write("</script>")
+            Else
+                Response.Write("<script language='javascript'>")
+                Response.Write("alert ('No Se Completo La Tranzacción')")
+                Response.Write("</script>")
+            End If
 
         Else
             Response.Write("Faltan Algunos Datos")
