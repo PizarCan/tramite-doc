@@ -17,5 +17,13 @@ namespace Integration.BL
             return ObjConstantes.ListarConstantes(Request);
 
         }
+
+        public IList<BE_Res_Constante> Get_ConstantesBynConValor(BE_Req_Constante Request)
+        {
+
+            DAConstante ObjConstantes = new DAConstante();
+            return ObjConstantes.Get_ConstantesBynConValor(Request);
+
+        }
     }
 }

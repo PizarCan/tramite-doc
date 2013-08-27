@@ -15,5 +15,7 @@ namespace Integration.BE.Documento
         public DateTime FechaActual { get; set; }
         public int nAdministrativo { get; set; }
         public int nAlumno { get; set; }
+        public DateTime dDocFecha { get; set; }
+        public string cPerApellido { get; set; }
     }
 }

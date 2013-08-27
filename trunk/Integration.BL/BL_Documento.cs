@@ -31,6 +31,13 @@ namespace Integration.BL
             return ObjDocumento.getTipoPersona(Request);
 
         }
+        public BE_Res_Documento getUltimoDocumentoBycPerCodigo(BE_Req_Documento Request)
+        {
+
+            DADocumento ObjDocumento = new DADocumento();
+            return ObjDocumento.getUltimoDocumentoBycPerCodigo(Request);
+
+        }
         public DateTime getFechaActual()
         {
             DADocumento ObjDocumento = new DADocumento();
