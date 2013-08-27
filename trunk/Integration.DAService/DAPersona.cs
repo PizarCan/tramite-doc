@@ -121,7 +121,6 @@ namespace Integration.DAService
             return Item;
         }
 
-
         public Boolean setPersona(BE_Req_Persona Request)
         {
             Boolean Item = new Boolean();
@@ -172,5 +171,7 @@ namespace Integration.DAService
             }
             return Item;
         }
+
+
     }
 }

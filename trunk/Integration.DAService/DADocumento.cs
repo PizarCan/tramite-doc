@@ -193,6 +193,54 @@ namespace Integration.DAService
             return Item;
         }
 
+        public Boolean setCopiaDocumento(BE_Req_Documento Request)
+        {
+            Boolean Item = new Boolean();
+            string codigo = "";
+            try
+            {
+                clsConection Obj = new clsConection();
+                string Cadena = Obj.GetConexionString("Naylamp");
+
+                using (SqlConnection cn = new SqlConnection(Cadena))
+                {
+                    cn.Open();
+
+                    using (SqlCommand cm = new SqlCommand())
+                    {
+                        cm.CommandText = "sp_set_CopiaDocumentoPersona";
+                        cm.CommandType = CommandType.StoredProcedure;
+                        cm.Parameters.AddWithValue("cDocCodigo", Request.cDocCodigo);
+                        cm.Parameters.AddWithValue("cPerCodigo", Request.cPerCodigo);
+                        cm.Connection = cn;
+                        using (SqlDataReader dr = cm.ExecuteReader())
+                        {
+                            while (dr.Read())
+                            {
+                                codigo = dr.GetString(dr.GetOrdinal("cDocCodigo")).ToString();
+                            }
+                        }
+
+                        if (codigo.Equals(""))
+                        {
+                            Item = false;
+                        }
+                        else
+                        {
+                            Item = true;
+                        }
+
+                    }
+                }
+
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            return Item;
+        }
+
         public DateTime getFechaActual()
         { 
             DateTime FechaActual = new DateTime();
