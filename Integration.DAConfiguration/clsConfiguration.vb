@@ -1,4 +1,6 @@
 ﻿Public Class clsConfiguration
+    
+
     Public Function DBTilde(ByVal Expresion As String) As String
         Dim nCount As Long
         Dim strOut As String = String.Empty

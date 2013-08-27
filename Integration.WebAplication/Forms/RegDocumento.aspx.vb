@@ -385,4 +385,10 @@ Partial Class Forms_RegDocumento
         script = "<script Language=JavaScript>window.open('RegPersona.aspx','RegPersona','scrollbars=yes,status=yes,height=350,width=600')</script>"
         Response.Write(script)
     End Sub
+
+    Protected Sub btnConCopia_Click(sender As Object, e As System.EventArgs) Handles btnConCopia.Click
+        Dim script As String
+        script = "<script Language=JavaScript>window.open('ConCopia.aspx?DocCodigo=" + Session("DocCodReg") + "','Copia','scrollbars=yes,status=yes,height=350,width=550')</script>"
+        Response.Write(script)
+    End Sub
 End Class

@@ -197,9 +197,10 @@
                                     </td>
                                     <td>
                                         <asp:DropDownList ID="cboInstDestino" runat="server" Width="233px" AutoPostBack="True"
-                                            Height="24px" Font-Size="XX-Small">
+                                            Height="24px" Font-Size="X-Small">
                                         </asp:DropDownList>
-                                        <asp:DropDownList ID="cboAreaDestino" runat="server" Width="233px" Font-Size="XX-Small">
+                                        <asp:DropDownList ID="cboAreaDestino" runat="server" Width="233px" 
+                                            Font-Size="X-Small">
                                         </asp:DropDownList>
                                     </td>
                                 </tr>
@@ -261,7 +262,7 @@
                                     </td>
                                     <td>
                                         <asp:Button ID="btnConCopia" runat="server" Width="120px" Text="Con Copia a :" Height="23px"
-                                            Enabled="False" CssClass="Boton"></asp:Button>
+                                            Enabled="true" CssClass="Boton"></asp:Button>
                                     </td>
                                 </tr>
                             </table>

@@ -41,6 +41,11 @@ namespace Integration.BL
             DADocumento ObjDocumento = new DADocumento();
             return ObjDocumento.setDocumento(Request);
         }
+        public Boolean setCopiaDocumento(BE_Req_Documento Request)
+        {
+            DADocumento ObjDocumento = new DADocumento();
+            return ObjDocumento.setCopiaDocumento(Request);
+        }
 
     }
 }
