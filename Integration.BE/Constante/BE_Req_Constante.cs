@@ -14,5 +14,6 @@ namespace Integration.BE.Constante
         public int ConRight { get; set; }
         public int ConValRight { get; set; }
         public string NotIn { get; set; }
+        public string cConValor { get; set; }
     }
 }

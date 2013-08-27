@@ -32,3 +32,4 @@ E:\Proyectos\Tramite documentario\IntegrationSystem\Integration.DataIntegration\
 E:\Proyectos\Tramite documentario\IntegrationSystem\Integration.DataIntegration\obj\Debug\Integration.DataIntegration.dll
 E:\Proyectos\Tramite documentario\IntegrationSystem\Integration.DataIntegration\obj\Debug\Integration.DataIntegration.xml
 E:\Proyectos\Tramite documentario\IntegrationSystem\Integration.DataIntegration\obj\Debug\Integration.DataIntegration.pdb
+E:\Proyectos\Tramite documentario\IntegrationSystem\Integration.DataIntegration\obj\Debug\Integration.DataIntegration.vbprojResolveAssemblyReference.cache

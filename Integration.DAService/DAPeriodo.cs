@@ -50,5 +50,40 @@ namespace Integration.DAService
             return Item;
         }
 
+        public DataTable GetPeriodosByActividad(BE_Req_Periodo Request)
+        {
+            DataTable Rs = new DataTable();
+            try
+            {
+                clsConection Obj = new clsConection();
+                string Cadena = Obj.GetConexionString("Naylamp");
+
+                using (SqlConnection cn = new SqlConnection(Cadena))
+                {
+                    cn.Open();
+
+                    using (SqlCommand cm = new SqlCommand())
+                    {
+                        cm.CommandText = "sp_get_PeriodosByActividad";
+                        cm.CommandType = CommandType.StoredProcedure;
+                        cm.Parameters.AddWithValue("nPrdActividad", Request.nPrdActividad);
+                        cm.Connection = cn;
+
+                        using (SqlDataReader dr = cm.ExecuteReader())
+                        {
+                            Rs.Load(dr);
+                        }
+                    }
+                }
+
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+
+            return Rs;
+        }
+
     }
 }

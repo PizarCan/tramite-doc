@@ -130,6 +130,45 @@ namespace Integration.DAService
             return Item;
         }
 
+        public BE_Res_Documento getUltimoDocumentoBycPerCodigo(BE_Req_Documento Request)
+        {
+            BE_Res_Documento Item = new BE_Res_Documento();
+            try
+            {
+                clsConection Obj = new clsConection();
+                string Cadena = Obj.GetConexionString("Naylamp");
+
+                using (SqlConnection cn = new SqlConnection(Cadena))
+                {
+                    cn.Open();
+
+                    using (SqlCommand cm = new SqlCommand())
+                    {
+                        cm.CommandText = "sp_get_UltimoDocumentoBycPerCodigo";
+                        cm.CommandType = CommandType.StoredProcedure;
+                        cm.Parameters.AddWithValue("cPerCodigo", Request.cPerCodigo);
+                        cm.Connection = cn;
+                        using (SqlDataReader dr = cm.ExecuteReader())
+                        {
+                            while (dr.Read())
+                            {
+                                Item.cDocNDoc = dr.GetString(dr.GetOrdinal("cDocNDoc"));
+                                Item.dDocFecha = dr.GetDateTime(dr.GetOrdinal("dDocFecha"));
+                                Item.cPerApellido = dr.GetString(dr.GetOrdinal("cPerApellido"));
+                            }
+                        }
+
+                    }
+                }
+
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            return Item;
+        }
+
         public Boolean setDocumento(BE_Req_Documento Request)
         {
             Boolean Item = new Boolean();
