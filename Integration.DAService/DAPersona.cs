@@ -31,7 +31,7 @@ namespace Integration.DAService
                         cm.Parameters.AddWithValue("cPerApellido", Request.cPerApellido);
                         cm.Parameters.AddWithValue("cPerNombre", Request.cPerNombre);
                         cm.Connection = cn;
-                        
+
                         using (SqlDataReader dr = cm.ExecuteReader())
                         {
                             Rs.Load(dr);
@@ -172,6 +172,49 @@ namespace Integration.DAService
             return Item;
         }
 
+        public string getDelegadoAnduser(BE_Req_Persona Request)
+        {
+            string codigo = "";
+            try
+            {
+                clsConection Obj = new clsConection();
+                string Cadena = Obj.GetConexionString("Naylamp");
 
+                using (SqlConnection cn = new SqlConnection(Cadena))
+                {
+                    cn.Open();
+
+                    using (SqlCommand cm = new SqlCommand())
+                    {
+                        cm.CommandText = "sp_get_UserAndDelegado";
+                        cm.CommandType = CommandType.StoredProcedure;
+                        cm.Parameters.AddWithValue("cPerCodigo", Request.cPerCodigo);
+                        cm.Connection = cn;
+                        using (SqlDataReader dr = cm.ExecuteReader())
+                        {
+                            while (dr.Read())
+                            {
+                                codigo = dr.GetString(dr.GetOrdinal("cPerCodigo")).ToString();
+                            }
+                            if (codigo.Equals(""))
+                            {
+                                codigo = Request.cPerCodigo;
+                            }
+                            else
+                            {
+                                codigo += Request.cPerCodigo;
+                            }
+                        }
+
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            return codigo;
+
+        }
     }
 }

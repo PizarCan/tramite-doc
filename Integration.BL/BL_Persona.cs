@@ -32,5 +32,11 @@ namespace Integration.BL
             DAPersona ObjPersona = new DAPersona();
             return ObjPersona.setPersona(Request);
         }
+
+        public string getDelegadoAnduser(BE_Req_Persona Request)
+        {
+            DAPersona ObjPersona = new DAPersona();
+            return ObjPersona.getDelegadoAnduser(Request);
+        }
     }
 }

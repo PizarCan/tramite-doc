@@ -5,6 +5,8 @@ using System.Text;
 using Integration.BE.Documento;
 using Integration.BL;
 using Integration.DAService;
+using System.Data;
+using System.Data.SqlClient;
 
 namespace Integration.BL
 {
@@ -52,6 +54,14 @@ namespace Integration.BL
         {
             DADocumento ObjDocumento = new DADocumento();
             return ObjDocumento.setCopiaDocumento(Request);
+        }
+
+        public DataTable getBuscaDocumentos(BE_Req_Documento Request)
+        {
+
+            DADocumento ObjDocumento = new DADocumento();
+            return ObjDocumento.getBuscaDocumentos(Request);
+
         }
 
     }
