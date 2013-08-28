@@ -30,6 +30,14 @@ namespace Integration.BE.Documento
         public int CodUODestino { get; set; }
         public int DocEstado { get; set; }
 
+        public int nPerRemFiltro { get; set; }
+        public int nPerRecFiltro { get; set; }
+        public int nDocNumFiltro { get; set; }
+        public int nItemFiltro { get; set; }
+        public int nAsuFiltro { get; set; }
+        public string cDocConContenido { get; set; }
+        public string cInvPerCodigo { get; set; }
+        public int nFilMes { get; set; }
 
     }
 }

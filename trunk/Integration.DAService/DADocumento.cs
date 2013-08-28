@@ -317,5 +317,70 @@ namespace Integration.DAService
             return FechaActual;
         }
 
+        public DataTable getBuscaDocumentos(BE_Req_Documento Request)
+        {
+            BE_Res_Documento Item = new BE_Res_Documento();
+            DataTable Rs = new DataTable();
+            try
+            {
+                clsConection Obj = new clsConection();
+                string Cadena = Obj.GetConexionString("Naylamp");
+
+                using (SqlConnection cn = new SqlConnection(Cadena))
+                {
+                    cn.Open();
+
+                    using (SqlCommand cm = new SqlCommand())
+                    {
+                        cm.CommandText = "SP_TraDoc_Procesos";
+                        cm.CommandType = CommandType.StoredProcedure;
+                        cm.Parameters.AddWithValue("Opcion", 1);
+                        cm.Parameters.AddWithValue("cPerCodigo", Request.cPerCodigo);
+                        cm.Parameters.AddWithValue("nPerRemFiltro", Request.nPerRemFiltro);
+                        cm.Parameters.AddWithValue("nPerRecFiltro", Request.nPerRecFiltro);
+                        cm.Parameters.AddWithValue("nDocNumFiltro", Request.nDocNumFiltro);
+                        cm.Parameters.AddWithValue("cDocNDoc", Request.cDocNDoc);
+                        cm.Parameters.AddWithValue("nItemFiltro", Request.nItemFiltro);
+                        cm.Parameters.AddWithValue("nAsuFiltro", Request.nAsuFiltro);
+                        cm.Parameters.AddWithValue("cDocConContenido", Request.cDocConContenido);
+                        cm.Parameters.AddWithValue("nPrdCodigo", Request.nPrdCodigo);
+                        cm.Parameters.AddWithValue("nDocTipo", Request.nDocTipo);
+                        cm.Parameters.AddWithValue("nFilMes", Request.nFilMes);
+                        cm.Parameters.AddWithValue("cInvPerCodigo", Request.cInvPerCodigo);
+                        cm.Connection = cn;
+                        using (SqlDataReader dr = cm.ExecuteReader())
+                        {
+                            //while (dr.Read())
+                            //{
+                                //Item.cDocNDoc = dr.GetString(dr.GetOrdinal("cDocNDoc"));
+                                //Item.cDocCodigo = dr.GetString(dr.GetOrdinal("cDocCodigo"));
+                                //Item.dFechaIni = dr.GetDateTime(dr.GetOrdinal("dFechaIni"));
+                                //Item.dDocFecha = dr.GetDateTime(dr.GetOrdinal("DocFecha"));
+                                //Item.PerRemite = dr.GetString(dr.GetOrdinal("PerRemite"));
+                                //Item.PerRecibe = dr.GetString(dr.GetOrdinal("PerRecibe"));
+                                //Item.Asunto = dr.GetString(dr.GetOrdinal("Asunto"));
+                                //Item.UORemCodigo = dr.GetInt32(dr.GetOrdinal("UORemCodigo"));
+                                //Item.UORecTipo = dr.GetInt32(dr.GetOrdinal("UORecTipo"));
+                                //Item.UORemTipo = dr.GetInt32(dr.GetOrdinal("UORemTipo"));
+                                //Item.DocTipo = dr.GetString(dr.GetOrdinal("DocTipo"));
+                                //Item.Archivo = dr.GetString(dr.GetOrdinal("Archivo"));
+                                //Item.Archiv = dr.GetString(dr.GetOrdinal("Archiv"));
+                                //Item.DocEstado = dr.GetString(dr.GetOrdinal("DocEstado"));
+                            //}
+                            Rs.Load(dr);
+                        }
+
+                    }
+                }
+
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            //return Item;
+            return Rs;
+        }
+
     }
 }
