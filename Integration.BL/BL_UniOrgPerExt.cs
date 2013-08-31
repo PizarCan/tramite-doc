@@ -5,12 +5,14 @@ using System.Text;
 using Integration.BE.UniOrgPerExt;
 using Integration.BL;
 using Integration.DAService;
+using System.Data;
+using System.Data.SqlClient;
 
 namespace Integration.BL
 {
     public class BL_UniOrgPerExt
     {
-        public IList<BE_Res_UniOrgPerExt> ObtenerUniOrgBycPerCodigo(BE_Req_UniOrgPerExt Request)
+        public DataTable ObtenerUniOrgBycPerCodigo(BE_Req_UniOrgPerExt Request)
         {
 
             DAUniOrgPerExt UniOrgPersona = new DAUniOrgPerExt();

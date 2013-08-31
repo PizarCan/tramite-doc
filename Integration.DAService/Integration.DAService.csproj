@@ -52,6 +52,7 @@
     <Compile Include="DAPerUsuGruAcc.cs" />
     <Compile Include="DAUbigeo.cs" />
     <Compile Include="DAUniOrgPerExt.cs" />
+    <Compile Include="DA_TraDoc.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

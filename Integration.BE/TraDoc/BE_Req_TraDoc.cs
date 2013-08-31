@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Integration.BE.Documento
+namespace Integration.BE.TraDoc
 {
-    public class BE_Req_Documento
+    public class BE_Req_TraDoc
     {
+
         public string cPerCodigo { get; set; }
         public int nPrdCodigo { get; set; }
         public int nDocTipo { get; set; }
@@ -25,7 +26,20 @@ namespace Integration.BE.Documento
         public int nDocPerTipo { get; set; }
         public string CodPerRegistra { get; set; }
         public string CodPerRecibe { get; set; }
-        public int CodUODestino { get; set; } 
+        public int CodUODestino { get; set; }
 
+
+        public int NumDocumento { get; set; }
+        public int DocEstado { get; set; }
+
+        public int nPerRemFiltro { get; set; }
+        public int nPerRecFiltro { get; set; }
+        public int nDocNumFiltro { get; set; }
+        public int nItemFiltro { get; set; }
+        public int nAsuFiltro { get; set; }
+        public string cDocConContenido { get; set; }
+        public string cInvPerCodigo { get; set; }
+        public int nFilMes { get; set; }
+        public int iOpcion {get;set;}
     }
 }
