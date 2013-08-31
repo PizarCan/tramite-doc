@@ -12,10 +12,11 @@ namespace Integration.DAService
 {
     public class DAUniOrgPerExt
     {
-        public IList<BE_Res_UniOrgPerExt> ObtenerUniOrgBycPerCodigo(BE_Req_UniOrgPerExt Request)
+        public DataTable ObtenerUniOrgBycPerCodigo(BE_Req_UniOrgPerExt Request)
         {
-            BE_Res_UniOrgPerExt Item = new BE_Res_UniOrgPerExt();
-            var lista = new List<BE_Res_UniOrgPerExt>();
+            //BE_Res_UniOrgPerExt Item = new BE_Res_UniOrgPerExt();
+            // var lista = new List<BE_Res_UniOrgPerExt>();
+            DataTable lista = new DataTable();
 
             try
             {
@@ -28,22 +29,22 @@ namespace Integration.DAService
 
                     using (SqlCommand cm = new SqlCommand())
                     {
-                        cm.CommandText = "sp_UniOrgBycPerCodigo";
+                        cm.CommandText = "SP_TraDoc_Procesos";
                         cm.CommandType = CommandType.StoredProcedure;
                         cm.Parameters.AddWithValue("cPerCodigo", Request.cPerCodigo);
+                        cm.Parameters.AddWithValue("Opcion", 19);
                         cm.Connection = cn;
                         using (SqlDataReader dr = cm.ExecuteReader())
                         {
                             lista.Clear();
-                            while (dr.Read())
-                            {
-                                Item = new BE_Res_UniOrgPerExt();
-                                Item.cIntDescripcion = dr.GetString(dr.GetOrdinal("cIntDescripcion")).Trim();
-                                Item.nUniOrgCodigo = dr.GetInt32(dr.GetOrdinal("nUniOrgCodigo"));
-                                lista.Add(Item);
-                                //dr.NextResult();
-                            }
-                            dr.Close();
+                            //while (dr.Read())
+                            //{
+                            //    Item = new BE_Res_UniOrgPerExt();
+                            //    Item.cIntDescripcion = dr.GetString(dr.GetOrdinal("cIntDescripcion")).Trim();
+                            //    Item.nUniOrgCodigo = dr.GetInt32(dr.GetOrdinal("nUniOrgCodigo"));
+                            //    lista.Add(Item);
+                            //}
+                            lista.Load(dr);
                         }
 
                     }

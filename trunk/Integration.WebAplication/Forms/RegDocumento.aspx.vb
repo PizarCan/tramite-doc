@@ -83,17 +83,13 @@ Partial Class Forms_RegDocumento
 
         Dim Request As BE_Req_UniOrgPerExt = New BE_Req_UniOrgPerExt()
         Dim objBL As BL_UniOrgPerExt = New BL_UniOrgPerExt()
-        Dim ListaUniOrg As New List(Of BE_Res_UniOrgPerExt)
+        Dim ListaUniOrg As New DataTable()
         Request.cPerCodigo = PerCodigo
         ListaUniOrg = objBL.ObtenerUniOrgBycPerCodigo(Request)
-        If ListaUniOrg.Count > 0 Then
-            Dim i As Integer = 0
-            For Each ResUniOrg As BE_Res_UniOrgPerExt In ListaUniOrg
-                cboUO.Items.Add(i)
-                cboUO.Items(i).Text = ResUniOrg.cIntDescripcion
-                cboUO.Items(i).Value = ResUniOrg.nUniOrgCodigo
-                i = i + 1
-            Next
+        If ListaUniOrg.Rows.Count > 0 Then
+            cboUO.DataTextField = "cIntDescripcion"
+            cboUO.DataValueField = "nUniOrgCodigo"
+            cboUO.DataSource = ListaUniOrg
         End If
         Return 1
     End Function
@@ -291,11 +287,11 @@ Partial Class Forms_RegDocumento
 
             Dim ReqUniOrgPerExt As BE_Req_UniOrgPerExt = New BE_Req_UniOrgPerExt()
             Dim BLUniOrg As BL_UniOrgPerExt = New BL_UniOrgPerExt()
-            Dim ListaUniOrg As New List(Of BE_Res_UniOrgPerExt)
+            Dim ListaUniOrg As New DataTable()
             ReqUniOrgPerExt.cPerCodigo = lblCodPerRemite.Text
             ListaUniOrg = BLUniOrg.ObtenerUniOrgBycPerCodigo(ReqUniOrgPerExt)
-            If ListaUniOrg.Count > 0 Then
-                UORemCodigo = ListaUniOrg(0).nUniOrgCodigo
+            If ListaUniOrg.Rows.Count > 0 Then
+                UORemCodigo = ListaUniOrg.Rows(0).Item(0)
             End If
             Dim DocPerTipo As Integer
             DocPerTipo = 8

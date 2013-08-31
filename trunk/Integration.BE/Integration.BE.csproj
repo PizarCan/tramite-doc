@@ -53,6 +53,8 @@
     <Compile Include="PerUsuGruAcc\BE_Req_PerUsuGruAcc.cs" />
     <Compile Include="PerUsuGruAcc\BE_Res_PerUsuGruAcc.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TraDoc\BE_Req_TraDoc.cs" />
+    <Compile Include="TraDoc\BE_Res_TraDoc.cs" />
     <Compile Include="Ubigeo\BE_Req_Ubigeo.cs" />
     <Compile Include="Ubigeo\BE_Res_Ubigeo.cs" />
     <Compile Include="UniOrgPerExt\BE_Req_UniOrgPerExt.cs" />
