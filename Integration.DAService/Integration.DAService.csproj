@@ -46,13 +46,14 @@
   <ItemGroup>
     <Compile Include="DAConstante.cs" />
     <Compile Include="DADocumento.cs" />
+    <Compile Include="DAInterface.cs" />
     <Compile Include="DALogin.cs" />
     <Compile Include="DAPeriodo.cs" />
     <Compile Include="DAPersona.cs" />
     <Compile Include="DAPerUsuGruAcc.cs" />
     <Compile Include="DAUbigeo.cs" />
     <Compile Include="DAUniOrgPerExt.cs" />
-    <Compile Include="DA_TraDoc.cs" />
+    <Compile Include="DATraDoc.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

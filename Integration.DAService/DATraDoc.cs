@@ -9,10 +9,10 @@ using Integration.BE.TraDoc;
 using Integration.Conection;
 namespace Integration.DAService
 {
-    public class DA_TraDoc
+    public class DATraDoc
     {
 
-        public DataTable getBuscaDocumentos(BE_Req_TraDoc Request)
+        public DataTable get_TraDoc_Procesos(BE_Req_TraDoc Request)
         {
             BE_Res_TraDoc Item = new BE_Res_TraDoc();
             DataTable Rs = new DataTable();

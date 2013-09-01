@@ -25,7 +25,16 @@ namespace Integration.BE.Documento
         public int nDocPerTipo { get; set; }
         public string CodPerRegistra { get; set; }
         public string CodPerRecibe { get; set; }
-        public int CodUODestino { get; set; } 
+        public int CodUODestino { get; set; }
+
+        public int FiltroPersona { get; set; }
+        public int FiltroFecha { get; set; }
+        public string cTipoDoc { get; set; }
+        public string cDocEstado { get; set; }
+        public int nDestEstado { get; set; }
+        public string cPerDestCodigo { get; set; }
+        public string cDocPerTipo { get; set; }
+        public string cDocConTipo { get; set; }
 
     }
 }

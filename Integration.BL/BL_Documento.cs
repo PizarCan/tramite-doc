@@ -55,14 +55,33 @@ namespace Integration.BL
             DADocumento ObjDocumento = new DADocumento();
             return ObjDocumento.setCopiaDocumento(Request);
         }
-
-        public DataTable getBuscaDocumentos(BE_Req_Documento Request)
+        public DataTable getDocPendientesConAcuerdo(BE_Req_Documento Request)
         {
 
             DADocumento ObjDocumento = new DADocumento();
-            return ObjDocumento.getBuscaDocumentos(Request);
+            return ObjDocumento.getDocPendientesConAcuerdo(Request);
 
         }
+        public DataTable getDocPendientes(BE_Req_Documento Request)
+        {
 
+            DADocumento ObjDocumento = new DADocumento();
+            return ObjDocumento.getDocPendientes(Request);
+
+        }
+        public DataTable getDocInformacion(BE_Req_Documento Request)
+        {
+
+            DADocumento ObjDocumento = new DADocumento();
+            return ObjDocumento.getDocInformacion(Request);
+
+        }
+        public DataTable getPerCopias(BE_Req_Documento Request)
+        {
+
+            DADocumento ObjDocumento = new DADocumento();
+            return ObjDocumento.getPerCopias(Request);
+
+        }
     }
 }

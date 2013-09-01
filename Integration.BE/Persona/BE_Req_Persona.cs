@@ -14,5 +14,7 @@ namespace Integration.BE.Persona
         public string cUbiGeoCodigo { get; set; }
         public int nPerTipo { get; set; }
         public string cPerCodigo { get; set; }
+        public string cPerParCodigo { get; set; }
+        public int nPerParTipo { get; set; }
     }
 }
