@@ -7,6 +7,7 @@ Imports Integration.BE.Documento
 Imports Integration.BE.Periodo
 Imports Integration.BE.Constante
 Imports Integration.BE.Persona
+Imports Integration.BE.TraDoc
 
 
 Partial Class Forms_Consultas
@@ -135,7 +136,7 @@ Partial Class Forms_Consultas
             End If
         Next
     End Sub
-    
+
     Protected Sub dgBuscar_SelectedIndexChanged(sender As Object, e As System.EventArgs) Handles dgBuscar.SelectedIndexChanged
         Dim script As String
         Dim DocCodigo As String
@@ -151,15 +152,14 @@ Partial Class Forms_Consultas
         Dim nFilTipo As Integer = 0
         If rbtPerRemite.Checked Then nFilTipo = 1
 
-        'Dim cRepComments As String = lblArea.Text
         Response.Write("<script language='javascript'>")
         Response.Write("window.open('Report/frmPEaDReport.aspx?nRepTipo=" & nRepTipo & "&cPerCodigo=" & cPerCodigo & "&nPerRemFiltro=" & nFilTipo & "&nPerRecFiltro=" & IIf(nFilTipo = 0, 1, 0) & "&nPrdCodigo=" & nPrdCodigo & "','Documentos_Diarios')")
         Response.Write("</script>")
     End Sub
-     
+
     Protected Sub btnBuscar_Click(sender As Object, e As System.EventArgs) Handles btnBuscar.Click
         Dim AdmUser As Boolean = False
-        lblError.Text = String.Empty 
+        lblError.Text = String.Empty
         Dim ReqPersona As BE_Req_Persona = New BE_Req_Persona()
         ReqPersona.cPerCodigo = Session("cPerCodigo")
         Dim BL_Per As BL_Persona = New BL_Persona()
@@ -188,7 +188,7 @@ Partial Class Forms_Consultas
         If gvConsultas.Rows.Count = 0 Then
             lblMessage.Text = "EL N° DE DOCUMENTO BUSCADO NO LE CORRESPONDE A SU AREA"
         End If
-         
+
     End Sub
 
     Public Function BuscaDocumentos(ByVal cPerCodigo As String, ByVal nPerRemFiltro As Integer, _
@@ -200,8 +200,8 @@ Partial Class Forms_Consultas
                                                     ByVal nFilMes As Int16, _
                                                     Optional ByVal cInvPerCodigo As String = "") As DataTable
 
-        Dim ReqDocumento As BE_Req_Documento = New BE_Req_Documento()
-        Dim BL_Doc As BL_Documento = New BL_Documento()
+        Dim ReqDocumento As BE_Req_TraDoc = New BE_Req_TraDoc()
+        Dim BL_Doc As BL_TraDoc = New BL_TraDoc()
         ReqDocumento.cPerCodigo = cPerCodigo
         ReqDocumento.nPerRemFiltro = nPerRemFiltro
         ReqDocumento.nPerRecFiltro = nPerRecFiltro
@@ -215,7 +215,7 @@ Partial Class Forms_Consultas
         ReqDocumento.nFilMes = nFilMes
         ReqDocumento.cInvPerCodigo = cInvPerCodigo
 
-        Return BL_Doc.getBuscaDocumentos(ReqDocumento)
+        Return BL_Doc.getDocumentos(ReqDocumento)
 
 
     End Function

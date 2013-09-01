@@ -1,9 +1,13 @@
-﻿
+﻿Imports System.Data
+Imports Integration.BE.Documento
+Imports Integration.BL
+Imports Integration.BE.Interface
+Imports Integration.BE.Constante
+
 Partial Class Forms_DetalleDocumento
     Inherits System.Web.UI.Page
 
     Protected Sub Page_Load(sender As Object, e As System.EventArgs) Handles Me.Load
-        clsConsultasComunes.Ins_User_From_Login(Session("PerCodigo"))
         If Not Page.IsPostBack Then
 
             Dim DocCodigo As String
@@ -12,70 +16,84 @@ Partial Class Forms_DetalleDocumento
             Dim DocumentoEstado As Integer
             Dim CodDestino As String
             Dim DocEstado As String = "6318,6319,6325"
-            Using cn As New SqlConnection(MiConexion)
-                Dim Clase As New clsTraDoc
-                Dim Rs As DataTable
-                Dim i As Integer
-                Dim MyTrans As SqlTransaction
-                Dim PerCodigo As String = Session("PerCodigo")
-                Dim cPerCopCodigo As String = (Request.QueryString("cPerCopCodigo"))
-                Try
-                    If cn.State = ConnectionState.Closed Then
-                        cn.Open()
-                    End If
-                    MyTrans = cn.BeginTransaction
-                    DocCodigo = (Request.QueryString("CodDocumento"))
-                    Session("DocEstModificar") = DocCodigo
-                    TipDoc = "1,2"
-                    TipDocumento = (Request.QueryString("TipoDocumento"))
-                    DocumentoEstado = (Request.QueryString("DocumentoEstado"))
-                    CodDestino = (Request.QueryString("CodDestino"))
-                    If Session("PerDelCodigo") <> System.String.Empty Then
-                        PerCodigo += "','" & Session("PerDelCodigo")
-                    End If
-                    If DocumentoEstado = 1 Then
-                        Rs = Clase.objDocPendientes(MyTrans, cn, PerCodigo, DocEstado, TipDoc, DocCodigo)
-                    Else
-                        DocEstado = "6318,6319, 6320, 6321, 6322, 6323, 6324, 6325,6326, 6328"
-                        Rs = Clase.objDocInformacion(MyTrans, cn, cPerCopCodigo, 1040, DocEstado, TipDoc, DocCodigo, , CodDestino)
-                    End If
-                    lblremitente.Text = Rs.Rows.Item(0).Item(2)
-                    lbldestino.Text = Rs.Rows.Item(0).Item(0)
-                    lblfecha.Text = Rs.Rows.Item(0).Item(9)
-                    lblasunto.Text = Rs.Rows.Item(0).Item(6)
-                    lbldetalle.Text = Rs.Rows.Item(1).Item(6)
-                    lblobservacion.Text = Rs.Rows.Item(0).Item(7)
-                    lblDocNumero.Text = Rs.Rows.Item(0).Item(10)
-                    lblUO.Text = Clase.objInterface(1006, Val(Rs.Rows.Item(0).Item(13)), MyTrans, cn).Rows.Item(0).Item(4)
-                    lblTipoDocumento.Text = Clase.objCargarConstante(MyTrans, cn, 1063, Len(TipDocumento), Len(TipDocumento), TipDocumento, , , ).Rows.Item(0).Item(2)
-                    Rs = Clase.objPerCopia(DocCodigo, MyTrans, cn)
-                    If Rs.Rows.Count > 0 Then
-                        For i = 0 To Rs.Rows.Count - 1
-                            lblCopias.Text = lblCopias.Text & Rs.Rows.Item(i).Item(0) & ";"
-                        Next
-                    End If
 
-                Catch x As Exception
-                    Response.Write("<script language 'javascript'> alert ('Proceso No Válido') </script>")
-                End Try
-            End Using
+            Dim Rs As DataTable
+            Dim i As Integer
+            Dim PerCodigo As String = Session("PerCodigo")
+            Dim cPerCopCodigo As String = (Request.QueryString("cPerCopCodigo"))
+            DocCodigo = (Request.QueryString("CodDocumento"))
+            Session("DocEstModificar") = DocCodigo
+            TipDoc = "1,2"
+            TipDocumento = (Request.QueryString("TipoDocumento"))
+            DocumentoEstado = (Request.QueryString("DocumentoEstado"))
+            CodDestino = (Request.QueryString("CodDestino"))
+            If Session("PerDelCodigo") <> System.String.Empty Then
+                PerCodigo += "','" & Session("PerDelCodigo")
+            End If
+            Dim ReqDoc As BE_Req_Documento = New BE_Req_Documento()
+            ReqDoc.cPerCodigo = PerCodigo
+            Dim ObjDoc As BL_Documento = New BL_Documento()
+
+            If DocumentoEstado = 1 Then
+                ReqDoc.cPerCodigo = PerCodigo
+                ReqDoc.cTipoDoc = TipDoc
+                ReqDoc.cDocEstado = DocEstado
+                ReqDoc.nDestEstado = 1
+                ReqDoc.cDocCodigo = DocCodigo
+                Rs = ObjDoc.getDocPendientes(ReqDoc)
+            Else
+                DocEstado = "6318,6319, 6320, 6321, 6322, 6323, 6324, 6325,6326, 6328"
+                ReqDoc.cPerCodigo = cPerCopCodigo
+                ReqDoc.cDocEstado = DocEstado
+                ReqDoc.cTipoDoc = TipDoc
+                ReqDoc.cDocCodigo = DocCodigo
+                ReqDoc.cDocPerTipo = "5"
+                ReqDoc.cPerDestCodigo = CodDestino
+                Rs = ObjDoc.getDocInformacion(ReqDoc)
+            End If
+            lblremitente.Text = Rs.Rows.Item(0).Item(2)
+            lbldestino.Text = Rs.Rows.Item(0).Item(0)
+            lblfecha.Text = Rs.Rows.Item(0).Item(9)
+            lblasunto.Text = Rs.Rows.Item(0).Item(6)
+            lbldetalle.Text = Rs.Rows.Item(1).Item(6)
+            lblobservacion.Text = Rs.Rows.Item(0).Item(7)
+            lblDocNumero.Text = Rs.Rows.Item(0).Item(10)
+            Dim ReqInt As BE_Req_Interface = New BE_Req_Interface()
+            Dim ObjInt As BL_Interface = New BL_Interface
+            ReqInt.nIntClase = 1006
+            ReqInt.nIntCodigo = Val(Rs.Rows.Item(0).Item(13))
+            Dim ResInt As BE_Res_Interface = New BE_Res_Interface()
+            ResInt = ObjInt.getInterface(ReqInt)
+            lblUO.Text = ResInt.cIntDescripcion
+
+            Dim ReqConst As BE_Req_Constante = New BE_Req_Constante()
+            Dim ObjConst As BL_Constante = New BL_Constante()
+            Dim ResConst As List(Of BE_Res_Constante)
+            ReqConst.nConCodigo = 1063
+            ReqConst.nConValor = Len(TipDocumento)
+            ReqConst.ConLeft = Len(TipDocumento)
+            ReqConst.ConValLeft = TipDocumento
+            ResConst = ObjConst.ListarConstantes(ReqConst)
+            lblTipoDocumento.Text = ResConst.Item(0).cConDescripcion.ToString
+
+            ReqDoc.cDocCodigo = DocCodigo
+            Rs = ObjDoc.getPerCopias(ReqDoc)
+            If Rs.Rows.Count > 0 Then
+                For i = 0 To Rs.Rows.Count - 1
+                    lblCopias.Text = lblCopias.Text & Rs.Rows.Item(i).Item(0) & ";"
+                Next
+            End If
+
 
         End If
     End Sub
 
     Protected Sub btncerrar_Click(sender As Object, e As System.EventArgs) Handles btncerrar.Click
-        Dim script As String
-        'Clase = New clsTraDoc
-        'MyTrans = cn.BeginTransaction
-        Try
-            'Clase.objModEstDocumento(Session("DocEstModificar"), 6319)
-            'Session("DocEstModificar") = ""
-            'MyTrans.Commit()
-            'Clase = Nothing
+        Dim script As String 
+        Try 
             script = "<script Language=JavaScript>window.close()</script>"
             Response.Write(script)
-        Catch x As Exception
-            'MyTrans.Rollback()
+        Catch x As Exception 
             Response.Write(x.Message)
         End Try
     End Sub

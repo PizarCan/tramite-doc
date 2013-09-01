@@ -38,5 +38,17 @@ namespace Integration.BL
             DAPersona ObjPersona = new DAPersona();
             return ObjPersona.getDelegadoAnduser(Request);
         }
+
+        public Boolean setDelegado(BE_Req_Persona Request)
+        {
+            DAPersona ObjPersona = new DAPersona();
+            return ObjPersona.setDelegado(Request);
+        }
+
+        public Boolean delDelegado(BE_Req_Persona Request)
+        {
+            DAPersona ObjPersona = new DAPersona();
+            return ObjPersona.delDelegado(Request);
+        }
     }
 }

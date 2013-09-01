@@ -216,5 +216,92 @@ namespace Integration.DAService
             return codigo;
 
         }
+
+        public Boolean setDelegado(BE_Req_Persona Request)
+        {
+            Boolean Item = new Boolean();
+            string cPerParCodigo = "";
+            try
+            {
+                clsConection Obj = new clsConection();
+                string Cadena = Obj.GetConexionString("Naylamp");
+
+                using (SqlConnection cn = new SqlConnection(Cadena))
+                {
+                    cn.Open();
+
+                    using (SqlCommand cm = new SqlCommand())
+                    {
+                        cm.CommandText = "sp_set_Delegado";
+                        cm.CommandType = CommandType.StoredProcedure;
+                        cm.Parameters.AddWithValue("@PerCodigo", Request.cPerCodigo);
+                        cm.Parameters.AddWithValue("@Parentesco", Request.nPerParTipo);
+                        cm.Parameters.AddWithValue("@DelCodigo", Request.cPerParCodigo);
+                        cm.Connection = cn;
+                        using (SqlDataReader dr = cm.ExecuteReader())
+                        {
+                            while (dr.Read())
+                            {
+                                cPerParCodigo = dr.GetString(dr.GetOrdinal("cPerParCodigo")).ToString();
+                            }
+                        }
+
+                        if (cPerParCodigo.Equals(""))
+                        {
+                            Item = false;
+                        }
+                        else
+                        {
+                            Item = true;
+                        }
+
+                    }
+                }
+
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            return Item;
+        }
+
+        public Boolean delDelegado(BE_Req_Persona Request)
+        {
+            Boolean Item = new Boolean(); 
+            try
+            {
+                clsConection Obj = new clsConection();
+                string Cadena = Obj.GetConexionString("Naylamp");
+
+                using (SqlConnection cn = new SqlConnection(Cadena))
+                {
+                    cn.Open();
+
+                    using (SqlCommand cm = new SqlCommand())
+                    {
+                        cm.CommandText = "sp_del_Delegado";
+                        cm.CommandType = CommandType.StoredProcedure;
+                        cm.Parameters.AddWithValue("@cPerCodigo", Request.cPerCodigo);
+                        cm.Parameters.AddWithValue("@nPerParTipo", Request.nPerParTipo);
+                        cm.Parameters.AddWithValue("@cPerParCodigo", Request.cPerParCodigo);
+                        cm.Connection = cn;
+                        using (SqlDataReader dr = cm.ExecuteReader())
+                        { 
+                            Item = true;
+                        } 
+
+                    }
+                }
+
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            return Item;
+        }
+ 
+
     }
 }

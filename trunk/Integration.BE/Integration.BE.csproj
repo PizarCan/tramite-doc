@@ -44,6 +44,8 @@
     <Compile Include="Constante\BE_Res_Constante.cs" />
     <Compile Include="Documento\BE_Req_Documento.cs" />
     <Compile Include="Documento\BE_Res_Documento.cs" />
+    <Compile Include="Interface\BE_Req_Interface.cs" />
+    <Compile Include="Interface\BE_Res_Interface.cs" />
     <Compile Include="Login\BE_Req_Login.cs" />
     <Compile Include="Login\BE_Res_Login.cs" />
     <Compile Include="Periodo\BE_Req_Periodo.cs" />
