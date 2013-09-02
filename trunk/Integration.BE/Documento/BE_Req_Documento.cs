@@ -35,6 +35,21 @@ namespace Integration.BE.Documento
         public string cPerDestCodigo { get; set; }
         public string cDocPerTipo { get; set; }
         public string cDocConTipo { get; set; }
+        public int nUniOrgCodigo { get; set; }
+
+        public int nEleCodigo { get; set; }
+        public int nCarCodigo { get; set; }
+        public string cCarObs { get; set; }
+        public float nPercent { get; set; }
+        public DateTime dDocTraFec { get; set; }
+        public int nDocTipoNum { get; set; }
+
+        #region DocLink
+            public int nDocLinNum { get; set; }
+            public string cDocLinUrl { get; set; }
+            public int nDocLinTipo { get; set; }
+            public int nDocLinGrupo { get; set; }
+        #endregion
 
     }
 }

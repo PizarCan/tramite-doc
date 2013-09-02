@@ -1,5 +1,10 @@
-﻿Public Class clsConfiguration
-    
+﻿Imports Microsoft.VisualBasic
+Imports System.Data.SqlClient
+Imports System.IO
+Imports System.Data
+
+Public Class clsConfiguration
+
 
     Public Function DBTilde(ByVal Expresion As String) As String
         Dim nCount As Long
@@ -42,12 +47,7 @@
             " select getdate()" & _
             " COMMIT TRAN "
         Time = Format(Date.Now, "HHmmss")
-        'Dim da As New SqlDataAdapter(sql, cn)
-        'da.SelectCommand.Transaction = MyTrans
-        'Dim ds As New DataSet
-        'da.Fill(ds, "Fecha")
         Randomize()
-        'FechaActual = ds.Tables("Fecha").Rows.Item(0).Item(0)
         If pcDocCodigo = vbNullString Then pcDocCodigo = Left(Format(FechaActual, "MMddyyyyHHmmss") & Chr(Rnd(Time) * 50 + 60) & Chr(Rnd(Time) * 50 + 60) & Chr(Rnd(Time) * 50 + 60) & Chr(Rnd(Time) * 50 + 60), 18)
         pcDocCodigo = Replace(pcDocCodigo, "=", "i")
         pcDocCodigo = Replace(pcDocCodigo, ";", "i")
@@ -56,4 +56,5 @@
         pcDocCodigo = Replace(pcDocCodigo, ":", "i")
         Return pcDocCodigo
     End Function
+     
 End Class

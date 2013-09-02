@@ -1,9 +1,13 @@
-﻿
+﻿Imports Integration.BE.Persona
+Imports Integration.BL
+Imports System.Data
+Imports Integration.DAConfiguration
+Imports Integration.BE.Documento
+
 Partial Class Forms_frmAcuMonitor
     Inherits System.Web.UI.Page
 
     Protected Sub Page_Load(sender As Object, e As System.EventArgs) Handles Me.Load
-        clsConsultasComunes.Ins_User_From_Login(Session("PerCodigo"))
         If Not Page.IsPostBack = True Then
             If Session("AcuMonitor") = True Then
                 txtFecIni.Text = Date.Now.Date
@@ -45,35 +49,27 @@ Partial Class Forms_frmAcuMonitor
 
 
     Protected Sub btnBuscar_Click(sender As Object, e As System.EventArgs) Handles btnBuscar.Click
-        Try
-            Limpiar()
-            If txtBuscar.Text.Trim.Length < 4 Then
-                lblError.Text = "Criterio de Búsqueda no Válido"
-                Exit Sub
-            End If
-            Using cn As New SqlConnection(MiConexion)
-                Dim Clase As New clsTraDoc
-                Dim MyTrans As SqlTransaction
-                Dim PerRelacion As String = "1,2,14"
-                Dim Rs As DataTable
+        Limpiar()
+        If txtBuscar.Text.Trim.Length < 4 Then
+            lblError.Text = "Criterio de Búsqueda no Válido"
+            Exit Sub
+        End If
+        Dim Clase As New clsConfiguration
+        Dim PerRelacion As String = "1,2,14"
+        Dim ReqPer As BE_Req_Persona = New BE_Req_Persona()
+        Dim ObjPer As BL_Persona = New BL_Persona()
 
-                If cn.State = ConnectionState.Closed Then
-                    cn.Open()
-                End If
-                MyTrans = cn.BeginTransaction
-                Rs = Clase.objBuscarPersona(MyTrans, cn, Clase.DBTilde(txtBuscar.Text), PerRelacion)
-                If Rs.Rows.Count > 0 Then
-                    gvPersona.Visible = True
-                    gvPersona.DataSource = Rs.DefaultView
-                    gvPersona.DataBind()
-                Else
-                    lblError.Text = "No Hay Regsitros"
-                End If
-
-            End Using
-        Catch ex As Exception
-            lblError.Text = ex.Message
-        End Try
+        Dim Rs As DataTable
+        ReqPer.cPerApellido = Clase.DBTilde(txtBuscar.Text)
+        ReqPer.cPerRelTipo = PerRelacion
+        Rs = ObjPer.ListaPeronas_BycPerApellido_cPerRelTipo(ReqPer)
+        If Rs.Rows.Count > 0 Then
+            gvPersona.Visible = True
+            gvPersona.DataSource = Rs.DefaultView
+            gvPersona.DataBind()
+        Else
+            lblError.Text = "No Hay Regsitros"
+        End If
     End Sub
 
     Sub Limpiar()
@@ -88,93 +84,68 @@ Partial Class Forms_frmAcuMonitor
         lblcPerCodigo.Text = gvPersona.SelectedValue
         lblPersona.Text = gvPersona.Rows(gvPersona.SelectedIndex).Cells(1).Text
         lblArea.Text = gvPersona.Rows(gvPersona.SelectedIndex).Cells(2).Text
-        'gvPersona.DataSource = Nothing
-        'gvPersona.DataBind()
         gvPersona.Visible = False
     End Sub
 
     Protected Sub btnMostrar_Click(sender As Object, e As System.EventArgs) Handles btnMostrar.Click
-        Using cn As New SqlConnection(MiConexion)
-            Dim MyTrans As SqlTransaction
-            Dim Clase As New clsTraDoc
-            Dim Rs As SqlDataReader
-            Try
+        Dim DocEstado As String = "6318,6319,6325"
+        Dim Ini As Date = txtFecIni.Text.Trim
+        Dim Fin As Date = txtFecFin.Text.Trim
+        Dim FecIni As String = Format(Ini, "MM/dd/yyyy")
+        Dim FecFin As String = Format(Fin, "MM/dd/yyyy")
+        Dim Rs As New DataTable
+        Dim ReqPer As BE_Req_Documento = New BE_Req_Documento()
+        Dim ObjDoc As BL_Documento = New BL_Documento()
 
-                If cn.State = ConnectionState.Closed Then
-                    cn.Open()
-                End If
 
-                MyTrans = cn.BeginTransaction
+        If rbnUsuario.Checked Then
+            ReqPer.cPerCodigo = lblcPerCodigo.Text.Trim
+            ReqPer.FiltroPersona = 1
+            ReqPer.FiltroFecha = 0
 
-                Dim DocEstado As String = "6318,6319,6325"
-                Dim Ini As Date = txtFecIni.Text.Trim
-                Dim Fin As Date = txtFecFin.Text.Trim
-                Dim FecIni As String = Format(Ini, "MM/dd/yyyy")
-                Dim FecFin As String = Format(Fin, "MM/dd/yyyy")
+            Rs = ObjDoc.getDocPendientesConAcuerdo(ReqPer)
+        Else
+            ReqPer.cPerCodigo = lblcPerCodigo.Text.Trim
+            ReqPer.FiltroPersona = 0
+            ReqPer.FiltroFecha = 1
+            ReqPer.dFechaIni = FecIni
+            ReqPer.dFechaFin = FecFin
+            Rs = ObjDoc.getDocPendientesConAcuerdo(ReqPer)
+        End If
 
-                If rbnUsuario.Checked Then
-                    Rs = Clase.Get_DocPendientes_With_Acuerdo(lblcPerCodigo.Text.Trim, 1, 0, cn, MyTrans)
-                Else
-                    Rs = Clase.Get_DocPendientes_With_Acuerdo(lblcPerCodigo.Text.Trim, 0, 1, cn, MyTrans, FecIni, FecFin)
-                End If
+        gvAcuerdos.DataSource = Rs
+        gvAcuerdos.DataBind()
 
-                gvAcuerdos.DataSource = Rs
-                gvAcuerdos.DataBind()
+        Rs.Clear()
 
-                Rs.Close()
+        MostrarGrafico(rbnUsuario.Checked, lblcPerCodigo.Text, rbnFecha.Checked, FecIni, FecFin)
 
-                MostrarGrafico(rbnUsuario.Checked, lblcPerCodigo.Text, rbnFecha.Checked, FecIni, FecFin)
+        Dim Row As GridViewRow
+        For Each Row In gvAcuerdos.Rows
+            Dim lnkButon As New LinkButton
 
-                Dim Row As GridViewRow
-                For Each Row In gvAcuerdos.Rows
-                    Dim lnkButon As New LinkButton
+            lnkButon = CType(Row.FindControl("lbnNumDocumento"), LinkButton)
+            lnkButon.OnClientClick = "javascript:(abre('frmAcuerdos.aspx?cDocCodigo=" & gvAcuerdos.DataKeys(Row.RowIndex).Values("cDocCodigo") & "&Tipo=1" & "','Silabo'));"
 
-                    lnkButon = CType(Row.FindControl("lbnNumDocumento"), LinkButton)
-                    lnkButon.OnClientClick = "javascript:(abre('frmAcuerdos.aspx?cDocCodigo=" & gvAcuerdos.DataKeys(Row.RowIndex).Values("cDocCodigo") & "&Tipo=1" & "','Silabo'));"
+        Next
 
-                Next
-
-            Catch x As Exception
-                Response.Write(x.Message)
-            End Try
-        End Using
     End Sub
 
     Sub MostrarGrafico(Optional ByVal PerFiltro As Integer = 0, Optional ByVal cPerCodigo As String = "", _
                             Optional ByVal FecFiltro As Integer = 0, Optional ByVal FecIni As String = "", _
                             Optional ByVal FecFin As String = "")
 
+        'Dim Comando As New DataTable
 
-        'Dim Report As New ReportDocument
-        Dim Comando As New DataTable
+        'Dim ReportRuta As String = String.Empty
 
-        Using Cn As New SqlConnection(TramiteDocumentario.MiConexion)
-            Cn.Open()
-            Dim ReportRuta As String = String.Empty
-            Dim MyTrans As SqlTransaction = Cn.BeginTransaction
 
-            Try
-                Dim clsTraDoc As New clsTraDoc
-                Dim Reader As SqlDataReader = clsTraDoc.Get_Suma_Estado_From_Acuerdos(PerFiltro, lblcPerCodigo.Text, _
-                                                FecFiltro, FecIni, FecFin, MyTrans, Cn)
+        'Dim Reader As SqlDataReader = clsTraDoc.Get_Suma_Estado_From_Acuerdos(PerFiltro, lblcPerCodigo.Text, _
+        '                                FecFiltro, FecIni, FecFin, MyTrans, Cn)
 
-                ReportRuta = Server.MapPath("~/Report/crptAcuEstadistica.rpt")
+        'ReportRuta = Server.MapPath("~/Report/crptAcuEstadistica.rpt")
 
-                Comando.Load(Reader)
-                'Report.Close()
-
-                'Report.Load(ReportRuta)
-                'Report.SetDataSource(Comando)
-
-                MyTrans.Commit()
-                Cn.Close()
-                'Me.crvAcuerdos.ReportSource = Report
-            Catch ex As Exception
-                Throw ex
-            End Try
-
-        End Using
-
+        'Comando.Load(Reader)
     End Sub
 
 

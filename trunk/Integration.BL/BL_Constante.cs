@@ -5,12 +5,13 @@ using System.Text;
 using Integration.BE.Constante;
 using Integration.BL;
 using Integration.DAService;
+using System.Data;
 
 namespace Integration.BL
 {
     public class BL_Constante
     {
-        public IList<BE_Res_Constante> ListarConstantes(BE_Req_Constante Request)
+        public DataTable ListarConstantes(BE_Req_Constante Request)
         {
 
             DAConstante ObjConstantes = new DAConstante();
@@ -24,6 +25,12 @@ namespace Integration.BL
             DAConstante ObjConstantes = new DAConstante();
             return ObjConstantes.Get_ConstantesBynConValor(Request);
 
+        }
+
+        public DataTable GetConstante(BE_Req_Constante Request)
+        {
+            DAConstante ObjConstantes = new DAConstante();
+            return ObjConstantes.GetConstante(Request);
         }
     }
 }

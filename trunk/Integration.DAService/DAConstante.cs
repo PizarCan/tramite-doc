@@ -12,10 +12,9 @@ namespace Integration.DAService
 {
     public class DAConstante
     {
-        public IList<BE_Res_Constante> ListarConstantes(BE_Req_Constante Request)
+        public DataTable ListarConstantes(BE_Req_Constante Request)
         {
-            BE_Res_Constante Item = new BE_Res_Constante();
-            var lista = new List<BE_Res_Constante>();
+            DataTable Item = new DataTable();
 
             try
             {
@@ -37,18 +36,11 @@ namespace Integration.DAService
                         cm.Parameters.AddWithValue("ConRight", Request.ConRight);
                         cm.Parameters.AddWithValue("ConValRight", Request.ConValRight);
                         cm.Parameters.AddWithValue("NotIn", Request.NotIn);
+                        cm.Parameters.AddWithValue("In", Request.cConValor);
                         cm.Connection = cn;
                         using (SqlDataReader dr = cm.ExecuteReader())
                         {
-                            lista.Clear();
-                            while (dr.Read())
-                            {
-                                Item = new BE_Res_Constante();
-                                Item.nConValor = dr.GetInt32(dr.GetOrdinal("nConValor"));
-                                Item.cConDescripcion = dr.GetString(dr.GetOrdinal("cConDescripcion")).Trim();
-                                lista.Add(Item);
-                            }
-                            dr.Close();
+                            Item.Load(dr);
                         }
 
                     }
@@ -59,7 +51,7 @@ namespace Integration.DAService
             {
                 throw;
             }
-            return lista;
+            return Item;
 
         }
 
@@ -109,5 +101,42 @@ namespace Integration.DAService
             return lista;
 
         }
+
+        public DataTable GetConstante(BE_Req_Constante Request)
+        {
+            DataTable Item = new DataTable();
+            
+            try
+            {
+                clsConection Obj = new clsConection();
+                string Cadena = Obj.GetConexionString("Naylamp");
+
+                using (SqlConnection cn = new SqlConnection(Cadena))
+                {
+                    cn.Open();
+
+                    using (SqlCommand cm = new SqlCommand())
+                    {
+                        cm.CommandText = "sp_Get_Constantes_BynConCodigo";
+                        cm.CommandType = CommandType.StoredProcedure;
+                        cm.Parameters.AddWithValue("nConCodigo", Request.nConCodigo);
+                        cm.Parameters.AddWithValue("cConValor", Request.cConValor);
+                        cm.Connection = cn;
+                        using (SqlDataReader dr = cm.ExecuteReader())
+                        {
+                            Item.Load(dr);
+                        }
+
+                    }
+                }
+
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            return Item;
+        }
+
     }
 }

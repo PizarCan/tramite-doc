@@ -3,7 +3,6 @@ Partial Class Forms_frmDocDiarios
     Inherits System.Web.UI.Page
 
     Protected Sub Page_Load(sender As Object, e As System.EventArgs) Handles Me.Load
-        clsConsultasComunes.Ins_User_From_Login(Session("PerCodigo"))
         Try
             If Not Page.IsPostBack Then
                 cldFecha.SelectedDate = Date.Now.Date
@@ -22,36 +21,34 @@ Partial Class Forms_frmDocDiarios
     End Sub
     Sub LoaderData(ByVal dFecha As Date, Optional ByVal Print As Integer = 0)
 
-        Dim Report As New ReportDocument
-        Dim Comando As New DataTable
+        'Dim Report As New ReportDocument
+        'Dim Comando As New DataTable
 
-        'Dim Impresora As New PrinterSettings
+        'Using Cn As New SqlConnection(TramiteDocumentario.MiConexion)
+        '    Cn.Open()
+        '    Dim ReportRuta As String = String.Empty
+        '    Dim MyTrans As SqlTransaction = Cn.BeginTransaction
 
-        Using Cn As New SqlConnection(TramiteDocumentario.MiConexion)
-            Cn.Open()
-            Dim ReportRuta As String = String.Empty
-            Dim MyTrans As SqlTransaction = Cn.BeginTransaction
-
-            Try
-                Dim clsTraDoc As New TramiteDocumentario.clsTraDoc
+        '    Try
+        '        Dim clsTraDoc As New TramiteDocumentario.clsTraDoc
 
 
-                ReportRuta = Server.MapPath("~/Report/crpDocDiarios.rpt")
+        '        ReportRuta = Server.MapPath("~/Report/crpDocDiarios.rpt")
 
-                Comando.Load(clsTraDoc.Get_MesPart_Doc_Diarios(Format(dFecha, "MM/dd/yyyy"), MyTrans, Cn, Session("PerCodigo")))
-                Report.Close()
+        '        Comando.Load(clsTraDoc.Get_MesPart_Doc_Diarios(Format(dFecha, "MM/dd/yyyy"), MyTrans, Cn, Session("PerCodigo")))
+        '        Report.Close()
 
-                Report.Load(ReportRuta)
-                Report.SetDataSource(Comando)
+        '        Report.Load(ReportRuta)
+        '        Report.SetDataSource(Comando)
 
-                MyTrans.Commit()
-                Cn.Close()
-                Me.crptPEaDReport.ReportSource = Report
-            Catch ex As Exception
-                Throw ex
-            End Try
+        '        MyTrans.Commit()
+        '        Cn.Close()
+        '        Me.crptPEaDReport.ReportSource = Report
+        '    Catch ex As Exception
+        '        Throw ex
+        '    End Try
 
-        End Using
+        'End Using
     End Sub
 
 
