@@ -92,7 +92,6 @@ Partial Class Forms_DelegarDocumentos
                 If BL_Per.delDelegado(ReqPer) Then
 
                 End If
-                'clsInsert.DeletePerParentesco(Session("PerCodigo"), cPerDelCodigo, Cn, MyTrans)
             End If
         Next
         LoaderData()

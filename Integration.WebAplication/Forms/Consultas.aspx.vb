@@ -201,7 +201,7 @@ Partial Class Forms_Consultas
                                                     Optional ByVal cInvPerCodigo As String = "") As DataTable
 
         Dim ReqDocumento As BE_Req_TraDoc = New BE_Req_TraDoc()
-        Dim BL_Doc As BL_TraDoc = New BL_TraDoc()
+        Dim BL_TraDoc As BL_TraDoc = New BL_TraDoc()
         ReqDocumento.cPerCodigo = cPerCodigo
         ReqDocumento.nPerRemFiltro = nPerRemFiltro
         ReqDocumento.nPerRecFiltro = nPerRecFiltro
@@ -214,8 +214,9 @@ Partial Class Forms_Consultas
         ReqDocumento.nDocTipo = nDocTipo
         ReqDocumento.nFilMes = nFilMes
         ReqDocumento.cInvPerCodigo = cInvPerCodigo
+        ReqDocumento.iOpcion = 1
 
-        Return BL_Doc.getDocumentos(ReqDocumento)
+        Return BL_TraDoc.get_TraDoc_Procesos(ReqDocumento)
 
 
     End Function

@@ -83,5 +83,58 @@ namespace Integration.BL
             return ObjDocumento.getPerCopias(Request);
 
         }
+        public Boolean updEstadoDocumento(BE_Req_Documento Request)
+        {
+            DADocumento ObjDocumento = new DADocumento();
+            return ObjDocumento.updEstadoDocumento(Request);
+        }
+        public Boolean setDocProProveido(BE_Req_Documento Request)
+        {
+            DADocumento ObjDocumento = new DADocumento();
+            return ObjDocumento.setDocProProveido(Request);
+        }
+        public Boolean setDocTratamiento(BE_Req_Documento Request)
+        {
+            DADocumento ObjDocumento = new DADocumento();
+            return ObjDocumento.setDocTratamiento(Request);
+        }
+        public DataTable getDocConAcuerdo(BE_Req_Documento Request)
+        {
+
+            DADocumento ObjDocumento = new DADocumento();
+            return ObjDocumento.getDocConAcuerdo(Request);
+
+        }
+        public DataTable getDocAcuerdoBySustentar(BE_Req_Documento Request)
+        {
+
+            DADocumento ObjDocumento = new DADocumento();
+            return ObjDocumento.getDocAcuerdoBySustentar(Request);
+
+        }
+        public DataTable getDocAcuerdoAvanceByPersona(BE_Req_Documento Request)
+        {
+
+            DADocumento ObjDocumento = new DADocumento();
+            return ObjDocumento.getDocAcuerdoAvanceByPersona(Request);
+
+        }
+        public Int32 getNumCorrelativoDocTratamiento(BE_Req_Documento Request)
+        {
+
+            DADocumento ObjDocumento = new DADocumento();
+            return ObjDocumento.getNumCorrelativoDocTratamiento(Request);
+
+        }
+        public Boolean setDocIdentifica(BE_Req_Documento Request)
+        {
+            DADocumento ObjDocumento = new DADocumento();
+            return ObjDocumento.setDocIdentifica(Request);
+        }
+        public Boolean setDocLink(BE_Req_Documento Request)
+        {
+            DADocumento ObjDocumento = new DADocumento();
+            return ObjDocumento.setDocLink(Request);
+        }
     }
 }

@@ -41,5 +41,12 @@ namespace Integration.BE.TraDoc
         public string cInvPerCodigo { get; set; }
         public int nFilMes { get; set; }
         public int iOpcion {get;set;}
+
+        public string cDocEstado { get; set; }
+        public int nMesCodigo { get; set; }
+        public string cUniOrgTransferencia { get; set; }
+        public string cDocPerTipo { get; set; }
+
+        public string cFecIni { get; set; }
     }
 }

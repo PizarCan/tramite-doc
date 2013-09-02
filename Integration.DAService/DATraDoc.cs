@@ -42,6 +42,11 @@ namespace Integration.DAService
                         cm.Parameters.AddWithValue("nDocTipo", Request.nDocTipo);
                         cm.Parameters.AddWithValue("nFilMes", Request.nFilMes);
                         cm.Parameters.AddWithValue("cInvPerCodigo", Request.cInvPerCodigo);
+                        cm.Parameters.AddWithValue("cDocEstado", Request.cDocEstado);
+                        cm.Parameters.AddWithValue("nMesCodigo", Request.nMesCodigo);
+                        cm.Parameters.AddWithValue("cUniOrgTransferencia", Request.cUniOrgTransferencia);
+                        cm.Parameters.AddWithValue("cDocPerTipo", Request.cDocPerTipo);
+                        cm.Parameters.AddWithValue("cFecIni", Request.cFecIni);
                         cm.Connection = cn;
                         using (SqlDataReader dr = cm.ExecuteReader())
                         { 
