@@ -1,101 +1,100 @@
-﻿
+﻿Imports Integration.BE.Documento
+Imports Integration.BL
+Imports Integration.BE.Periodo
+Imports System.Data
+Imports Integration.BE.Constante
+Imports Integration.DAConfiguration
+Imports Integration.BE.Persona
+Imports Integration.BE.TraDoc
+
 Partial Class Forms_frmTransBuscar
     Inherits System.Web.UI.Page
 
     Protected Sub Page_Load(sender As Object, e As System.EventArgs) Handles Me.Load
-        clsConsultasComunes.Ins_User_From_Login(Session("PerCodigo"))
         If Not Page.IsPostBack Then
-
             If Session("PerMesaPartes") = True Then
-                Using cn As New SqlConnection(MiConexion)
-                    Dim MiClase As New clsTraDoc
-                    Dim MyTrans As SqlTransaction
-                    Dim MiDataTable As DataTable
-
-                    If cn.State = ConnectionState.Closed Then
-                        cn.Open()
-                    End If
-                    MyTrans = cn.BeginTransaction
-                    Try
-                        MiDataTable = MiClase.objUltDocReg(Session("PerCodigo"), MyTrans, cn)
-                        lblUltimoDoc.Text = "Último Documento Registrado: " & MiDataTable.Rows.Item(0).Item(0) & Space(2) & MiDataTable.Rows.Item(0).Item(1)
-                        MyTrans.Commit()
-                    Catch ex As Exception
-                        MyTrans.Rollback()
-                        Me.lblUltimoDoc.Text = "No Se Puede Mostrar"
-                    End Try
-                End Using
+                Dim ReqDocumento As BE_Req_Documento = New BE_Req_Documento()
+                Dim ObjBL_Doc As BL_Documento = New BL_Documento()
+                Dim ResDocumento As BE_Res_Documento = New BE_Res_Documento()
+                ReqDocumento.cPerCodigo = Session("cPerCodigo")
+                ResDocumento = ObjBL_Doc.getUltimoDocumentoBycPerCodigo(ReqDocumento)
+                If ResDocumento.cDocNDoc <> "" Then
+                    Me.lblUltimoDoc.Text = "Último Documento Registrado: " & ResDocumento.cDocNDoc & Space(2) & ResDocumento.dDocFecha
+                Else
+                    Me.lblUltimoDoc.Text = "No Se Puede Mostrar"
+                End If
             End If
+
             LoaderCombo()
 
         End If
     End Sub
 
     Sub LoaderCombo()
-        Dim MiConexion As String = TramiteDocumentario.MiConexion
-        Using Cn As New SqlConnection(MiConexion)
-            Try
-                Cn.Open()
-                Dim clsTraDoc As New clsTraDoc
-                Dim clsComunes As New clsConsultasComunes
-                Dim MyTrans As SqlTransaction = Cn.BeginTransaction
-                Dim Rs As SqlDataReader = clsTraDoc.Get_Periodo_Administrativo(MyTrans, Cn)
-                cboPeriodo.DataTextField = "cPrdDescripcion"
-                cboPeriodo.DataValueField = "nPrdCodigo"
-                cboPeriodo.DataSource = Rs
-                cboPeriodo.DataBind()
-                Rs.Close()
 
-                cboTipDoc.DataValueField = "nConValor"
-                cboTipDoc.DataTextField = "cConDescripcion"
-                Rs = clsTraDoc.objTipDocumentos(MyTrans, Cn) 'Clase.objCargarConstante(MyTrans, cn, 1063, 4, 1, 8, , , NoMuestra).DefaultView
-                cboTipDoc.DataSource = Rs
-                cboTipDoc.DataBind()
-                Rs.Close()
+        Dim ReqPeriodo As BE_Req_Periodo = New BE_Req_Periodo()
+        Dim BLPeriodo As BL_Periodo = New BL_Periodo()
+        Dim Rs As DataTable = New DataTable
 
-                Rs = clsComunes.Get_Constante(1005, MyTrans, Cn)
-                cboFilMes.DataTextField = "cConDescripcion"
-                cboFilMes.DataValueField = "nConValor"
-                cboFilMes.DataSource = Rs
-                cboFilMes.DataBind()
-                Rs.Close()
+        ReqPeriodo.nPrdActividad = 1
+        Rs = BLPeriodo.GetPeriodosByActividad(ReqPeriodo)
+        If Rs.Rows.Count > 0 Then
+            cboPeriodo.DataTextField = "cPrdDescripcion"
+            cboPeriodo.DataValueField = "nPrdCodigo"
+            cboPeriodo.DataSource = Rs
+            cboPeriodo.DataBind()
+        End If
+        Rs.Clear()
 
-                cboTipDoc.Items.Insert(0, "Todos")
-                cboTipDoc.Items(0).Value = 0
+        Dim Request As BE_Req_Constante = New BE_Req_Constante()
+        Dim objBL As BL_Constante = New BL_Constante()
+        Dim ListaDocumentos As New List(Of BE_Res_Constante)
+        Request.nConCodigo = 1063
+        Request.cConValor = "8100,8600,8700,8800,8102, 8803, 8804, 8805, 8004"
+        ListaDocumentos = objBL.Get_ConstantesBynConValor(Request)
+        If ListaDocumentos.Count > 0 Then
+            cboTipDoc.Items.Insert(0, "Todos")
+            cboTipDoc.Items(0).Value = 0
+            Dim i As Integer = 1
+            For Each ResDocumentos As BE_Res_Constante In ListaDocumentos
+                cboTipDoc.Items.Add(i)
+                cboTipDoc.Items(i).Text = ResDocumentos.cConDescripcion
+                cboTipDoc.Items(i).Value = ResDocumentos.nConValor
+                i = i + 1
+            Next
+        End If
 
-                MyTrans.Commit()
-            Catch ex As Exception
-                Throw
-            End Try
-        End Using
+        Request.nConCodigo = 1005
+        Request.cConValor = "ALL"
+        Dim ListaConstante As New List(Of BE_Res_Constante)
+        ListaConstante = objBL.Get_ConstantesBynConValor(Request)
+        If ListaConstante.Count > 0 Then
+            Dim i As Integer = 0
+            For Each ResDocumentos As BE_Res_Constante In ListaConstante
+                cboFilMes.Items.Add(i)
+                cboFilMes.Items(i).Text = ResDocumentos.cConDescripcion
+                cboFilMes.Items(i).Value = ResDocumentos.nConValor
+                i = i + 1
+            Next
+        End If
+
     End Sub
 
-
-
     Protected Sub txtPerRemite_TextChanged(sender As Object, e As System.EventArgs) Handles txtPerRemite.TextChanged
-        If txtPerRemite.Text.Length > 5 Then
-            Using cn As New SqlConnection(MiConexion)
-                Dim Clase As New clsTraDoc
-                Dim Rs As DataTable
-                Dim MyTrans As SqlTransaction
-                Try
-                    If cn.State = ConnectionState.Closed Then
-                        cn.Open()
-                    End If
-                    MyTrans = cn.BeginTransaction
-                    Rs = Clase.objBuscarPersona(MyTrans, cn, Clase.DBTilde(txtPerRemite.Text))
-                    If Rs.Rows.Count > 0 Then
-                        dgNombre.Visible = True
-                        dgNombre.DataSource = Rs.DefaultView
-                        dgNombre.DataBind()
-                    Else
-                        dgNombre.Visible = False
-                        Response.Write("No Hay Registros")
-                    End If
-                Catch x As Exception
-                    Response.Write(x.Message)
-                End Try
-            End Using
+        If txtPerRemite.Text.Length > 3 Then
+            Dim Clase As New clsConfiguration
+            Dim Request As BE_Req_Persona = New BE_Req_Persona()
+            Dim objBL As BL_Persona = New BL_Persona()
+            Dim Rs As DataTable = New DataTable()
+            Request.cPerApellido = Clase.DBTilde(txtPerRemite.Text)
+            Rs = objBL.ListaPeronas_BycPerApellido(Request)
+            If Rs.Rows.Count > 0 Then
+                dgNombre.Visible = True
+                dgNombre.DataSource = Rs
+                dgNombre.DataBind()
+            Else
+                Response.Write("No Hay Registros")
+            End If
         End If
     End Sub
 
@@ -106,47 +105,34 @@ Partial Class Forms_frmTransBuscar
     End Sub
 
     Protected Sub btnBuscar_Click(sender As Object, e As System.EventArgs) Handles btnBuscar.Click
-        Using cn As New SqlConnection(MiConexion)
-            Dim clsTraDoc As New clsTraDoc
-            Dim MyTrans As SqlTransaction
-            Dim Reader As SqlDataReader = Nothing 
-            Dim AdmUser As Boolean = False
-            Try
-                lblError.Text = String.Empty
-                lblMessage.Text = String.Empty
+        Dim AdmUser As Boolean = False
+        lblError.Text = String.Empty
+        Dim ReqPersona As BE_Req_Persona = New BE_Req_Persona()
+        ReqPersona.cPerCodigo = Session("cPerCodigo")
+        Dim BL_Per As BL_Persona = New BL_Persona()
+        Dim cInvPerCodigo As String = BL_Per.getDelegadoAnduser(ReqPersona)
 
-                If cn.State = ConnectionState.Closed Then
-                    cn.Open()
-                End If
-                MyTrans = cn.BeginTransaction 
+        lblMessage.Text = String.Empty
+        Dim Reader As DataTable = New DataTable()
+        If rbtNumDocumneto.Checked = True And txtAsunto.Text <> "" Then
+            Reader = BuscaDocumentos("", 0, 0, 1, 0, txtAsunto.Text.Trim, 0, "", cboPeriodo.SelectedValue, cboTipDoc.SelectedValue, cboFilMes.SelectedValue, cInvPerCodigo)
+        ElseIf rbtPerRemite.Checked = True And lblPerRemiteCodigo.Text <> "" Then
+            Reader = BuscaDocumentos(lblPerRemiteCodigo.Text.Trim, 1, 0, 0, 0, "", 0, "", cboPeriodo.SelectedValue, cboTipDoc.SelectedValue, cboFilMes.SelectedValue, cInvPerCodigo)
+        ElseIf rbtPerDestino.Checked = True And lblPerRemiteCodigo.Text <> "" Then
+            Reader = BuscaDocumentos(lblPerRemiteCodigo.Text.Trim, 0, 1, 0, 0, "", 0, "", cboPeriodo.SelectedValue, cboTipDoc.SelectedValue, cboFilMes.SelectedValue, cInvPerCodigo)
+        ElseIf rbtAsunto.Checked = True And txtAsunto.Text <> "" Then
+            Reader = BuscaDocumentos("", 0, 0, 0, 0, 0, 1, txtAsunto.Text.Trim, cboPeriodo.SelectedValue, cboTipDoc.SelectedValue, cboFilMes.SelectedValue, cInvPerCodigo)
+        ElseIf rbtItem.Checked = True And txtAsunto.Text <> "" Then
+            Reader = BuscaDocumentos("", 0, 0, 0, 1, txtAsunto.Text.Trim, 0, "", cboPeriodo.SelectedValue, cboTipDoc.SelectedValue, cboFilMes.SelectedValue, cInvPerCodigo)
+        End If
 
-                If rbtNumDocumneto.Checked = True And txtAsunto.Text <> "" Then
-                    Reader = clsTraDoc.Get_Busca_Doc_Transferencia("", 0, 0, 1, 0, txtAsunto.Text.Trim, 0, "", cboPeriodo.SelectedValue, cboTipDoc.SelectedValue, cboFilMes.SelectedValue, MyTrans, cn, Get_User_AND_Delegado(Session("PerCodigo"), MyTrans, cn))
-                ElseIf rbtPerRemite.Checked = True And lblPerRemiteCodigo.Text <> "" Then
-                    Reader = clsTraDoc.Get_Busca_Doc_Transferencia(lblPerRemiteCodigo.Text.Trim, 1, 0, 0, 0, "", 0, "", cboPeriodo.SelectedValue, cboTipDoc.SelectedValue, cboFilMes.SelectedValue, MyTrans, cn, Get_User_AND_Delegado(Session("PerCodigo"), MyTrans, cn))
-                ElseIf rbtPerDestino.Checked = True And lblPerRemiteCodigo.Text <> "" Then
-                    Reader = clsTraDoc.Get_Busca_Doc_Transferencia(lblPerRemiteCodigo.Text.Trim, 0, 1, 0, 0, "", 0, "", cboPeriodo.SelectedValue, cboTipDoc.SelectedValue, cboFilMes.SelectedValue, MyTrans, cn, Get_User_AND_Delegado(Session("PerCodigo"), MyTrans, cn))
-                ElseIf rbtAsunto.Checked = True And txtAsunto.Text <> "" Then
-                    Reader = clsTraDoc.Get_Busca_Doc_Transferencia("", 0, 0, 0, 0, 0, 1, txtAsunto.Text.Trim, cboPeriodo.SelectedValue, cboTipDoc.SelectedValue, cboFilMes.SelectedValue, MyTrans, cn, Get_User_AND_Delegado(Session("PerCodigo"), MyTrans, cn))
-                ElseIf rbtItem.Checked = True And txtAsunto.Text <> "" Then
-                    Reader = clsTraDoc.Get_Busca_Doc_Transferencia("", 0, 0, 0, 1, txtAsunto.Text.Trim, 0, "", cboPeriodo.SelectedValue, cboTipDoc.SelectedValue, cboFilMes.SelectedValue, MyTrans, cn, Get_User_AND_Delegado(Session("PerCodigo"), MyTrans, cn))
-                End If
-                 
-                gvConsultas.DataSource = Reader
-                gvConsultas.DataBind()
+        gvConsultas.DataSource = Reader
+        gvConsultas.DataBind()
+        gvAtriLoader()
+        If gvConsultas.Rows.Count = 0 Then
+            lblMessage.Text = "EL N° DE DOCUMENTO BUSCADO NO LE CORRESPONDE A SU AREA"
+        End If
 
-                Reader.Close()
-
-                gvAtriLoader()
-
-                If gvConsultas.Rows.Count = 0 Then
-                    lblMessage.Text = "EL N° DE DOCUMENTO BUSCADO NO LE CORRESPONDE A SU AREA"
-                End If
-
-            Catch x As Exception 
-                Response.Write(x.Message)
-            End Try
-        End Using
     End Sub
 
     Sub gvAtriLoader()
@@ -169,6 +155,7 @@ Partial Class Forms_frmTransBuscar
             imgArch = CType(Row.FindControl("imgArch"), ImageButton)
 
             If Not ArcName Is String.Empty Then
+
                 imgArchivo.OnClientClick = "javascript:(abre('frmDonwFile.aspx?ArcRuta=" & RutDescarga & "&ArcName=" & ArcName & "','Documentos'));"
             Else
                 imgArchivo.ImageUrl = "~\Imagenes\Stop.gif"
@@ -181,7 +168,6 @@ Partial Class Forms_frmTransBuscar
             End If
         Next
     End Sub
-
 
     Protected Sub dgBuscar_SelectedIndexChanged(sender As Object, e As System.EventArgs) Handles dgBuscar.SelectedIndexChanged
         Dim script As String
@@ -203,4 +189,34 @@ Partial Class Forms_frmTransBuscar
         Response.Write("window.open('Report/frmPEaDReport.aspx?nRepTipo=" & nRepTipo & "&cPerCodigo=" & cPerCodigo & "&nPerRemFiltro=" & nFilTipo & "&nPerRecFiltro=" & IIf(nFilTipo = 0, 1, 0) & "&nPrdCodigo=" & nPrdCodigo & "','Documentos_Diarios')")
         Response.Write("</script>")
     End Sub
+
+    Public Function BuscaDocumentos(ByVal cPerCodigo As String, ByVal nPerRemFiltro As Integer, _
+                                                    ByVal nPerRecFiltro As Integer, _
+                                                    ByVal nDocNumFiltro As Integer, ByVal nItemFiltro As Integer, _
+                                                    ByVal cDocNDoc As String, ByVal nAsuFiltro As Integer, _
+                                                    ByVal cDocConContenido As String, ByVal nPrdCodigo As Long, _
+                                                    ByVal nDocTipo As Long, _
+                                                    ByVal nFilMes As Int16, _
+                                                    Optional ByVal cInvPerCodigo As String = "") As DataTable
+
+        Dim ReqDocumento As BE_Req_TraDoc = New BE_Req_TraDoc()
+        Dim BL_TraDoc As BL_TraDoc = New BL_TraDoc()
+        ReqDocumento.cPerCodigo = cPerCodigo
+        ReqDocumento.nPerRemFiltro = nPerRemFiltro
+        ReqDocumento.nPerRecFiltro = nPerRecFiltro
+        ReqDocumento.nDocNumFiltro = nDocNumFiltro
+        ReqDocumento.nItemFiltro = nItemFiltro
+        ReqDocumento.cDocNDoc = cDocNDoc
+        ReqDocumento.nAsuFiltro = nAsuFiltro
+        ReqDocumento.cDocConContenido = cDocConContenido
+        ReqDocumento.nPrdCodigo = nPrdCodigo
+        ReqDocumento.nDocTipo = nDocTipo
+        ReqDocumento.nFilMes = nFilMes
+        ReqDocumento.cInvPerCodigo = cInvPerCodigo
+        ReqDocumento.iOpcion = 1
+
+        Return BL_TraDoc.get_TraDoc_Procesos(ReqDocumento)
+
+    End Function
+
 End Class

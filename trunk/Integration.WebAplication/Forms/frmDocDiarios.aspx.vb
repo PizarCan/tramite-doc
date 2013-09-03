@@ -1,4 +1,5 @@
-﻿
+﻿Imports CrystalDecisions.CrystalReports.Engine
+
 Partial Class Forms_frmDocDiarios
     Inherits System.Web.UI.Page
 
@@ -21,7 +22,7 @@ Partial Class Forms_frmDocDiarios
     End Sub
     Sub LoaderData(ByVal dFecha As Date, Optional ByVal Print As Integer = 0)
 
-        'Dim Report As New ReportDocument
+        Dim Report As New ReportDocument
         'Dim Comando As New DataTable
 
         'Using Cn As New SqlConnection(TramiteDocumentario.MiConexion)

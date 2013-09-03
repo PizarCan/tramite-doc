@@ -33,9 +33,6 @@ E:\SkyDriver\SkyDrive\Aplicaciones\Integration.System\Integration.Test\bin\Debug
 E:\SkyDriver\SkyDrive\Aplicaciones\Integration.System\Integration.Test\bin\Debug\Integration.DAService.dll
 E:\SkyDriver\SkyDrive\Aplicaciones\Integration.System\Integration.Test\bin\Debug\Integration.BE.pdb
 E:\SkyDriver\SkyDrive\Aplicaciones\Integration.System\Integration.Test\bin\Debug\Integration.DAService.pdb
-E:\Proyectos\Tramite documentario\IntegrationSystem\Integration.Test\obj\x86\Debug\Integration.Test.exe
-E:\Proyectos\Tramite documentario\IntegrationSystem\Integration.Test\obj\x86\Debug\Integration.Test.xml
-E:\Proyectos\Tramite documentario\IntegrationSystem\Integration.Test\obj\x86\Debug\Integration.Test.pdb
 E:\Proyectos\Tramite documentario\IntegrationSystem\Integration.Test\bin\Debug\Integration.Test.exe
 E:\Proyectos\Tramite documentario\IntegrationSystem\Integration.Test\bin\Debug\Integration.Test.pdb
 E:\Proyectos\Tramite documentario\IntegrationSystem\Integration.Test\bin\Debug\Integration.Test.xml
@@ -50,3 +47,6 @@ E:\Proyectos\Tramite documentario\IntegrationSystem\Integration.Test\obj\x86\Deb
 E:\Proyectos\Tramite documentario\IntegrationSystem\Integration.Test\obj\x86\Debug\Integration.Test.Form1.resources
 E:\Proyectos\Tramite documentario\IntegrationSystem\Integration.Test\obj\x86\Debug\Integration.Test.Resources.resources
 E:\Proyectos\Tramite documentario\IntegrationSystem\Integration.Test\obj\x86\Debug\Integration.Test.vbproj.GenerateResource.Cache
+E:\Proyectos\Tramite documentario\IntegrationSystem\Integration.Test\obj\x86\Debug\Integration.Test.exe
+E:\Proyectos\Tramite documentario\IntegrationSystem\Integration.Test\obj\x86\Debug\Integration.Test.xml
+E:\Proyectos\Tramite documentario\IntegrationSystem\Integration.Test\obj\x86\Debug\Integration.Test.pdb

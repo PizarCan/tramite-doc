@@ -29,3 +29,10 @@ Public Module DocTipo
     Public gnDocCurMatRectificacion As Long = 8806003
     Public gnDocSerVarios As Long = 8806004
 End Module
+
+
+Public Enum DocPerTipo
+    gDocPerTipTransOrigen = 1
+    gDocPerTipTransDestino = 2
+    gDocPerTipTransUsuario = 3
+End Enum

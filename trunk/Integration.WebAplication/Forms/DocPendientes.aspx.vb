@@ -70,56 +70,65 @@ Partial Class Forms_DocPendientes
 
 
     Sub saveGridView()
+
         Dim Row As GridViewRow
-        Dim MyTrans As SqlTransaction
-        Using cn As New SqlConnection(MiConexion)
-            Dim clsTraDoc As New clsTraDoc
-            Dim clsInsert As New clsInserciones
-            Dim cDocCodigo As String
-            Dim nMax As Integer
-            Dim I As Integer
-            Dim cPerDelCodigo() As String = Split(Session("cPerDelCodigo"), ",")
-            Dim dFecha As DateTime = Date.Now
-            Dim cFecha As String = Format(dFecha, "MM/dd/yyyy HH:mm:ss")
+        Dim cDocCodigo As String
+        Dim cFecha As String
+        Dim cPerDelCodigo() As String = Split(Session("cPerDelCodigo"), ",")
+        Dim I As Integer
+        Dim chkEstado As New CheckBox
+        Dim nMax As Integer
 
-            If cn.State = ConnectionState.Closed Then
-                cn.Open()
+        Dim dFecha As DateTime = Date.Now
+        Dim ReqTraDoc As BE_Req_TraDoc = New BE_Req_TraDoc()
+        Dim ObjTraDoc As BL_TraDoc = New BL_TraDoc()
+        Dim ReqDoc As BE_Req_Documento = New BE_Req_Documento()
+        Dim ObjDoc As BL_Documento = New BL_Documento()
+        Dim Rs As DataTable
+
+        cFecha = Format(dFecha, "MM/dd/yyyy HH:mm:ss")
+
+        For Each Row In gvDocEvaluar.Rows
+            Dim cbo As New DropDownList
+            Dim chk As New CheckBox
+            cbo = CType(Row.FindControl("cboEstado"), DropDownList)
+            chk = CType(Row.FindControl("chkMulDoc"), CheckBox)
+
+            cDocCodigo = gvDocEvaluar.DataKeys(Row.RowIndex).Item("cDocCodigo")
+
+            If Not cbo.SelectedValue = 0 Then
+                ReqDoc.cDocCodigo = cDocCodigo
+                ReqDoc.nDocEstado = cbo.SelectedValue
+                ReqDoc.cPerCodigo = gvDocEvaluar.DataKeys(Row.RowIndex).Item("CodPerDestino")
+                ReqDoc.cDocObserv = ""
+                ReqDoc.nDocPerTipo = 1006
+                If Not ObjDoc.updEstadoDocumento(ReqDoc) Then Exit Sub
             End If
-            MyTrans = cn.BeginTransaction
-            Try
 
-                For Each Row In gvDocEvaluar.Rows
-                    Dim cbo As New DropDownList
-                    Dim chk As New CheckBox
-                    cbo = CType(Row.FindControl("cboEstado"), DropDownList)
-                    chk = CType(Row.FindControl("chkMulDoc"), CheckBox)
 
-                    cDocCodigo = gvDocEvaluar.DataKeys(Row.RowIndex).Item("cDocCodigo")
-
-                    If Not cbo.SelectedValue = 0 Then
-                        clsTraDoc.objModEstDocumento(cDocCodigo, _
-                                                cbo.SelectedValue, gvDocEvaluar.DataKeys(Row.RowIndex).Item("CodPerDestino"), _
-                                                Session("UOCodigo"), clsTraDoc.FecActual(MyTrans, cn), MyTrans, cn)
-                    End If
-
-                    If chk.Visible AndAlso chk.Checked Then
-                        Dim Reader As SqlDataReader = clsTraDoc.Get_DocTratamiento_Max(cDocCodigo, MyTrans, cn)
-                        While Reader.Read
-                            nMax = Reader("Item")
-                        End While
-                        Reader.Close()
-
-                        For I = 0 To cPerDelCodigo.Length - 1
-                            clsInsert.objInsertDocTratamiento(cDocCodigo, nMax + I, 20, "DOCUMENTO LEIDO", 0, cPerDelCodigo(I), cFecha, MyTrans, cn)
-                        Next
-                    End If
+            If chk.Visible AndAlso chk.Checked Then
+                ReqTraDoc.iOpcion = 11
+                ReqTraDoc.cDocEstado = cDocCodigo
+                Rs = ObjTraDoc.get_TraDoc_Procesos(ReqTraDoc)
+                For x As Integer = 0 To Rs.Rows.Count - 1
+                    nMax = Rs.Rows(x).Item(1)
                 Next
-                MyTrans.Commit()
-            Catch x As Exception
-                MyTrans.Rollback()
-                Response.Write("<script languge 'javascript'> Alert (" & x.Message & ")</script>")
-            End Try
-        End Using
+                Rs.Clear()
+
+                ReqDoc.cDocCodigo = cDocCodigo
+                ReqDoc.nCarCodigo = 20
+                ReqDoc.cCarObs = "DOCUMENTO LEIDO"
+                ReqDoc.nPercent = 0
+                ReqDoc.dDocTraFec = cFecha
+                For I = 0 To cPerDelCodigo.Length - 1
+                    ReqDoc.nEleCodigo = nMax + I
+                    ReqDoc.cPerCodigo = cPerDelCodigo(I)
+                    If Not ObjDoc.setDocTratamiento(ReqDoc) Then Exit For
+                Next
+
+            End If
+        Next
+
 
     End Sub
 
@@ -132,64 +141,50 @@ Partial Class Forms_DocPendientes
     End Function
 
     Sub LoaderCombo()
-        Dim MiConexion As String = TramiteDocumentario.MiConexion
-        Using Cn As New SqlConnection(MiConexion)
-            Try
-                Cn.Open()
-                Dim clsTraDoc As New clsTraDoc
-                Dim MyTrans As SqlTransaction = Cn.BeginTransaction
-                Dim Rs As SqlDataReader = clsTraDoc.Get_Periodo_Administrativo(MyTrans, Cn)
-                cboPeriodo.DataTextField = "cPrdDescripcion"
-                cboPeriodo.DataValueField = "nPrdCodigo"
-                cboPeriodo.DataSource = Rs
-                cboPeriodo.DataBind()
-                Rs.Close()
-                MyTrans.Commit()
-            Catch ex As Exception
-                Throw
-            End Try
-        End Using
+        Dim ReqPeriodo As BE_Req_Periodo = New BE_Req_Periodo()
+        Dim BLPeriodo As BL_Periodo = New BL_Periodo()
+        Dim Rs As DataTable = New DataTable
+
+        ReqPeriodo.nPrdActividad = 1
+        Rs = BLPeriodo.GetPeriodosByActividad(ReqPeriodo)
+        If Rs.Rows.Count > 0 Then
+            cboPeriodo.DataTextField = "cPrdDescripcion"
+            cboPeriodo.DataValueField = "nPrdCodigo"
+            cboPeriodo.DataSource = Rs
+            cboPeriodo.DataBind()
+        End If
+        Rs.Clear()
     End Sub
 
     Protected Sub btnGrabar2_Click(sender As Object, e As System.EventArgs) Handles btnGrabar2.Click
         Dim Row As GridViewRow
-        Dim MyTrans As SqlTransaction
-        Using cn As New SqlConnection(MiConexion)
-            Dim Clase As New clsTraDoc
-            Dim nDocPerEdiTipo As Integer
-            If cn.State = ConnectionState.Closed Then
-                cn.Open()
+        Dim nDocPerEdiTipo As Integer
+        Dim ReqDoc As BE_Req_Documento = New BE_Req_Documento()
+        Dim ObjDoc As BL_Documento = New BL_Documento()
+        For Each Row In gvProDoc.Rows
+            Dim cbo As New DropDownList
+            cbo = CType(Row.FindControl("cboEstado"), DropDownList)
+            nDocPerEdiTipo = gvProDoc.DataKeys(Row.RowIndex).Values("nDocPerEdiTipo")
+            If Not cbo.SelectedValue = 0 Then
+                ReqDoc.cDocCodigo = gvProDoc.DataKeys(Row.RowIndex).Item("cDocCodigo")
+                ReqDoc.nDocEstado = cbo.SelectedValue
+                ReqDoc.cPerCodigo = gvProDoc.DataKeys(Row.RowIndex).Item("cPerCodigo")
+                ReqDoc.cDocObserv = ""
+                ReqDoc.nDocPerTipo = 1006
+                If Not ObjDoc.updEstadoDocumento(ReqDoc) Then Exit Sub
             End If
-            MyTrans = cn.BeginTransaction
-            Try
-                For Each Row In gvProDoc.Rows
-                    Dim cbo As New DropDownList
-                    cbo = CType(Row.FindControl("cboEstado"), DropDownList)
-                    nDocPerEdiTipo = gvProDoc.DataKeys(Row.RowIndex).Values("nDocPerEdiTipo")
-
-                    If Not cbo.SelectedValue = 0 Then
-                        Clase.objModEstDocumento(gvProDoc.DataKeys(Row.RowIndex).Item("cDocCodigo"), cbo.SelectedValue, gvProDoc.DataKeys(Row.RowIndex).Item("cPerCodigo"), Session("UOCodigo"), Clase.FecActual(MyTrans, cn), MyTrans, cn, , nDocPerEdiTipo)
-                    End If
-                Next
-                MyTrans.Commit()
-            Catch x As Exception
-                MyTrans.Rollback()
-            End Try
-        End Using
+        Next
         Response.Redirect("DocPendientes.aspx")
     End Sub
 
     Protected Sub cboPeriodo_SelectedIndexChanged(sender As Object, e As System.EventArgs) Handles cboPeriodo.SelectedIndexChanged
-        Dim MiConexion As String = TramiteDocumentario.MiConexion
-        Using Cn As New SqlConnection(MiConexion)
-            Try
-                Cn.Open()
-                Dim MyTrans As SqlTransaction = Cn.BeginTransaction
-                LoaderData_By_Periodo(Get_User_AND_Delegado(Session("PerCodigo"), MyTrans, Cn), cboPeriodo.SelectedValue, "6318,6319,6325", Val(cboFilMes.SelectedValue))
-            Catch ex As Exception
-                Throw
-            End Try
-        End Using
+
+
+        Dim ReqPersona As BE_Req_Persona = New BE_Req_Persona()
+        ReqPersona.cPerCodigo = Session("cPerCodigo")
+        Dim ObjPer As BL_Persona = New BL_Persona()
+        LoaderData_By_Periodo(ObjPer.getDelegadoAnduser(ReqPersona), cboPeriodo.SelectedValue, "6318,6319,6325", Val(cboFilMes.SelectedValue))
+
     End Sub
 
     Sub LoaderGVAtributo()
@@ -443,7 +438,7 @@ Partial Class Forms_DocPendientes
 
     Protected Sub chkDelegado_CheckedChanged(sender As Object, e As System.EventArgs) Handles chkDelegado.CheckedChanged
         If chkDelegado.Checked = False Then
-            LoaderData_By_Periodo(Session("PerCodigo"), cboPeriodo.SelectedValue, "6318,6319,6325", Val(cboFilMes.SelectedValue))
+            LoaderData_By_Periodo(Session("cPerCodigo"), cboPeriodo.SelectedValue, "6318,6319,6325", Val(cboFilMes.SelectedValue))
         Else
             Dim ReqPersona As BE_Req_Persona = New BE_Req_Persona()
             ReqPersona.cPerCodigo = Session("cPerCodigo")
@@ -470,25 +465,6 @@ Partial Class Forms_DocPendientes
             cDocCodigo = gvCopias.DataKeys(Row.RowIndex).Values("cDocCodigo")
             chkEstado = CType(Row.FindControl("chkEstado"), CheckBox)
             If chkEstado.Checked = True Then
-                ReqTraDoc.iOpcion = 11
-                ReqTraDoc.cDocEstado = cDocCodigo
-                Rs = ObjTraDoc.get_TraDoc_Procesos(ReqTraDoc)
-                For x As Integer = 0 To Rs.Rows.Count - 1
-                    nMax = Rs.Rows(x).Item(1)
-                Next
-                Rs.Clear()
-                Dim ReqDoc As BE_Req_Documento = New BE_Req_Documento()
-                Dim ObjDoc As BL_Documento = New BL_Documento()
-                ReqDoc.cDocCodigo = cDocCodigo
-                ReqDoc.nCarCodigo = 10
-                ReqDoc.cCarObs = "DOCUMENTO LEIDO"
-                ReqDoc.nPercent = 0
-                ReqDoc.dDocTraFec = cFecha
-                For I = 0 To cPerDelCodigo.Length - 1
-                    ReqDoc.nEleCodigo = nMax + I
-                    ReqDoc.cPerCodigo = cPerDelCodigo(I)
-                    If Not ObjDoc.setDocTratamiento(ReqDoc) Then Exit For
-                Next
             End If
         Next
         Response.Redirect("DocPendientes.aspx")

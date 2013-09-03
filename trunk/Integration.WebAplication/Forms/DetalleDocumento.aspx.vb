@@ -68,13 +68,14 @@ Partial Class Forms_DetalleDocumento
 
             Dim ReqConst As BE_Req_Constante = New BE_Req_Constante()
             Dim ObjConst As BL_Constante = New BL_Constante()
-            Dim ResConst As List(Of BE_Res_Constante)
+
+            Rs.Clear()
             ReqConst.nConCodigo = 1063
             ReqConst.nConValor = Len(TipDocumento)
             ReqConst.ConLeft = Len(TipDocumento)
             ReqConst.ConValLeft = TipDocumento
-            ResConst = ObjConst.ListarConstantes(ReqConst)
-            lblTipoDocumento.Text = ResConst.Item(0).cConDescripcion.ToString
+            Rs = ObjConst.ListarConstantes(ReqConst)
+            lblTipoDocumento.Text = Rs.Rows(0).Item(1)
 
             ReqDoc.cDocCodigo = DocCodigo
             Rs = ObjDoc.getPerCopias(ReqDoc)
