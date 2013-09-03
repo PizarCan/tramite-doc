@@ -43,12 +43,23 @@ namespace Integration.BE.Documento
         public float nPercent { get; set; }
         public DateTime dDocTraFec { get; set; }
         public int nDocTipoNum { get; set; }
+        
+        #region DocPersona
+            public int nPerRelacion { get; set; }
+
+        #endregion
+
 
         #region DocLink
-            public int nDocLinNum { get; set; }
+        public int nDocLinNum { get; set; }
             public string cDocLinUrl { get; set; }
             public int nDocLinTipo { get; set; }
             public int nDocLinGrupo { get; set; }
+        #endregion
+
+        #region DocUniOrg
+            public int nDocUniOrgTipo { get; set; }
+            public int nDocUniOrgEstado { get; set; }
         #endregion
 
     }

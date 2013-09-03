@@ -1,5 +1,8 @@
 ﻿<%@ Page Language="VB" AutoEventWireup="false" CodeFile="frmDocDiarios.aspx.vb" Inherits="Forms_frmDocDiarios" %>
 
+<%@ Register Assembly="CrystalDecisions.Web, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304"
+    Namespace="CrystalDecisions.Web" TagPrefix="CR" %>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -87,10 +90,13 @@
                     </table>
                                 <asp:LinkButton ID="lnkCerrar" runat="server" Width="155px">Cerrar</asp:LinkButton></td>
                 <td style="width: 450px" align="left" valign="top">
-                    <CR:CrystalReportViewer ID="crptPEaDReport" runat="server" AutoDataBind="true" DisplayGroupTree="False"
+                 
+                    <CR:CrystalReportViewer  ID="crptPEaDReport" runat="server" AutoDataBind="true" DisplayGroupTree="False"
                         EnableDatabaseLogonPrompt="False" EnableParameterPrompt="False" HasCrystalLogo="False"
                         HasGotoPageButton="False" HasSearchButton="False" HasToggleGroupTreeButton="False"
-                        ReuseParameterValuesOnRefresh="True" />
+                        ReuseParameterValuesOnRefresh="True"  />
+
+
                 </td>
             </tr>
             <tr>

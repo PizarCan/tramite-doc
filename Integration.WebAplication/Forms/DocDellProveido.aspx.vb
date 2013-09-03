@@ -43,15 +43,15 @@ Partial Class Forms_DocDellProveido
 
             Dim ReqConst As BE_Req_Constante = New BE_Req_Constante()
             Dim ObjConst As BL_Constante = New BL_Constante()
-            Dim ResConst As List(Of BE_Res_Constante)
-            ReqConst.nConCodigo = 1063
+            Dim Rs As New DataTable
             ReqConst.nConValor = Len(nDocTipo.ToString.Trim)
             ReqConst.ConLeft = Len(nDocTipo.ToString.Trim)
             ReqConst.ConValLeft = nDocTipo
-            ResConst = ObjConst.ListarConstantes(ReqConst)
-            lblTipoDocumento.Text = ResConst.Item(0).cConDescripcion.ToString
+            Rs = ObjConst.ListarConstantes(ReqConst)
+            lblTipoDocumento.Text = Rs.Rows(0).Item(1)
 
-            Dim Rs As DataTable
+            Rs.Clear()
+
             lblFecEmision.Text = Dt.Rows.Item(0).Item(15)
             Dim ReqDoc As BE_Req_Documento = New BE_Req_Documento()
             Dim ObjDoc As BL_Documento = New BL_Documento()

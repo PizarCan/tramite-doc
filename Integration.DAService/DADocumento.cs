@@ -788,6 +788,119 @@ namespace Integration.DAService
             return Item;
         }
 
+        public Boolean setDocumentoTransf(BE_Req_Documento Request)
+        {
+            Boolean Item = new Boolean();
+            try
+            {
+                clsConection Obj = new clsConection();
+                string Cadena = Obj.GetConexionString("Naylamp");
+
+                using (SqlConnection cn = new SqlConnection(Cadena))
+                {
+                    cn.Open();
+
+                    using (SqlCommand cm = new SqlCommand())
+                    {
+                        cm.CommandText = "sp_set_DocumentoTransferencia";
+                        cm.CommandType = CommandType.StoredProcedure;
+                        cm.Parameters.AddWithValue("cDocCodigo", Request.cDocCodigo);
+                        cm.Parameters.AddWithValue("dDocFecha", Request.dDocFecha);
+                        cm.Parameters.AddWithValue("cDocObserv", Request.cDocObserv);
+                        cm.Parameters.AddWithValue("nDocTipo", Request.nDocTipo);
+                        cm.Parameters.AddWithValue("nDocEstado", Request.nDocEstado);
+                        cm.Connection = cn;
+                        using (SqlDataReader dr = cm.ExecuteReader())
+                        {
+                            Item = true;
+                        }
+
+                    }
+                }
+
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            return Item;
+        }
+
+        public Boolean setDocPersona(BE_Req_Documento Request)
+        {
+            Boolean Item = new Boolean();
+            try
+            {
+                clsConection Obj = new clsConection();
+                string Cadena = Obj.GetConexionString("Naylamp");
+
+                using (SqlConnection cn = new SqlConnection(Cadena))
+                {
+                    cn.Open();
+
+                    using (SqlCommand cm = new SqlCommand())
+                    {
+                        cm.CommandText = "sp_set_DocPersona";
+                        cm.CommandType = CommandType.StoredProcedure;
+                        cm.Parameters.AddWithValue("cDocCodigo", Request.cDocCodigo);
+                        cm.Parameters.AddWithValue("cPerCodigo", Request.cPerCodigo);
+                        cm.Parameters.AddWithValue("nDocPerTipo", Request.nDocPerTipo);
+                        cm.Parameters.AddWithValue("nPerRelacion", Request.nPerRelacion);
+                        cm.Parameters.AddWithValue("nDocTipo", Request.nDocTipo);
+                        cm.Connection = cn;
+                        using (SqlDataReader dr = cm.ExecuteReader())
+                        {
+                            Item = true;
+                        }
+
+                    }
+                }
+
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            return Item;
+        }
+
+        public Boolean setDocUniOrg(BE_Req_Documento Request)
+        {
+            Boolean Item = new Boolean();
+            try
+            {
+                clsConection Obj = new clsConection();
+                string Cadena = Obj.GetConexionString("Naylamp");
+
+                using (SqlConnection cn = new SqlConnection(Cadena))
+                {
+                    cn.Open();
+
+                    using (SqlCommand cm = new SqlCommand())
+                    {
+                        cm.CommandText = "sp_set_DocUniOrg";
+                        cm.CommandType = CommandType.StoredProcedure;
+                        cm.Parameters.AddWithValue("cDocCodigo", Request.cDocCodigo);
+                        cm.Parameters.AddWithValue("nUniOrgCodigo", Request.nUniOrgCodigo);
+                        cm.Parameters.AddWithValue("nDocUniOrgTipo", Request.nDocUniOrgTipo);
+                        cm.Parameters.AddWithValue("nDocUniOrgEstado", Request.nDocUniOrgEstado);
+                        cm.Connection = cn;
+                        using (SqlDataReader dr = cm.ExecuteReader())
+                        {
+                            Item = true;
+                        }
+
+                    }
+                }
+
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            return Item;
+        }
+
         #endregion
 
         #region upd

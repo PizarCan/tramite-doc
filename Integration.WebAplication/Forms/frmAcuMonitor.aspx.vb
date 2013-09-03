@@ -78,14 +78,13 @@ Partial Class Forms_frmAcuMonitor
         lblArea.Text = String.Empty
     End Sub
 
-
-
-    Protected Sub gvPersona_SelectedIndexChanging(sender As Object, e As System.Web.UI.WebControls.GridViewSelectEventArgs) Handles gvPersona.SelectedIndexChanging
+    Protected Sub gvPersona_SelectedIndexChanged(sender As Object, e As System.EventArgs) Handles gvPersona.SelectedIndexChanged
         lblcPerCodigo.Text = gvPersona.SelectedValue
         lblPersona.Text = gvPersona.Rows(gvPersona.SelectedIndex).Cells(1).Text
         lblArea.Text = gvPersona.Rows(gvPersona.SelectedIndex).Cells(2).Text
         gvPersona.Visible = False
     End Sub
+
 
     Protected Sub btnMostrar_Click(sender As Object, e As System.EventArgs) Handles btnMostrar.Click
         Dim DocEstado As String = "6318,6319,6325"

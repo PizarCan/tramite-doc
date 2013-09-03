@@ -36,7 +36,7 @@ Partial Class Forms_RegDocumento
     Private Function cboTipDocumentos(ByVal nConCodigo As Integer, ByVal nConValor As Integer, Optional ByVal ConLeft As Integer = 0, Optional ByVal ConValLeft As Integer = 0, Optional ByVal ConRight As Integer = 0, Optional ByVal ConValRight As Integer = 0, Optional ByVal NotIn As String = "") As Integer
         Dim Request As BE_Req_Constante = New BE_Req_Constante()
         Dim objBL As BL_Constante = New BL_Constante()
-        Dim ListaDocumentos As New List(Of BE_Res_Constante)
+        Dim ListaDocumentos As New DataTable
         Request.nConCodigo = nConCodigo
         Request.nConValor = nConValor
         Request.ConLeft = ConLeft
@@ -45,16 +45,13 @@ Partial Class Forms_RegDocumento
         Request.ConValRight = ConValRight
         Request.NotIn = NotIn
         ListaDocumentos = objBL.ListarConstantes(Request)
-        If ListaDocumentos.Count > 0 Then
+        If ListaDocumentos.Rows.Count > 0 Then
+            cboTipDoc.DataTextField = "cConDescripcion"
+            cboTipDoc.DataValueField = "nConValor"
+            cboTipDoc.DataSource = ListaDocumentos
+
             cboTipDoc.Items.Insert(0, "<Seleccione>")
             cboTipDoc.Items(0).Value = 0
-            Dim i As Integer = 1
-            For Each ResDocumentos As BE_Res_Constante In ListaDocumentos
-                cboTipDoc.Items.Add(i)
-                cboTipDoc.Items(i).Text = ResDocumentos.cConDescripcion
-                cboTipDoc.Items(i).Value = ResDocumentos.nConValor
-                i = i + 1
-            Next
         End If
         Return 1
     End Function
