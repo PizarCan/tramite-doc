@@ -59,10 +59,9 @@ namespace Integration.DAService
         }
 
 
-        public IList<BE_Res_UniOrgPerExt> ObtenerInstitucionesBycPerCodigo(BE_Req_UniOrgPerExt Request)
+        public DataTable ObtenerInstitucionesBycPerCodigo(BE_Req_UniOrgPerExt Request)
         {
-            BE_Res_UniOrgPerExt Item = new BE_Res_UniOrgPerExt();
-            var lista = new List<BE_Res_UniOrgPerExt>();
+            DataTable lista = new DataTable();
 
             try
             {
@@ -81,16 +80,7 @@ namespace Integration.DAService
                         cm.Connection = cn;
                         using (SqlDataReader dr = cm.ExecuteReader())
                         {
-                            lista.Clear();
-                            while (dr.Read())
-                            {
-                                Item = new BE_Res_UniOrgPerExt();
-                                Item.cPerCodigo = dr.GetString(dr.GetOrdinal("cPerCodigo")).Trim();
-                                Item.cPernombre = dr.GetString(dr.GetOrdinal("cPerNombre"));
-                                lista.Add(Item);
-                                //dr.NextResult();
-                            }
-                            dr.Close();
+                            lista.Load(dr);
                         }
 
                     }
@@ -104,10 +94,10 @@ namespace Integration.DAService
             return lista;
         }
 
-        public IList<BE_Res_UniOrgPerExt> ObtenerAreaByPersonaInstitucion(BE_Req_UniOrgPerExt Request)
+        public DataTable ObtenerAreaByPersonaInstitucion(BE_Req_UniOrgPerExt Request)
         {
-            BE_Res_UniOrgPerExt Item = new BE_Res_UniOrgPerExt();
-            var lista = new List<BE_Res_UniOrgPerExt>();
+             
+            DataTable lista = new DataTable();
 
             try
             {
@@ -127,15 +117,7 @@ namespace Integration.DAService
                         cm.Connection = cn;
                         using (SqlDataReader dr = cm.ExecuteReader())
                         {
-                            lista.Clear();
-                            while (dr.Read())
-                            {
-                                Item = new BE_Res_UniOrgPerExt();
-                                Item.cIntDescripcion = dr.GetString(dr.GetOrdinal("cIntDescripcion")).Trim();
-                                Item.nUniOrgCodigo = dr.GetInt32(dr.GetOrdinal("nUniOrgCodigo"));
-                                lista.Add(Item);
-                            }
-                            dr.Close();
+                            lista.Load(dr);
                         }
 
                     }

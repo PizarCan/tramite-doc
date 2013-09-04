@@ -48,5 +48,6 @@ namespace Integration.BE.TraDoc
         public string cDocPerTipo { get; set; }
 
         public string cFecIni { get; set; }
+        public Int32 nUniOrgCodigo { get; set; }
     }
 }

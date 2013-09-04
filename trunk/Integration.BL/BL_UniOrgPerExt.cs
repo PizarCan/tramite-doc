@@ -18,13 +18,13 @@ namespace Integration.BL
             DAUniOrgPerExt UniOrgPersona = new DAUniOrgPerExt();
             return UniOrgPersona.ObtenerUniOrgBycPerCodigo(Request);
         }
-        public IList<BE_Res_UniOrgPerExt> ObtenerInstitucionesBycPerCodigo(BE_Req_UniOrgPerExt Request)
+        public DataTable ObtenerInstitucionesBycPerCodigo(BE_Req_UniOrgPerExt Request)
         {
 
             DAUniOrgPerExt UniOrgPersona = new DAUniOrgPerExt();
             return UniOrgPersona.ObtenerInstitucionesBycPerCodigo(Request);
         }
-        public IList<BE_Res_UniOrgPerExt> ObtenerAreaByPersonaInstitucion(BE_Req_UniOrgPerExt Request)
+        public DataTable ObtenerAreaByPersonaInstitucion(BE_Req_UniOrgPerExt Request)
         {
 
             DAUniOrgPerExt UniOrgPersona = new DAUniOrgPerExt();

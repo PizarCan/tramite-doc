@@ -3,8 +3,8 @@
 Public Module modTraDoc
     Public gnCopCantidad As Integer = 20
     Public Arreglo(gnCopCantidad, 1) As String
-    Public RutDoc = "E:\Campus\DocInternos\TramiteDocumentario\"
-    Public RutDescarga = "D:/Campus/DocInternos/TramiteDocumentario"
+    Public RutDoc As String = "E:\Campus\DocInternos\TramiteDocumentario\"
+    Public RutDescarga As String = "D:/Campus/DocInternos/TramiteDocumentario"
     Public RutTraOnLinRuta As String = "campus.uss.edu.pe/campus/FileRegistro"
 
 
