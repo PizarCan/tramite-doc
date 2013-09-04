@@ -11,7 +11,7 @@ Partial Class Forms_frmDocTransferencia
     Protected Sub txtPerOrigen_TextChanged(sender As Object, e As System.EventArgs) Handles txtPerOrigen.TextChanged
 
         Dim PerRelacion As String = "1,2,14"
-        Dim Clase As New clsConfiguration
+        Dim Clase As New clsConfiguraciones
         Dim ReqPer As BE_Req_Persona = New BE_Req_Persona()
         Dim ObjPer As BL_Persona = New BL_Persona()
 
@@ -56,7 +56,7 @@ Partial Class Forms_frmDocTransferencia
 
     Protected Sub txtPerDestino_TextChanged(sender As Object, e As System.EventArgs) Handles txtPerDestino.TextChanged
         Dim PerRelacion As String = "1,2,14"
-        Dim Clase As New clsConfiguration
+        Dim Clase As New clsConfiguraciones
         Dim ReqPer As BE_Req_Persona = New BE_Req_Persona()
         Dim ObjPer As BL_Persona = New BL_Persona()
 
@@ -101,7 +101,7 @@ Partial Class Forms_frmDocTransferencia
     End Sub
 
     Protected Sub btnGrabar_Click(sender As Object, e As System.EventArgs) Handles btnGrabar.Click
-        Dim Clase As New clsConfiguration
+        Dim Clase As New clsConfiguraciones
         Dim objBLDoc As BL_Documento = New BL_Documento()
         Dim ReqDoc As BE_Req_Documento = New BE_Req_Documento()
         Dim rpta As Boolean = False

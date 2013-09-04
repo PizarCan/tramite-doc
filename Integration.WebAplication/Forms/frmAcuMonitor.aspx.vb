@@ -54,7 +54,7 @@ Partial Class Forms_frmAcuMonitor
             lblError.Text = "Criterio de Búsqueda no Válido"
             Exit Sub
         End If
-        Dim Clase As New clsConfiguration
+        Dim Clase As New clsConfiguraciones
         Dim PerRelacion As String = "1,2,14"
         Dim ReqPer As BE_Req_Persona = New BE_Req_Persona()
         Dim ObjPer As BL_Persona = New BL_Persona()

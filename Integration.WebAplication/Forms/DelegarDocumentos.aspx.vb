@@ -10,7 +10,7 @@ Partial Class Forms_DelegarDocumentos
 
     Protected Sub txtBuscar_TextChanged(sender As Object, e As System.EventArgs) Handles txtBuscar.TextChanged
         If txtBuscar.Text.Trim.Length > 3 Then
-            Dim Clase As New clsConfiguration
+            Dim Clase As New clsConfiguraciones
             Dim Request As BE_Req_Persona = New BE_Req_Persona()
             Dim objBL As BL_Persona = New BL_Persona()
             Dim Rs As DataTable = New DataTable()

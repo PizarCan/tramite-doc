@@ -5,10 +5,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Doc Pendientes</title>
+    <link href="../Styles/Estilous.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
     <form id="Form1" method="post" runat="server">
-			<table class="cuadro" cellSpacing="0" cellPadding="0" width="770" align="center" border="0" id="TABLE3" onclick="return TABLE3_onclick()">
+			<table class="cuadro" cellSpacing="0" cellPadding="0" width="770" align="center" border="0" id="TABLE3" >
 				<tr>
 					<td align="center" colSpan="2" class="Cabecera">
                         <img src="../Imagenes/CabeceraAU.png" />Trámite Documentario</td>
@@ -23,11 +24,11 @@
 						<table cellSpacing="0" cellPadding="0" width="150" border="0">
 							<tr>
 								<td>
-									<%if Session("PerMesaPartes") = true then%>
-									<!--#include file="mnuTramiteDoc2.html"-->
-									<%else%>
-									<!--#include file="mnuTramiteDoc.html"-->
-									<%end if%>
+									<%if Session("PerMesaPartes") = true then
+									        Response.WriteFile("mnuTramiteDoc2.html")
+									else
+									        Response.WriteFile("mnuTramiteDoc.html")
+									 End If%>
 								</td>
 							</tr>
 						</table>

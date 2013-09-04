@@ -102,19 +102,17 @@ Partial Class Forms_DocDellProveido
 
         Dim Request As BE_Req_UniOrgPerExt = New BE_Req_UniOrgPerExt()
         Dim objBL As BL_UniOrgPerExt = New BL_UniOrgPerExt()
-        Dim ListaUniOrg As New List(Of BE_Res_UniOrgPerExt)
+        Dim ListaUniOrg As New DataTable
         Request.cPerCodigo = dgNombre2.SelectedItem.Cells(1).Text
         ListaUniOrg = objBL.ObtenerInstitucionesBycPerCodigo(Request)
-        If ListaUniOrg.Count > 0 Then
+        If ListaUniOrg.Rows.Count > 0 Then
+            cboInstDestino.DataTextField = "cPernombre"
+            cboInstDestino.DataValueField = "cPerCodigo"
+            cboInstDestino.DataSource = ListaUniOrg
+            cboInstDestino.DataBind()
+
             cboInstDestino.Items.Insert(0, "Seleccione Institucion")
             cboInstDestino.Items(0).Value = 0
-            Dim i As Integer = 1
-            For Each ResUniOrg As BE_Res_UniOrgPerExt In ListaUniOrg
-                cboInstDestino.Items.Add(i)
-                cboInstDestino.Items(i).Text = ResUniOrg.cPernombre
-                cboInstDestino.Items(i).Value = ResUniOrg.cPerCodigo
-                i = i + 1
-            Next
         End If
         btnGrabar.Enabled = True
         dgNombre2.Visible = False
@@ -125,18 +123,16 @@ Partial Class Forms_DocDellProveido
 
             Dim Request As BE_Req_UniOrgPerExt = New BE_Req_UniOrgPerExt()
             Dim objBL As BL_UniOrgPerExt = New BL_UniOrgPerExt()
-            Dim ListaUniOrg As New List(Of BE_Res_UniOrgPerExt)
+            Dim ListaUniOrg As New DataTable
             Request.cPerCodigo = dgNombre2.SelectedItem.Cells(1).Text
             Request.cUniCodigo = cboInstDestino.SelectedValue
             ListaUniOrg = objBL.ObtenerAreaByPersonaInstitucion(Request)
-            If ListaUniOrg.Count > 0 Then
-                Dim i As Integer = 0
-                For Each ResUniOrg As BE_Res_UniOrgPerExt In ListaUniOrg
-                    cboAreaDestino.Items.Add(i)
-                    cboAreaDestino.Items(i).Text = ResUniOrg.cIntDescripcion
-                    cboAreaDestino.Items(i).Value = ResUniOrg.nUniOrgCodigo
-                    i = i + 1
-                Next
+            If ListaUniOrg.Rows.Count > 0 Then
+                cboAreaDestino.DataTextField = "cIntDescripcion"
+                cboAreaDestino.DataValueField = "nUniOrgCodigo"
+                cboAreaDestino.DataSource = ListaUniOrg
+                cboAreaDestino.DataBind()
+                
             End If
 
         End If

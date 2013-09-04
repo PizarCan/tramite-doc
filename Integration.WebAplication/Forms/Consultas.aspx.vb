@@ -83,7 +83,7 @@ Partial Class Forms_Consultas
 
     Protected Sub txtPerRemite_TextChanged(sender As Object, e As System.EventArgs) Handles txtPerRemite.TextChanged
         If txtPerRemite.Text.Length > 3 Then
-            Dim Clase As New clsConfiguration
+            Dim Clase As New clsConfiguraciones
             Dim Request As BE_Req_Persona = New BE_Req_Persona()
             Dim objBL As BL_Persona = New BL_Persona()
             Dim Rs As DataTable = New DataTable()

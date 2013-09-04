@@ -48,6 +48,41 @@ namespace Integration.DAService
             return Rs;
         }
 
+        public DataTable ListaPersona_BycPerCodigo(BE_Req_Persona Request)
+        {
+            DataTable Rs = new DataTable();
+            try
+            {
+                clsConection Obj = new clsConection();
+                string Cadena = Obj.GetConexionString("Naylamp");
+
+                using (SqlConnection cn = new SqlConnection(Cadena))
+                {
+                    cn.Open();
+
+                    using (SqlCommand cm = new SqlCommand())
+                    {
+                        cm.CommandText = "sp_get_Persona_ByCperCodigo";
+                        cm.CommandType = CommandType.StoredProcedure;
+                        cm.Parameters.AddWithValue("cPerCodigo", Request.cPerCodigo);
+                        cm.Connection = cn;
+
+                        using (SqlDataReader dr = cm.ExecuteReader())
+                        {
+                            Rs.Load(dr);
+                        }
+                    }
+                }
+
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+
+            return Rs;
+        }
+
         public DataTable ListaPersonas_BycPerCodigo_cPerRelTipo(BE_Req_Persona Request)
         {
             DataTable Rs = new DataTable();
@@ -84,6 +119,76 @@ namespace Integration.DAService
             return Rs;
         }
 
+        public SqlDataReader DRListaPersonas_BycPerCodigo_cPerRelTipo(BE_Req_Persona Request)
+        {
+            SqlDataReader Rs;
+            try
+            {
+                clsConection Obj = new clsConection();
+                string Cadena = Obj.GetConexionString("Naylamp");
+
+                using (SqlConnection cn = new SqlConnection(Cadena))
+                {
+                    cn.Open();
+
+                    using (SqlCommand cm = new SqlCommand())
+                    {
+                        cm.CommandText = "sp_ListaPersonas_BycPerCodigo_cPerRelacion";
+                        cm.CommandType = CommandType.StoredProcedure;
+                        cm.Parameters.AddWithValue("cPerApellido", Request.cPerApellido);
+                        cm.Parameters.AddWithValue("cPerRelTipo", Request.cPerRelTipo);
+                        cm.Connection = cn;
+
+                        using (SqlDataReader dr = cm.ExecuteReader())
+                        {
+                            Rs = dr;
+                        }
+                    }
+                }
+
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+
+            return Rs;
+        }
+
+        public SqlDataReader DRListaDelegados_BycPerCodigo(BE_Req_Persona Request)
+        {
+            SqlDataReader Rs;
+            try
+            {
+                clsConection Obj = new clsConection();
+                string Cadena = Obj.GetConexionString("Naylamp");
+
+                using (SqlConnection cn = new SqlConnection(Cadena))
+                {
+                    cn.Open();
+
+                    using (SqlCommand cm = new SqlCommand())
+                    {
+                        cm.CommandText = "sp_get_Delegados";
+                        cm.CommandType = CommandType.StoredProcedure;
+                        cm.Parameters.AddWithValue("cPerCodigo", Request.cPerCodigo);
+                        cm.Connection = cn;
+
+                        using (SqlDataReader dr = cm.ExecuteReader())
+                        {
+                            Rs = dr;
+                        }
+                    }
+                }
+
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+
+            return Rs;
+        }
         public BE_Res_Persona getcPerCodigoNew()
         {
             BE_Res_Persona Item = new BE_Res_Persona();

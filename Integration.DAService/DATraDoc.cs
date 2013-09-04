@@ -29,7 +29,7 @@ namespace Integration.DAService
                     {
                         cm.CommandText = "SP_TraDoc_Procesos";
                         cm.CommandType = CommandType.StoredProcedure;
-                        cm.Parameters.AddWithValue("iOpcion", Request.iOpcion);
+                        cm.Parameters.AddWithValue("Opcion", Request.iOpcion);
                         cm.Parameters.AddWithValue("cPerCodigo", Request.cPerCodigo);
                         cm.Parameters.AddWithValue("nPerRemFiltro", Request.nPerRemFiltro);
                         cm.Parameters.AddWithValue("nPerRecFiltro", Request.nPerRecFiltro);

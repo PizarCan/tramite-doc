@@ -22,6 +22,21 @@ namespace Integration.BL
             DAPersona ObjPersona = new DAPersona();
             return ObjPersona.ListaPersonas_BycPerCodigo_cPerRelTipo(Request);
         }
+        public DataTable ListaPersona_BycPerCodigo(BE_Req_Persona Request)
+        {
+            DAPersona ObjPersona = new DAPersona();
+            return ObjPersona.ListaPersona_BycPerCodigo(Request);
+        }
+        public SqlDataReader DRListaPeronas_BycPerApellido_cPerRelTipo(BE_Req_Persona Request)
+        {
+            DAPersona ObjPersona = new DAPersona();
+            return ObjPersona.DRListaPersonas_BycPerCodigo_cPerRelTipo(Request);
+        }
+        public SqlDataReader DRListaDelegados_BycPerCodigo(BE_Req_Persona Request)
+        {
+            DAPersona ObjPersona = new DAPersona();
+            return ObjPersona.DRListaDelegados_BycPerCodigo(Request);
+        }
         public BE_Res_Persona getcPerCodigoNew()
         {
             DAPersona ObjPersona = new DAPersona();

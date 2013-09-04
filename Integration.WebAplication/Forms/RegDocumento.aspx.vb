@@ -1,8 +1,7 @@
 ﻿Imports System.Data.SqlClient
 Imports System.Data
 Imports Integration.BL
-Imports Integration.Conection
-Imports Integration.DAConfiguration
+Imports Integration.Conection 
 Imports Integration.BE.Login
 Imports Integration.BE.UniOrgPerExt
 Imports Integration.BE.Constante
@@ -49,7 +48,7 @@ Partial Class Forms_RegDocumento
             cboTipDoc.DataTextField = "cConDescripcion"
             cboTipDoc.DataValueField = "nConValor"
             cboTipDoc.DataSource = ListaDocumentos
-
+            cboTipDoc.DataBind()
             cboTipDoc.Items.Insert(0, "<Seleccione>")
             cboTipDoc.Items(0).Value = 0
         End If
@@ -87,6 +86,7 @@ Partial Class Forms_RegDocumento
             cboUO.DataTextField = "cIntDescripcion"
             cboUO.DataValueField = "nUniOrgCodigo"
             cboUO.DataSource = ListaUniOrg
+            cboUO.DataBind()
         End If
         Return 1
     End Function
@@ -146,11 +146,11 @@ Partial Class Forms_RegDocumento
 
     Protected Sub txtNombre_TextChanged(sender As Object, e As System.EventArgs) Handles txtNombre.TextChanged
         If txtNombre.Text.Trim.Length > 3 Then
-            Dim Clase As New clsConfiguration
+            Dim clase As New clsConfiguraciones
             Dim Request As BE_Req_Persona = New BE_Req_Persona()
             Dim objBL As BL_Persona = New BL_Persona()
             Dim Rs As DataTable = New DataTable()
-            Request.cPerApellido = Clase.DBTilde(txtNombre.Text)
+            Request.cPerApellido = clase.DBTilde(txtNombre.Text)
             Rs = objBL.ListaPeronas_BycPerApellido(Request)
             If Rs.Rows.Count > 0 Then
                 Ocultar(False)
@@ -171,11 +171,11 @@ Partial Class Forms_RegDocumento
 
     Protected Sub txtDestino_TextChanged(sender As Object, e As System.EventArgs) Handles txtDestino.TextChanged
         If txtDestino.Text.Trim.Length > 3 Then
-            Dim Clase As New clsConfiguration
+            Dim clase As New clsConfiguraciones
             Dim Request As BE_Req_Persona = New BE_Req_Persona()
             Dim objBL As BL_Persona = New BL_Persona()
             Dim Rs As DataTable = New DataTable()
-            Request.cPerApellido = Clase.DBTilde(txtNombre.Text)
+            Request.cPerApellido = clase.DBTilde(txtNombre.Text)
             Request.cPerRelTipo = "1,2,14"
             Rs = objBL.ListaPeronas_BycPerApellido_cPerRelTipo(Request)
             If Rs.Rows.Count > 0 Then
@@ -185,7 +185,7 @@ Partial Class Forms_RegDocumento
             Else
                 Response.Write("No Hay Registros")
                 Ocultar2(True)
-            End If 
+            End If
         End If
     End Sub
 
@@ -198,19 +198,17 @@ Partial Class Forms_RegDocumento
 
         Dim Request As BE_Req_UniOrgPerExt = New BE_Req_UniOrgPerExt()
         Dim objBL As BL_UniOrgPerExt = New BL_UniOrgPerExt()
-        Dim ListaUniOrg As New List(Of BE_Res_UniOrgPerExt)
+        Dim ListaUniOrg As New DataTable
         Request.cPerCodigo = dgNombre2.SelectedItem.Cells(1).Text
         ListaUniOrg = objBL.ObtenerInstitucionesBycPerCodigo(Request)
-        If ListaUniOrg.Count > 0 Then
+        If ListaUniOrg.Rows.Count > 0 Then
+            cboInstDestino.DataTextField = "cPernombre"
+            cboInstDestino.DataValueField = "cPerCodigo"
+            cboInstDestino.DataSource = ListaUniOrg
+            cboInstDestino.DataBind()
+
             cboInstDestino.Items.Insert(0, "Seleccione Institucion")
             cboInstDestino.Items(0).Value = 0
-            Dim i As Integer = 1
-            For Each ResUniOrg As BE_Res_UniOrgPerExt In ListaUniOrg
-                cboInstDestino.Items.Add(i)
-                cboInstDestino.Items(i).Text = ResUniOrg.cPernombre
-                cboInstDestino.Items(i).Value = ResUniOrg.cPerCodigo
-                i = i + 1
-            Next
         End If
         btnGrabar.Enabled = True
         Ocultar2(True)
@@ -222,18 +220,15 @@ Partial Class Forms_RegDocumento
 
             Dim Request As BE_Req_UniOrgPerExt = New BE_Req_UniOrgPerExt()
             Dim objBL As BL_UniOrgPerExt = New BL_UniOrgPerExt()
-            Dim ListaUniOrg As New List(Of BE_Res_UniOrgPerExt)
+            Dim ListaUniOrg As New DataTable
             Request.cPerCodigo = dgNombre2.SelectedItem.Cells(1).Text
             Request.cUniCodigo = cboInstDestino.SelectedValue
             ListaUniOrg = objBL.ObtenerAreaByPersonaInstitucion(Request)
-            If ListaUniOrg.Count > 0 Then
-                Dim i As Integer = 0
-                For Each ResUniOrg As BE_Res_UniOrgPerExt In ListaUniOrg
-                    cboAreaDestino.Items.Add(i)
-                    cboAreaDestino.Items(i).Text = ResUniOrg.cIntDescripcion
-                    cboAreaDestino.Items(i).Value = ResUniOrg.nUniOrgCodigo
-                    i = i + 1
-                Next
+            If ListaUniOrg.Rows.Count > 0 Then
+                cboAreaDestino.DataValueField = "nUniOrgCodigo"
+                cboAreaDestino.DataTextField = "cIntDescripcion"
+                cboAreaDestino.DataSource = ListaUniOrg
+                cboAreaDestino.DataBind()
             End If
 
         End If
@@ -261,7 +256,7 @@ Partial Class Forms_RegDocumento
             End If
 
             'GENERAR NUEVO NUMERO
-            Dim Clase As New clsConfiguration
+            Dim Clase As New clsConfiguraciones
             NewCodDoc = Clase.objGeneraCodDoc(objBLDoc.getFechaActual)
             Session("DocCodReg") = NewCodDoc
             'FechaActual = Format(objBLDoc.getFechaActual, "MM/dd/yyyy HH:mm:ss")

@@ -77,7 +77,7 @@ Partial Class Forms_RegPersona
 
     Protected Sub btnBuscar_Click(sender As Object, e As System.EventArgs) Handles btnBuscar.Click
         If txtBuscar.Text.Trim.Length > 3 Then
-            Dim Clase As New clsConfiguration
+            Dim Clase As New clsConfiguraciones
             Dim Request As BE_Req_Persona = New BE_Req_Persona()
             Dim objBL As BL_Persona = New BL_Persona()
             Dim Rs As DataTable = New DataTable()
@@ -96,7 +96,7 @@ Partial Class Forms_RegPersona
         lblError.Text = String.Empty
         If txtApellido.Text.Trim.Length > 6 And txtNombre.Text.Trim.Length > 2 And cboProvincia.SelectedValue <> "" Then
             'Dim TransCodigo As String
-            Dim Clase As New clsConfiguration
+            Dim Clase As New clsConfiguraciones
             Dim Request As BE_Req_Persona = New BE_Req_Persona()
             Dim objBL As BL_Persona = New BL_Persona()
             Dim Rs As DataTable = New DataTable()

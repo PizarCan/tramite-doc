@@ -200,7 +200,7 @@
                                             Height="24px" Font-Size="X-Small">
                                         </asp:DropDownList>
                                         <asp:DropDownList ID="cboAreaDestino" runat="server" Width="233px" 
-                                            Font-Size="X-Small">
+                                            Height="24px" Font-Size="X-Small">
                                         </asp:DropDownList>
                                     </td>
                                 </tr>
