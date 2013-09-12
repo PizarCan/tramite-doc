@@ -11,7 +11,9 @@ Partial Class Forms_DocPendientes
     Inherits System.Web.UI.Page
 
     Protected Sub Page_Load(sender As Object, e As System.EventArgs) Handles Me.Load
-
+        If Session("cPerCodigo") Is Nothing Then
+            Response.Redirect("~/login.aspx")
+        End If
         If Not Page.IsPostBack Then
             Dim PrdActual As Integer
             Dim nActMes As Integer = Month(Date.Today)
@@ -353,6 +355,7 @@ Partial Class Forms_DocPendientes
 
         'DocDevueltos
         cDocEstado = "6324"
+        ReqTraDoc.cDocEstado = cDocEstado
         ReqTraDoc.cDocPerTipo = "1"
         Rs = ObjTraDoc.get_TraDoc_Procesos(ReqTraDoc)
         gvDevDoc.DataSource = Rs

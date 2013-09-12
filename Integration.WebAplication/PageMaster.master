@@ -1,0 +1,44 @@
+﻿<%@ Master Language="VB" CodeFile="PageMaster.master.vb" Inherits="PageMaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link href="../Styles/Estilous.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body style="margin-top: 0">
+    <form id="Form1" method="post" runat="server">
+    <table class="cuadro" cellspacing="0" cellpadding="0" width="770" align="center">
+        <tr>
+            <td align="left" colspan="2" class="Cabecera">
+                <img src="Imagenes/CabeceraAU.png" />
+                Trámite Documentario
+            </td>
+        </tr>
+        <tr>
+            <td width="770" bgcolor="#7ac930" colspan="2" class="CabeceraTabla" style="height: 20px">
+            </td>
+        </tr>
+        <tr>
+            <td valign="top" width="150">
+                <table cellspacing="0" cellpadding="0" width="150" border="0">
+                    <tr>
+                        <td>
+                            <asp:ContentPlaceHolder ID="menu" runat="server">
+                            </asp:ContentPlaceHolder>
+                        </td>
+                    </tr>
+                </table>
+                <asp:LoginStatus ID="LoginStatus1" runat="server" />
+            </td>
+            <td align="justify" width="620">
+                <asp:ContentPlaceHolder ID="contenido" runat="server">
+                </asp:ContentPlaceHolder>
+            </td>
+        </tr>
+    </table> 
+    </form>
+</body>
+</html>

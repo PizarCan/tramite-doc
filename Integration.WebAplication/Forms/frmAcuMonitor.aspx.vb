@@ -62,7 +62,7 @@ Partial Class Forms_frmAcuMonitor
         Dim Rs As DataTable
         ReqPer.cPerApellido = Clase.DBTilde(txtBuscar.Text)
         ReqPer.cPerRelTipo = PerRelacion
-        Rs = ObjPer.ListaPeronas_BycPerApellido_cPerRelTipo(ReqPer)
+        Rs = ObjPer.ListaPersonas_BycPerApellido_cPerRelTipo(ReqPer)
         If Rs.Rows.Count > 0 Then
             gvPersona.Visible = True
             gvPersona.DataSource = Rs.DefaultView
@@ -100,6 +100,8 @@ Partial Class Forms_frmAcuMonitor
         If rbnUsuario.Checked Then
             ReqPer.cPerCodigo = lblcPerCodigo.Text.Trim
             ReqPer.FiltroPersona = 1
+            ReqPer.dFechaIni = FecIni
+            ReqPer.dFechaFin = FecFin
             ReqPer.FiltroFecha = 0
 
             Rs = ObjDoc.getDocPendientesConAcuerdo(ReqPer)
@@ -134,17 +136,16 @@ Partial Class Forms_frmAcuMonitor
                             Optional ByVal FecFiltro As Integer = 0, Optional ByVal FecIni As String = "", _
                             Optional ByVal FecFin As String = "")
 
-        'Dim Comando As New DataTable
+        Dim Comando As New DataTable
 
-        'Dim ReportRuta As String = String.Empty
+        Dim ReportRuta As String = String.Empty
 
 
         'Dim Reader As SqlDataReader = clsTraDoc.Get_Suma_Estado_From_Acuerdos(PerFiltro, lblcPerCodigo.Text, _
         '                                FecFiltro, FecIni, FecFin, MyTrans, Cn)
 
-        'ReportRuta = Server.MapPath("~/Report/crptAcuEstadistica.rpt")
-
-        'Comando.Load(Reader)
+        ReportRuta = Server.MapPath("~/ReportES/crptAcuEstadistica.rpt")
+         
     End Sub
 
 

@@ -25,7 +25,7 @@ Partial Class Forms_ConCopia
             Dim Rs As DataTable = New DataTable()
             Request.cPerApellido = Clase.DBTilde(txtDestino.Text)
             Request.cPerRelTipo = "1,2,14"
-            Rs = objBL.ListaPeronas_BycPerApellido_cPerRelTipo(Request)
+            Rs = objBL.ListaPersonas_BycPerApellido_cPerRelTipo(Request)
             If Rs.Rows.Count > 0 Then
                 dgNombre2.DataSource = Rs
                 dgNombre2.DataBind()

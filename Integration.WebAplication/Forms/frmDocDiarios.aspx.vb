@@ -1,4 +1,7 @@
 ﻿Imports CrystalDecisions.CrystalReports.Engine
+Imports System.Data
+Imports Integration.BE.TraDoc
+Imports Integration.BL
 
 Partial Class Forms_frmDocDiarios
     Inherits System.Web.UI.Page
@@ -22,34 +25,24 @@ Partial Class Forms_frmDocDiarios
     End Sub
     Sub LoaderData(ByVal dFecha As Date, Optional ByVal Print As Integer = 0)
 
-        Dim Report As New ReportDocument
-        'Dim Comando As New DataTable
+        Dim Report As New ReportDocument()
+        Dim DocDiario As DataTable = New DataTable()
 
-        'Using Cn As New SqlConnection(TramiteDocumentario.MiConexion)
-        '    Cn.Open()
-        '    Dim ReportRuta As String = String.Empty
-        '    Dim MyTrans As SqlTransaction = Cn.BeginTransaction
+        Dim ReqTraDoc As BE_Req_TraDoc = New BE_Req_TraDoc()
+        Dim BL_TraDoc As BL_TraDoc = New BL_TraDoc()
+        ReqTraDoc.iOpcion = 14
+        ReqTraDoc.cFecIni = Format(dFecha, "MM/dd/yyyy")
+        ReqTraDoc.cPerCodigo = Session("cPerCodigo")
+        DocDiario = BL_TraDoc.get_TraDoc_Procesos(ReqTraDoc)
 
-        '    Try
-        '        Dim clsTraDoc As New TramiteDocumentario.clsTraDoc
+        Dim ReportRuta As String = String.Empty
+        ReportRuta = Server.MapPath("~/Reportes/crpDocDiarios.rpt")
+        Report.Close()
+        Report.Load(Server.MapPath("~/Reportes/crpDocDiarios.rpt"))
+        Report.SetDataSource(DocDiario)
 
+        crptPEaDReport.ReportSource = Report
 
-        '        ReportRuta = Server.MapPath("~/Report/crpDocDiarios.rpt")
-
-        '        Comando.Load(clsTraDoc.Get_MesPart_Doc_Diarios(Format(dFecha, "MM/dd/yyyy"), MyTrans, Cn, Session("PerCodigo")))
-        '        Report.Close()
-
-        '        Report.Load(ReportRuta)
-        '        Report.SetDataSource(Comando)
-
-        '        MyTrans.Commit()
-        '        Cn.Close()
-        '        Me.crptPEaDReport.ReportSource = Report
-        '    Catch ex As Exception
-        '        Throw ex
-        '    End Try
-
-        'End Using
     End Sub
 
 

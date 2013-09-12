@@ -26,9 +26,9 @@ Partial Class Forms_frmAcuDirectorio
                     If PerDelCodigo <> System.String.Empty Then
                         PerDelCodigo = Left(PerDelCodigo, Len(PerDelCodigo) - 1)
                         Session("PerDelCodigo") = PerDelCodigo
-                        PerCodigo = Session("PerCodigo") & "','" & PerDelCodigo
+                        PerCodigo = Session("cPerCodigo") & "','" & PerDelCodigo
                     Else
-                        PerCodigo = Session("PerCodigo")
+                        PerCodigo = Session("cPerCodigo")
                     End If
                     Dim ReqDocumentos As BE_Req_Documento = New BE_Req_Documento()
                     Dim BL_Doc As BL_Documento = New BL_Documento()
@@ -36,6 +36,8 @@ Partial Class Forms_frmAcuDirectorio
                     ReqDocumentos.cPerCodigo = PerCodigo
                     ReqDocumentos.FiltroPersona = 1
                     ReqDocumentos.FiltroFecha = 0
+                    ReqDocumentos.dFechaIni = "01/01/1900"
+                    ReqDocumentos.dFechaFin = "01/01/1900"
                     Rs = BL_Doc.getDocPendientesConAcuerdo(ReqDocumentos)
 
                     gvAcuerdos.DataSource = Rs

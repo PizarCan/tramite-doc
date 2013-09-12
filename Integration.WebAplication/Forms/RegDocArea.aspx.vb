@@ -13,16 +13,16 @@ Partial Class Forms_RegDocArea
     Dim Midtr As DataRow
 
     Protected Sub Page_Load(sender As Object, e As System.EventArgs) Handles Me.Load
-        'clsConsultasComunes.Ins_User_From_Login(Session("PerCodigo"))
+        'clsConsultasComunes.Ins_User_From_Login(Session("cPerCodigo"))
         If Not Page.IsPostBack Then
             lblusuario.Text = Session("Nombre")
-            lblCodPerRemite.Text = Session("PerCodigo")
+            lblCodPerRemite.Text = Session("cPerCodigo")
             ' Combo UO ******
             Dim ReqUniOrg As BE_Req_UniOrgPerExt = New BE_Req_UniOrgPerExt()
             Dim BL_ReqUniOrg As BL_UniOrgPerExt = New BL_UniOrgPerExt()
 
             CboUniOrg(lblCodPerRemite.Text)
-            'Dependencias(Val(cboUniOrgP.SelectedValue), MyTrans, cn)
+            Dependencias(Val(cboUniOrgP.SelectedValue))
             '****************
             '*****Acuerdos****
             If Session("AcuRegistro") = True Then
@@ -32,15 +32,23 @@ Partial Class Forms_RegDocArea
                 pnlAcuerdo.Visible = False
             End If
             '*****************
+            Dim ReqTraDoc As BE_Req_TraDoc = New BE_Req_TraDoc()
+            Dim ObjTraDoc As BL_TraDoc = New BL_TraDoc()
+            Dim RS As DataTable
+
+            ReqTraDoc.iOpcion = 17
+            ReqTraDoc.cPerJurCodigo = gPerEmpCodigo.gPerEmpUA
+            RS = ObjTraDoc.get_TraDoc_Procesos(ReqTraDoc)
+
             cboTipDoc.DataValueField = "nConValor"
             cboTipDoc.DataTextField = "cConDescripcion"
-            'cboTipDoc.DataSource = Clase.Get_Documentos_Habilitados(gPerEmpCodigo.gPerEmpUA, cn, MyTrans)
+            cboTipDoc.DataSource = RS
             cboTipDoc.DataBind()
             cboTipDoc.Items.Insert(0, "Seleccione")
             cboTipDoc.Items(0).Value = 0
 
             txtFecha.Text = Date.Now.Date
-            'Get_PerMail(cn, MyTrans)
+            Get_PerMail()
 
         End If
         btnGrabar.Attributes.Add("onclick", "javascript:if(confirm('Está Seguro de Grabar')== false) return false;")
@@ -57,10 +65,10 @@ Partial Class Forms_RegDocArea
         Request.cPerCodigo = PerCodigo
         ListaUniOrg = objBL.ObtenerUniOrgBycPerCodigo(Request)
         If ListaUniOrg.Rows.Count > 0 Then
-            cboUO.DataTextField = "cIntDescripcion"
-            cboUO.DataValueField = "nUniOrgCodigo"
-            cboUO.DataSource = ListaUniOrg
-            cboUO.DataBind()
+            cboUniOrgP.DataTextField = "cIntDescripcion"
+            cboUniOrgP.DataValueField = "nUniOrgCodigo"
+            cboUniOrgP.DataSource = ListaUniOrg
+            cboUniOrgP.DataBind()
         End If
         Return 1
     End Function
@@ -91,7 +99,7 @@ Partial Class Forms_RegDocArea
             Dim clase As New clsConfiguraciones
             Request.cPerApellido = clase.DBTilde(txtDestino.Text)
             Request.cPerRelTipo = "1,2,14"
-            Rs = objBL.ListaPeronas_BycPerApellido_cPerRelTipo(Request)
+            Rs = objBL.ListaPersonas_BycPerApellido_cPerRelTipo(Request)
             If Rs.Rows.Count > 0 Then
                 Ocultar2(False)
                 dgNombre2.DataSource = Rs
@@ -103,28 +111,35 @@ Partial Class Forms_RegDocArea
 
             Rs.Clear()
 
-            Dim Rd As SqlDataReader
+            'Dim Rd As SqlDataReader
 
-            Rd = objBL.DRListaPeronas_BycPerApellido_cPerRelTipo(Request)
+            Dim dt As DataTable
 
-            clase.ddl_Fill(cboNumero, Rd, "cPerCodigo-Nombre", "Numero")
+            dt = objBL.ListaPersonas_BycPerApellido_cPerRelTipo(Request)
+            cboNumero.DataTextField = "Nombre"
+            cboNumero.DataValueField = "cPerCodigo"
+            cboNumero.DataSource = dt
+            cboNumero.DataBind()
+            '            Rd = objBL.DRListaPersonas_BycPerCodigo_cPerRelTipo(Request)
+
+            'clase.ddl_Fill(cboNumero, Rd, "cPerCodigo-Nombre", "Numero")
+
             cboNumero.Items.Insert(0, "Seleccione")
             cboNumero.Items.Item(0).Value = 0
 
-            Rd.Close()
+            'Rd.Close()
 
         End If
     End Sub
 
-    Sub LoadPersona(Optional ByVal cPerKey As String = "")
-        Dim Key() As String = Split(cPerKey, "-")
+    Sub LoadPersona(Optional ByVal cPerCodigo As String = "", Optional ByVal cPerNombre As String = "")
         Dim Clase As New clsConfiguraciones
-        If cPerKey = String.Empty Then
+        If cPerCodigo = String.Empty Then
             Session("pcPerNombre") = dgNombre2.SelectedItem.Cells(2).Text
             Session("pcPerCodigo") = dgNombre2.SelectedItem.Cells(1).Text
         Else
-            Session("pcPerCodigo") = Key(0)
-            Session("pcPerNombre") = Key(1)
+            Session("pcPerCodigo") = cPerCodigo
+            Session("pcPerNombre") = cPerNombre
         End If
         txtDestino.Text = Session("pcPerNombre")
         lblCodPerDestino.Text = Session("pcPerCodigo")
@@ -136,6 +151,7 @@ Partial Class Forms_RegDocArea
         Dim objBL As BL_UniOrgPerExt = New BL_UniOrgPerExt()
         Dim ListaUniOrg As New DataTable
         Request.cPerCodigo = dgNombre2.SelectedItem.Cells(1).Text
+
         ListaUniOrg = objBL.ObtenerInstitucionesBycPerCodigo(Request)
         If ListaUniOrg.Rows.Count > 0 Then
             cboInstDestino.DataSource = ListaUniOrg
@@ -255,7 +271,7 @@ Partial Class Forms_RegDocArea
         txtRRHHFecFin.Text = Date.Today
 
     End Sub
-     
+
     Sub Limpiar()
         lblCodPerDestino.Text = ""
         txtAsunto.Text = ""
@@ -328,27 +344,28 @@ Partial Class Forms_RegDocArea
             Dim PerDelCodigo As String = System.String.Empty
             Dim ReqPersona As BE_Req_Persona = New BE_Req_Persona()
             Dim ObjPersona As BL_Persona = New BL_Persona()
-            Dim dr As SqlDataReader = ObjPersona.DRListaDelegados_BycPerCodigo(Session("cPerCodigo"))
-            If dr.HasRows Then
+            ReqPersona.cPerCodigo = Session("cPerCodigo")
+            Dim dt As DataTable = ObjPersona.GetDelegados_BycPerCodigo(ReqPersona)
+            If dt.Rows.Count > 1 Then
                 cboDelegado.DataTextField = "Delegado"
                 cboDelegado.DataValueField = "cPerCodigo"
-                cboDelegado.DataSource = dr
+                cboDelegado.DataSource = dt
                 cboDelegado.DataBind()
                 cboDelegado.Items.Insert(0, "Seleccione un Nombre")
                 cboDelegado.Items(0).Value = 0
 
-                dr.Close()
+                dt.Clear()
             Else
                 chkDelegado.Checked = False
             End If
         Else
             lblusuario.Text = Session("Nombre")
-            lblCodPerRemite.Text = Session("PerCodigo")
+            lblCodPerRemite.Text = Session("cPerCodigo")
             CboUniOrg(lblCodPerRemite.Text)
             cboDelegado.DataSource = ""
             cboDelegado.DataBind()
         End If
-         
+
     End Sub
 
     Protected Sub btnAgregar_Click(sender As Object, e As System.EventArgs) Handles btnAgregar.Click
@@ -403,9 +420,26 @@ Partial Class Forms_RegDocArea
             Session("UOPerDelCodigo") = MiDtb.Rows.Item(0).Item(4)
             lblCodPerRemite.Text = PerDelCodigo
             CboUniOrg(lblCodPerRemite.Text)
-            'Dependencias(cboUniOrgP.SelectedValue)
+            Dependencias(cboUniOrgP.SelectedValue)
             If cboTipDoc.SelectedValue <> 0 Then txtNumDocumento.Text = GeneraNumero(cboUO.SelectedValue, cboTipDoc.SelectedValue)
         End If
+    End Sub
+
+    Sub Dependencias(ByVal pnUniOrgCodigo As Long)
+        Dim Reader As DataTable
+
+        Dim ReqTraDoc As BE_Req_TraDoc = New BE_Req_TraDoc()
+        Dim ObjTraDoc As BL_TraDoc = New BL_TraDoc
+        ReqTraDoc.iOpcion = 20
+        ReqTraDoc.nUniOrgCodigo = pnUniOrgCodigo
+
+        Reader = ObjTraDoc.get_TraDoc_Procesos(ReqTraDoc)
+
+        cboUO.DataTextField = "cUniOrgNombre"
+        cboUO.DataValueField = "nUniOrgCodigo"
+        cboUO.DataSource = Reader
+        cboUO.DataBind()
+
     End Sub
 
     Private Function GeneraNumero(ByVal nUniOrgCodigo As Long, ByVal nDocTipo As Long) As String
@@ -426,7 +460,7 @@ Partial Class Forms_RegDocArea
         End If
         Return cDocNDoc
     End Function
-     
+
     Protected Sub lnkCopia_Click(sender As Object, e As System.EventArgs) Handles lnkCopia.Click
         If mvCopia.ActiveViewIndex = -1 Then
             mvCopia.ActiveViewIndex = 0
@@ -454,7 +488,7 @@ Partial Class Forms_RegDocArea
         Dim clase As New clsConfiguraciones
         Request.cPerApellido = clase.DBTilde(txtDestino.Text)
         Request.cPerRelTipo = "1,2,14"
-        Rs = objBL.ListaPeronas_BycPerApellido_cPerRelTipo(Request)
+        Rs = objBL.ListaPersonas_BycPerApellido_cPerRelTipo(Request)
         If Rs.Rows.Count > 0 Then
             Ocultar2(False)
             gvCopia.DataSource = Rs.DefaultView
@@ -465,7 +499,7 @@ Partial Class Forms_RegDocArea
         End If
 
     End Sub
-       
+
 
     Protected Sub btnCopAgregar_Click(sender As Object, e As System.EventArgs) Handles btnCopAgregar.Click
         Try
@@ -499,7 +533,7 @@ Partial Class Forms_RegDocArea
     End Sub
 
     Protected Sub cboNumero_SelectedIndexChanged(sender As Object, e As System.EventArgs) Handles cboNumero.SelectedIndexChanged
-        LoadPersona(cboNumero.SelectedValue)
+        LoadPersona(cboNumero.SelectedValue, cboNumero.SelectedItem.Text)
     End Sub
 
     Protected Sub btnCancelar_Click(sender As Object, e As System.EventArgs) Handles btnCancelar.Click
@@ -525,16 +559,49 @@ Partial Class Forms_RegDocArea
         If lblMail.Text <> "No ha Registrado Su Mail" Then txtPerMail.Text = lblMail.Text
 
     End Sub
-    'Sub Get_PerMail(ByVal Cn As SqlConnection, ByVal MyTrans As SqlTransaction)
-    '    Dim clsTraDoc As New clsTraDoc
-    '    Dim Reader As SqlDataReader = clsTraDoc.Get_PerMail(Session("PerCodigo"), Cn, MyTrans)
-    '    While Reader.Read
-    '        lblMail.Text = Reader("cPerMaiNombre")
-    '        lblMail.ForeColor = Color.Black
-    '    End While
-    '    If lblMail.Text = String.Empty Then lblMail.Text = "No ha Registrado Su Mail" : lblMail.ForeColor = Color.Red
-    '    Reader.Close()
-    '    Reader = Nothing
-    'End Sub
+    Sub Get_PerMail()
+        Dim ReqTraDoc As BE_Req_TraDoc = New BE_Req_TraDoc
+        Dim BL_TraDoc As BL_TraDoc = New BL_TraDoc
+        Dim dt As New DataTable
+        ReqTraDoc.iOpcion = 18
+        ReqTraDoc.cPerCodigo = Session("cPerCodigo")
+        dt = BL_TraDoc.get_TraDoc_Procesos(ReqTraDoc)
+
+        If dt.Rows.Count > 1 Then
+            lblMail.Text = dt.Rows(0).Item("cPerMaiNombre").ToString
+            lblMail.ForeColor = Drawing.Color.Black
+        End If
+
+        If lblMail.Text = String.Empty Then lblMail.Text = "No ha Registrado Su Mail" : lblMail.ForeColor = Drawing.Color.Red
+    End Sub
      
+    Protected Sub cboUO_SelectedIndexChanged(sender As Object, e As System.EventArgs) Handles cboUO.SelectedIndexChanged
+        Dependencias(cboUniOrgP.SelectedValue)
+        txtNumDocumento.Text = GeneraNumero(cboUO.SelectedValue, cboTipDoc.SelectedValue)
+    End Sub
+
+    Protected Sub cboUniOrgP_SelectedIndexChanged(sender As Object, e As System.EventArgs) Handles cboUniOrgP.SelectedIndexChanged
+
+        txtNumDocumento.Text = GeneraNumero(cboUO.SelectedValue, cboTipDoc.SelectedValue)
+    End Sub
+
+    Protected Sub btnDocBuscar_Click(sender As Object, e As System.EventArgs) Handles btnDocBuscar.Click
+        lblDocRefCodigo.Text = String.Empty
+        Dim Reader As DataTable
+        Dim ReqTraDoc As BE_Req_TraDoc = New BE_Req_TraDoc()
+        Dim ObjTraDoc As BL_TraDoc = New BL_TraDoc
+        ReqTraDoc.iOpcion = 5
+        ReqTraDoc.cDocNDoc = txtDocReferencia.Text.Trim
+        Reader = ObjTraDoc.get_TraDoc_Procesos(ReqTraDoc)
+
+        chkDocRef.DataTextField = "Asunto"
+        chkDocRef.DataValueField = "cDocCodigo"
+        chkDocRef.DataSource = Reader
+        chkDocRef.DataBind()
+
+    End Sub
+     
+    Protected Sub btnMaiGrabar_Click(sender As Object, e As System.EventArgs) Handles btnMaiGrabar.Click
+
+    End Sub
 End Class

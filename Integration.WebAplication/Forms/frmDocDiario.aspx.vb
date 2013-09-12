@@ -1,6 +1,7 @@
 ﻿Imports Integration.BE.TraDoc
 Imports Integration.BL
 Imports System.Data
+Imports CrystalDecisions.CrystalReports.Engine
 
 Partial Class Forms_frmDocDiario
     Inherits System.Web.UI.Page

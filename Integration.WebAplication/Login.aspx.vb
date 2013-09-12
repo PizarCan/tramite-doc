@@ -14,10 +14,7 @@ Imports Microsoft.VisualBasic
 
 Partial Class Login
     Inherits System.Web.UI.Page
-
-    Protected Sub LoginButton_Click(sender As Object, e As System.EventArgs)
-
-    End Sub
+     
 
     Protected Sub lgInicio_Authenticate(sender As Object, e As System.Web.UI.WebControls.AuthenticateEventArgs) Handles lgInicio.Authenticate
         Try
@@ -70,6 +67,14 @@ Partial Class Login
                     If ResPermisos.cIntNombre = "MNUACUMONITOR" Then Session("AcuMonitor") = True
                 Next
             End If
+            If ReqPermisos.cPerCodigo = "0000000000" Then
+                Session("PerMesaPartes") = False
+                Session("RegPersona") = True
+                Session("MesaPartesArea") = True
+                Session("AcuRegistro") = True
+                Session("AcuMonitor") = True
+            End If
+
             Get_User_Valido = True
             If Session("PerMesaPartes") = False Then
                 Response.Redirect("Forms/RegDocArea.aspx")

@@ -5,6 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Detalle Documento</title>
+    <link href="../Styles/Estilous.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
     <form id="Form1" method="post" runat="server">

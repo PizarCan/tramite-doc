@@ -18,7 +18,7 @@ Partial Class Forms_frmDocTransferencia
         Dim Rs As DataTable
         ReqPer.cPerApellido = Clase.DBTilde(txtPerOrigen.Text)
         ReqPer.cPerRelTipo = PerRelacion
-        Rs = ObjPer.ListaPeronas_BycPerApellido_cPerRelTipo(ReqPer)
+        Rs = ObjPer.ListaPersonas_BycPerApellido_cPerRelTipo(ReqPer)
         If Rs.Rows.Count > 0 Then
             gvPerOrigen.DataSource = Rs.DefaultView
             gvPerOrigen.DataBind()
@@ -63,7 +63,7 @@ Partial Class Forms_frmDocTransferencia
         Dim Rs As DataTable
         ReqPer.cPerApellido = Clase.DBTilde(txtPerDestino.Text)
         ReqPer.cPerRelTipo = PerRelacion
-        Rs = ObjPer.ListaPeronas_BycPerApellido_cPerRelTipo(ReqPer)
+        Rs = ObjPer.ListaPersonas_BycPerApellido_cPerRelTipo(ReqPer)
         If Rs.Rows.Count > 0 Then
             gvPerDestino.DataSource = Rs.DefaultView
             gvPerDestino.DataBind()
@@ -131,7 +131,7 @@ Partial Class Forms_frmDocTransferencia
                     ReqDoc.cPerCodigo = Session("cPerCodigo")
                     ReqDoc.nPerRelacion = 1
                     ReqDoc.nDocTipo = 1
-                    'clsInsert.objInsertDocPersona(cDocCodigo, TramiteDocumentario.DocPerTipo.gDocPerTipTransUsuario, Session("PerCodigo"), 1, 1, MyTrans, Cn)
+                    'clsInsert.objInsertDocPersona(cDocCodigo, TramiteDocumentario.DocPerTipo.gDocPerTipTransUsuario, Session("cPerCodigo"), 1, 1, MyTrans, Cn)
                     If Not objBLDoc.setDocPersona(ReqDoc) Then
                         ReqDoc.nUniOrgCodigo = cboOrigen.SelectedValue
                         ReqDoc.nDocUniOrgTipo = DocPerTipo.gDocPerTipTransOrigen

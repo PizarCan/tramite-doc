@@ -19,7 +19,7 @@ Partial Class Forms_DetalleDocumento
 
             Dim Rs As DataTable
             Dim i As Integer
-            Dim PerCodigo As String = Session("PerCodigo")
+            Dim PerCodigo As String = Session("cPerCodigo")
             Dim cPerCopCodigo As String = (Request.QueryString("cPerCopCodigo"))
             DocCodigo = (Request.QueryString("CodDocumento"))
             Session("DocEstModificar") = DocCodigo
