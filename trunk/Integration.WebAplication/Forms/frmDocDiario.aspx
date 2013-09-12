@@ -63,12 +63,11 @@
                     <asp:LinkButton ID="lnkCerrar" runat="server" Width="155px">Cerrar</asp:LinkButton>
                 </td>
                 <td style="width: 450px" align="left" valign="top">
-                
-                    <CR:CrystalReportViewer id="crptPEaDReport" runat="server" autodatabind="true" displaygrouptree="False"
+                 
+                    <CR:CrystalReportViewer  id="crptPEaDReport" runat="server" autodatabind="true" displaygrouptree="False"
                         enabledatabaselogonprompt="False" enableparameterprompt="False" hascrystallogo="False"
                         hasgotopagebutton="False" hassearchbutton="False" hastogglegrouptreebutton="False"
-                        reuseparametervaluesonrefresh="True"  />
-
+                        reuseparametervaluesonrefresh="True" />
                 </td>
             </tr>
             <tr>

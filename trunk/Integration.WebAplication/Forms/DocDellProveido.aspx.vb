@@ -82,7 +82,7 @@ Partial Class Forms_DocDellProveido
         Dim ObjPersona As BL_Persona = New BL_Persona()
         ReqPersona.cPerApellido = txtDestino.Text.Trim
         ReqPersona.cPerRelTipo = PerRelacion
-        Rs = ObjPersona.ListaPeronas_BycPerApellido_cPerRelTipo(ReqPersona)
+        Rs = ObjPersona.ListaPersonas_BycPerApellido_cPerRelTipo(ReqPersona)
 
         If Rs.Rows.Count > 0 Then
             dgNombre2.Visible = True
@@ -166,7 +166,7 @@ Partial Class Forms_DocDellProveido
                 rpta = False
             End If
 
-            'Clase.objTransanccion(406302, Session("PerCodigo"), MyTrans, cn, "Doc:" & lblDocCodigo.Text & " Origen:" & lblPerRecibe.Text.Trim & " Destino:" & lblCodPerDestino.Text & " Obs:" & Left(txtProveido.Text, 100))
+            'Clase.objTransanccion(406302, Session("cPerCodigo"), MyTrans, cn, "Doc:" & lblDocCodigo.Text & " Origen:" & lblPerRecibe.Text.Trim & " Destino:" & lblCodPerDestino.Text & " Obs:" & Left(txtProveido.Text, 100))
             If rpta = False Then
                 lblError.Text = "Proseso no contemplado (Enviar Proveído a la misma persona)"
             End If

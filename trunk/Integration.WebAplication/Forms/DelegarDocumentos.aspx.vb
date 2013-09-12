@@ -16,7 +16,7 @@ Partial Class Forms_DelegarDocumentos
             Dim Rs As DataTable = New DataTable()
             Request.cPerApellido = Clase.DBTilde(txtBuscar.Text)
             Request.cPerRelTipo = "1"
-            Rs = objBL.ListaPeronas_BycPerApellido_cPerRelTipo(Request)
+            Rs = objBL.ListaPersonas_BycPerApellido_cPerRelTipo(Request)
             If Rs.Rows.Count > 0 Then
                 gvPersona.DataSource = Rs.DefaultView
                 gvPersona.DataBind()
@@ -36,7 +36,7 @@ Partial Class Forms_DelegarDocumentos
             ReqPer.cPerParCodigo = lblPerCodigo.Text
             ReqPer.nPerParTipo = 1012
             If BL_Per.setDelegado(ReqPer) Then
-                'MiClase.objTransanccion(406301, Session("PerCodigo"), MyTrans, cn, lblPerCodigo.Text & "Persona ala que delegó")
+                'MiClase.objTransanccion(406301, Session("cPerCodigo"), MyTrans, cn, lblPerCodigo.Text & "Persona ala que delegó")
             End If
             lblPerNombre.Text = System.String.Empty
             lblPerCodigo.Text = System.String.Empty

@@ -30,6 +30,11 @@ Public Module DocTipo
     Public gnDocSerVarios As Long = 8806004
 End Module
 
+Public Module gPerEmpCodigo
+    Public gPerEmpUSSCodigo As String = "1000003833"
+    Public gPerEmpUCV_CHICodigo As String = "1000003204"
+    Public gPerEmpUA As String = "9000013375"
+End Module
 
 Public Enum DocPerTipo
     gDocPerTipTransOrigen = 1

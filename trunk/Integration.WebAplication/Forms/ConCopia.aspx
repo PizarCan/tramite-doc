@@ -5,6 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>ConCopia</title>
+    <link href="../Styles/Estilous.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
     <form id="Form1" method="post" runat="server">
@@ -40,7 +41,7 @@
 								</TR>
 							</TABLE>
 						</FONT><FONT face="Courier New" size="2">
-                            <asp:Button ID="Button1" runat="server" Text="Button" Width="0px" /><asp:button id="btnAgregarCopia" runat="server" Width="200px" Text="Agregar Copia"></asp:button><asp:button id="btnQuitarCopia" runat="server" Width="200px" Text="Quitar Copia"></asp:button></FONT></TD>
+                            <asp:Button ID="Button1" runat="server" Visible="false" Text="Button" Width="0px" /><asp:button id="btnAgregarCopia" runat="server" Width="200px" Text="Agregar Copia"></asp:button><asp:button id="btnQuitarCopia" runat="server" Width="200px" Text="Quitar Copia"></asp:button></FONT></TD>
 				</TR>
 				<TR>
 					<TD style="HEIGHT: 21px"><FONT face="Courier" size="2"><asp:listbox id="lstCopias" runat="server" Font-Size="XX-Small" Width="400px" Height="104px"></asp:listbox></FONT></TD>

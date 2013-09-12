@@ -177,7 +177,7 @@ Partial Class Forms_RegDocumento
             Dim Rs As DataTable = New DataTable()
             Request.cPerApellido = clase.DBTilde(txtNombre.Text)
             Request.cPerRelTipo = "1,2,14"
-            Rs = objBL.ListaPeronas_BycPerApellido_cPerRelTipo(Request)
+            Rs = objBL.ListaPersonas_BycPerApellido_cPerRelTipo(Request)
             If Rs.Rows.Count > 0 Then
                 Ocultar2(False)
                 dgNombre2.DataSource = Rs
@@ -322,7 +322,7 @@ Partial Class Forms_RegDocumento
                 registra = True
             End If
 
-            'Clase.objTransanccion(406304, Session("PerCodigo"), MyTrans, cn, "Doc:" & NewCodDoc & "Destino:" & lblCodPerDestino.Text)
+            'Clase.objTransanccion(406304, Session("cPerCodigo"), MyTrans, cn, "Doc:" & NewCodDoc & "Destino:" & lblCodPerDestino.Text)
 
 
             If registra Then
@@ -378,5 +378,11 @@ Partial Class Forms_RegDocumento
         Dim script As String
         script = "<script Language=JavaScript>window.open('ConCopia.aspx?DocCodigo=" + Session("DocCodReg") + "','Copia','scrollbars=yes,status=yes,height=350,width=550')</script>"
         Response.Write(script)
+    End Sub
+
+    Protected Sub btnImprimir_Click(sender As Object, e As System.EventArgs) Handles btnImprimir.Click
+        Response.Write("<script language='javascript'>")
+        Response.Write("window.open('frmDocDiarios.aspx','Documentos_Diarios')")
+        Response.Write("</script>")
     End Sub
 End Class

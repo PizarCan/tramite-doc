@@ -5,6 +5,10 @@
 <head runat="server">
     <title>Trámite Documentario</title>
     <link href="../Styles/Estilous.css" rel="stylesheet" type="text/css" />
+    <script language="jscript" type="text/javascript">
+        function clickButton() {
+        }   
+    </script>
 </head>
 <body style="margin-top: 0">
     <form id="Form1" method="post" runat="server">
@@ -141,7 +145,7 @@
                                         </asp:DropDownList>
                                     </td>
                                     <td style="width: 91px" align="right">
-                                        <asp:Button ID="Button2" runat="server" Text="Button" Width="0px" />
+                                        <asp:Button ID="Button2" runat="server" Text="Button" Width="0px"  />
                                         <asp:Button ID="btnDelegar" runat="server" Text="Delegar" Width="75px" CssClass="Boton" />
                                     </td>
                                 </tr>
