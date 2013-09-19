@@ -71,7 +71,7 @@ namespace Integration.DAService
 
                     using (SqlCommand cm = new SqlCommand())
                     {
-                        cm.CommandText = "sp_Get_Constantes_BynConCodigo";
+                        cm.CommandText = "sp_Get_Constantes_By_nConCodigo";
                         cm.CommandType = CommandType.StoredProcedure;
                         cm.Parameters.AddWithValue("nConCodigo", Request.nConCodigo);
                         cm.Parameters.AddWithValue("cConValor", Request.cConValor);
@@ -117,7 +117,7 @@ namespace Integration.DAService
 
                     using (SqlCommand cm = new SqlCommand())
                     {
-                        cm.CommandText = "sp_Get_Constantes_BynConCodigo";
+                        cm.CommandText = "sp_Get_Constantes_By_nConCodigo";
                         cm.CommandType = CommandType.StoredProcedure;
                         cm.Parameters.AddWithValue("nConCodigo", Request.nConCodigo);
                         cm.Parameters.AddWithValue("cConValor", Request.cConValor);

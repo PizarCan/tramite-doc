@@ -9,6 +9,7 @@ namespace Integration.BE.PerUsuGruAcc
     {
         public string cPerCodigo { get; set; }
         public string cIntNombre { get; set; }
+        public int nIntCodigo { get; set; }
     }
 
 

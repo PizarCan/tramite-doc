@@ -47,4 +47,5 @@ Partial Class Forms_frmDocDiario
         Rs.Clear()
 
     End Sub
+     
 End Class

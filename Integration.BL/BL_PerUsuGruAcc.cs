@@ -17,5 +17,19 @@ namespace Integration.BL
             return ObjPermisos.ObtenerPermisos(Request);
 
         }
+        public Boolean setPerUsuGruAcc (BE_Req_PerUsuGruAcc Request)
+        {
+
+            DAPerUsuGruAcc ObjPermisos = new DAPerUsuGruAcc();
+            return ObjPermisos.setPerUsuGruAcc(Request);
+
+        }
+        public Boolean delPerUsuGruAcc (BE_Req_PerUsuGruAcc Request)
+        {
+
+            DAPerUsuGruAcc ObjPermisos = new DAPerUsuGruAcc();
+            return ObjPermisos.delPerUsuGruAcc(Request);
+
+        }
     }
 }

@@ -47,6 +47,7 @@ namespace Integration.DAService
                         cm.Parameters.AddWithValue("cUniOrgTransferencia", Request.cUniOrgTransferencia);
                         cm.Parameters.AddWithValue("cDocPerTipo", Request.cDocPerTipo);
                         cm.Parameters.AddWithValue("cFecIni", Request.cFecIni);
+                        cm.Parameters.AddWithValue("cPerJurCodigo", Request.cPerJurCodigo);
                         cm.Connection = cn;
                         using (SqlDataReader dr = cm.ExecuteReader())
                         { 
@@ -64,6 +65,6 @@ namespace Integration.DAService
             //return Item;
             return Rs;
         }
-
+         
     }
 }

@@ -30,5 +30,17 @@ namespace Integration.BL
             DAUniOrgPerExt UniOrgPersona = new DAUniOrgPerExt();
             return UniOrgPersona.ObtenerAreaByPersonaInstitucion(Request);
         }
+        public DataTable GetAreaByInstitucion(BE_Req_UniOrgPerExt Request)
+        {
+
+            DAUniOrgPerExt UniOrgPersona = new DAUniOrgPerExt();
+            return UniOrgPersona.GetAreaByInstitucion(Request);
+        }
+        public DataTable GetInstituciones()
+        {
+
+            DAUniOrgPerExt UniOrgPersona = new DAUniOrgPerExt();
+            return UniOrgPersona.GetInstituciones();
+        }
     }
 }

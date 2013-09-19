@@ -83,7 +83,7 @@ namespace Integration.DAService
             return Rs;
         }
 
-        public DataTable ListaPersonas_BycPerCodigo_cPerRelTipo(BE_Req_Persona Request)
+        public DataTable ListaPersonas_BycPerApellido_cPerRelTipo(BE_Req_Persona Request)
         {
             DataTable Rs = new DataTable();
             try
@@ -97,7 +97,7 @@ namespace Integration.DAService
 
                     using (SqlCommand cm = new SqlCommand())
                     {
-                        cm.CommandText = "sp_ListaPersonas_BycPerCodigo_cPerRelacion";
+                        cm.CommandText = "sp_ListaPersonas_BycPerApellido_cPerRelacion";
                         cm.CommandType = CommandType.StoredProcedure;
                         cm.Parameters.AddWithValue("cPerApellido", Request.cPerApellido);
                         cm.Parameters.AddWithValue("cPerRelTipo", Request.cPerRelTipo);
@@ -189,6 +189,42 @@ namespace Integration.DAService
 
             return Rs;
         }
+
+        public DataTable GetDelegados_BycPerCodigo(BE_Req_Persona Request)
+        {
+            DataTable Rs = new DataTable();
+            try
+            {
+                clsConection Obj = new clsConection();
+                string Cadena = Obj.GetConexionString("Naylamp");
+
+                using (SqlConnection cn = new SqlConnection(Cadena))
+                {
+                    cn.Open();
+
+                    using (SqlCommand cm = new SqlCommand())
+                    {
+                        cm.CommandText = "sp_get_Delegados";
+                        cm.CommandType = CommandType.StoredProcedure;
+                        cm.Parameters.AddWithValue("cPerCodigo", Request.cPerCodigo);
+                        cm.Connection = cn;
+
+                        using (SqlDataReader dr = cm.ExecuteReader())
+                        {
+                            Rs.Load(dr);
+                        }
+                    }
+                }
+
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+
+            return Rs;
+        }
+
         public BE_Res_Persona getcPerCodigoNew()
         {
             BE_Res_Persona Item = new BE_Res_Persona();
@@ -406,7 +442,153 @@ namespace Integration.DAService
             }
             return Item;
         }
- 
+
+        public Boolean InsPersonaArea(BE_Req_Persona Request)
+        {
+            Boolean Item = new Boolean();
+            string codigo = "";
+            try
+            {
+                clsConection Obj = new clsConection();
+                string Cadena = Obj.GetConexionString("Naylamp");
+
+                using (SqlConnection cn = new SqlConnection(Cadena))
+                {
+                    cn.Open();
+
+                    using (SqlCommand cm = new SqlCommand())
+                    {
+                        cm.CommandText = "sp_ins_PersonaArea";
+                        cm.CommandType = CommandType.StoredProcedure;
+                        cm.Parameters.AddWithValue("cPerCodigo", Request.cPerCodigo);
+                        cm.Parameters.AddWithValue("cPerApellido", Request.cPerApellido);
+                        cm.Parameters.AddWithValue("cPerNombre", Request.cPerNombre);
+                        cm.Parameters.AddWithValue("nPerTipo", Request.nPerTipo);
+                        cm.Parameters.AddWithValue("cUbiGeoCodigo", Request.cUbiGeoCodigo);
+                        cm.Parameters.AddWithValue("nPerIdeTipo", Request.nPerIdeTipo);
+                        cm.Parameters.AddWithValue("cPerIdeNumero", Request.cPerIdeNumero);
+                        cm.Parameters.AddWithValue("cPerDomDireccion", Request.cPerDomDireccion);
+                        cm.Parameters.AddWithValue("nUniOrgCodigo", Request.nUniOrgCodigo);
+                        cm.Connection = cn;
+                        using (SqlDataReader dr = cm.ExecuteReader())
+                        {
+                            while (dr.Read())
+                            {
+                                codigo = dr.GetString(dr.GetOrdinal("cPerCodigo")).ToString();
+                            }
+                        }
+
+                        if (codigo.Equals(""))
+                        {
+                            Item = false;
+                        }
+                        else
+                        {
+                            Item = true;
+                        }
+
+                    }
+                }
+
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            return Item;
+        }
+
+        public Boolean UpdPersonaArea(BE_Req_Persona Request)
+        {
+            Boolean Item = new Boolean();
+            string codigo = "";
+            try
+            {
+                clsConection Obj = new clsConection();
+                string Cadena = Obj.GetConexionString("Naylamp");
+
+                using (SqlConnection cn = new SqlConnection(Cadena))
+                {
+                    cn.Open();
+
+                    using (SqlCommand cm = new SqlCommand())
+                    {
+                        cm.CommandText = "sp_upd_PersonaArea";
+                        cm.CommandType = CommandType.StoredProcedure;
+                        cm.Parameters.AddWithValue("cPerCodigo", Request.cPerCodigo);
+                        cm.Parameters.AddWithValue("cPerApellido", Request.cPerApellido);
+                        cm.Parameters.AddWithValue("cPerNombre", Request.cPerNombre);
+                        cm.Parameters.AddWithValue("nPerTipo", Request.nPerTipo);
+                        cm.Parameters.AddWithValue("cUbiGeoCodigo", Request.cUbiGeoCodigo);
+                        cm.Parameters.AddWithValue("nPerIdeTipo", Request.nPerIdeTipo);
+                        cm.Parameters.AddWithValue("cPerIdeNumero", Request.cPerIdeNumero);
+                        cm.Parameters.AddWithValue("cPerDomDireccion", Request.cPerDomDireccion);
+                        cm.Parameters.AddWithValue("nUniOrgCodigo", Request.nUniOrgCodigo);
+                        cm.Parameters.AddWithValue("nPerDirCodigo", Request.nPerDirCodigo);
+                        cm.Connection = cn;
+                        using (SqlDataReader dr = cm.ExecuteReader())
+                        {
+                            while (dr.Read())
+                            {
+                                codigo = dr.GetString(dr.GetOrdinal("cPerCodigo")).ToString();
+                            }
+                        }
+
+                        if (codigo.Equals(""))
+                        {
+                            Item = false;
+                        }
+                        else
+                        {
+                            Item = true;
+                        }
+
+                    }
+                }
+
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            return Item;
+        }
+
+        public DataTable GetDatosPersona_BycPerCodigo(BE_Req_Persona Request)
+        {
+            DataTable Rs = new DataTable();
+            try
+            {
+                clsConection Obj = new clsConection();
+                string Cadena = Obj.GetConexionString("Naylamp");
+
+                using (SqlConnection cn = new SqlConnection(Cadena))
+                {
+                    cn.Open();
+
+                    using (SqlCommand cm = new SqlCommand())
+                    {
+                        cm.CommandText = "sp_get_DatosPersona_By_cPerCodigo";
+                        cm.CommandType = CommandType.StoredProcedure;
+                        cm.Parameters.AddWithValue("cPerCodigo", Request.cPerCodigo);
+                        cm.Connection = cn;
+
+                        using (SqlDataReader dr = cm.ExecuteReader())
+                        {
+                            Rs.Load(dr);
+                        }
+                    }
+                }
+
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+
+            return Rs;
+        }
+
 
     }
 }
