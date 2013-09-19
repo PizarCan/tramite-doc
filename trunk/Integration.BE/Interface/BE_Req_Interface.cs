@@ -9,6 +9,6 @@ namespace Integration.BE.Interface
     {
         public int nIntClase { get; set; }
         public int nIntCodigo { get; set; }
-
+        public string cIntJerarquia { get; set; }
     }
 }

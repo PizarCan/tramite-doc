@@ -68,7 +68,7 @@ Partial Class Login
                 Next
             End If
             If ReqPermisos.cPerCodigo = "0000000000" Then
-                Session("PerMesaPartes") = False
+                Session("PerMesaPartes") = True
                 Session("RegPersona") = True
                 Session("MesaPartesArea") = True
                 Session("AcuRegistro") = True

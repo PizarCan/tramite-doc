@@ -1,8 +1,8 @@
-﻿Imports Integration.BE.UniOrgPerExt
-Imports Integration.BL
-Imports System.Data
-Imports Integration.BE.Persona
+﻿Imports System.Data
 Imports System.Data.SqlClient
+Imports Integration.BL
+Imports Integration.BE.UniOrgPerExt
+Imports Integration.BE.Persona
 Imports Integration.BE.Documento
 Imports Integration.BE.Periodo
 Imports Integration.BE.TraDoc

@@ -175,7 +175,7 @@ Partial Class Forms_RegDocumento
             Dim Request As BE_Req_Persona = New BE_Req_Persona()
             Dim objBL As BL_Persona = New BL_Persona()
             Dim Rs As DataTable = New DataTable()
-            Request.cPerApellido = clase.DBTilde(txtNombre.Text)
+            Request.cPerApellido = clase.DBTilde(txtDestino.Text)
             Request.cPerRelTipo = "1,2,14"
             Rs = objBL.ListaPersonas_BycPerApellido_cPerRelTipo(Request)
             If Rs.Rows.Count > 0 Then

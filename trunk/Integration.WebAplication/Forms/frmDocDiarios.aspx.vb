@@ -36,12 +36,16 @@ Partial Class Forms_frmDocDiarios
         DocDiario = BL_TraDoc.get_TraDoc_Procesos(ReqTraDoc)
 
         Dim ReportRuta As String = String.Empty
-        ReportRuta = Server.MapPath("~/Reportes/crpDocDiarios.rpt")
+        'ReportRuta = Server.MapPath("~/Reportes/crpDocDiarios.rpt")
         Report.Close()
         Report.Load(Server.MapPath("~/Reportes/crpDocDiarios.rpt"))
-        Report.SetDataSource(DocDiario)
+        Dim ds As New dsReportes
+        ds.Tables("DocDiario").Load(DocDiario.CreateDataReader)
+        Report.SetDataSource(ds)
 
         crptPEaDReport.ReportSource = Report
+         
+
 
     End Sub
 

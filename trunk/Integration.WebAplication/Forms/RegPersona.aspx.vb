@@ -1,7 +1,7 @@
 ﻿Imports System.Data.SqlClient
 Imports System.Data
-Imports Integration.BL
 Imports Integration.Conection
+Imports Integration.BL
 Imports Integration.DAConfiguration
 Imports Integration.BE.Login
 Imports Integration.BE.Persona

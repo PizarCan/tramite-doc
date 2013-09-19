@@ -447,7 +447,7 @@ namespace Integration.DAService
 
                     using (SqlCommand cm = new SqlCommand())
                     {
-                        cm.CommandText = "sp_get_Acuerdo_Anvance_By_Persona";
+                        cm.CommandText = "sp_get_AcuerdoAvance_By_Persona";
                         cm.CommandType = CommandType.StoredProcedure;
                         cm.Parameters.AddWithValue("cDocCodigo", Request.cDocCodigo);
                         cm.Parameters.AddWithValue("cPerCodigo", Request.cPerCodigo);

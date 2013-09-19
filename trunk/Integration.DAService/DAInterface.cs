@@ -31,7 +31,7 @@ namespace Integration.DAService
                         cm.CommandText = "sp_get_Interface";
                         cm.CommandType = CommandType.StoredProcedure;
                         cm.Parameters.AddWithValue("nIntClase", Request.nIntClase);
-                        cm.Parameters.AddWithValue("nIntCodigo", Request.nIntCodigo);
+                        cm.Parameters.AddWithValue("nIntCodigo", Request.nIntCodigo); 
                         cm.Connection = cn;
                         using (SqlDataReader dr = cm.ExecuteReader())
                         {
@@ -57,5 +57,39 @@ namespace Integration.DAService
             return Item;
         }
 
+        public DataTable getInterfaceBycIntJerarquia(BE_Req_Interface Request)
+        {
+            DataTable Item = new DataTable();
+            try
+            {
+                clsConection Obj = new clsConection();
+                string Cadena = Obj.GetConexionString("Naylamp");
+
+                using (SqlConnection cn = new SqlConnection(Cadena))
+                {
+                    cn.Open();
+
+                    using (SqlCommand cm = new SqlCommand())
+                    {
+                        cm.CommandText = "sp_get_Interface_By_cIntJerarquia";
+                        cm.CommandType = CommandType.StoredProcedure;
+                        cm.Parameters.AddWithValue("nIntClase", Request.nIntClase);
+                        cm.Parameters.AddWithValue("cIntJerarquia", Request.cIntJerarquia);
+                        cm.Connection = cn;
+                        using (SqlDataReader dr = cm.ExecuteReader())
+                        {
+                            Item.Load(dr);
+                        }
+
+                    }
+                }
+
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            return Item;
+        }
     }
 }
