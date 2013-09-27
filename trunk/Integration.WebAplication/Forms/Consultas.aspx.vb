@@ -154,7 +154,7 @@ Partial Class Forms_Consultas
         If rbtPerRemite.Checked Then nFilTipo = 1
 
         Response.Write("<script language='javascript'>")
-        Response.Write("window.open('Report/frmPEaDReport.aspx?nRepTipo=" & nRepTipo & "&cPerCodigo=" & cPerCodigo & "&nPerRemFiltro=" & nFilTipo & "&nPerRecFiltro=" & IIf(nFilTipo = 0, 1, 0) & "&nPrdCodigo=" & nPrdCodigo & "','Documentos_Diarios')")
+        Response.Write("window.open('../Reportes/frmPEaDReport.aspx?nRepTipo=" & nRepTipo & "&cPerCodigo=" & cPerCodigo & "&nPerRemFiltro=" & nFilTipo & "&nPerRecFiltro=" & IIf(nFilTipo = 0, 1, 0) & "&nPrdCodigo=" & nPrdCodigo & "','Documentos_Diarios')")
         Response.Write("</script>")
     End Sub
 

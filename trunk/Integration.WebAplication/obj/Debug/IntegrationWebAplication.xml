@@ -446,6 +446,14 @@ Control lnkCerrar.
 Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
+</member><member name="F:IntegrationWebAplication.Forms_frmDocDiarios.CrystalReportViewer1">
+	<summary>
+Control CrystalReportViewer1.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
 </member><member name="F:IntegrationWebAplication.Forms_frmDocDiarios.lblError">
 	<summary>
 Control lblError.
@@ -1846,6 +1854,14 @@ Para modificarlo, mueva la declaración del campo del archivo del diseñador al 
 </member><member name="F:IntegrationWebAplication.Reportes_frmPEaDReport.form1">
 	<summary>
 Control form1.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Reportes_frmPEaDReport.CrystalReportViewer1">
+	<summary>
+Control CrystalReportViewer1.
 </summary>
 	<remarks>
 Campo generado automáticamente.

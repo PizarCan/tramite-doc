@@ -14,7 +14,7 @@ Partial Class Forms_frmDocDiarios
                 lnkCerrar.Attributes.Add("onclick", "javascript:window.close()")
             End If
             lblError.Text = String.Empty
-            'LoaderData(txtFecha.Text)
+            LoaderData(txtFecha.Text)
         Catch ex As Exception
             lblError.Text = ex.Message
         End Try
@@ -38,29 +38,21 @@ Partial Class Forms_frmDocDiarios
         If DocDiario.Rows.Count > 0 Then
             Try
                 Dim ReportRuta As String = String.Empty
-                ReportRuta = Server.MapPath("~/Reportes/crpDocDiarios.rpt")
-                'Report.Close()
+                ReportRuta = Server.MapPath("../Reportes/crpDocDiarios.rpt")
+                Report.Close()
                 Report.Load(ReportRuta)
-                'Report.SetDataSource(DocDiario)
-                Dim ds As New dsReportes
-                ds.Tables("DocDiario").Load(DocDiario.CreateDataReader)
-                Report.SetDataSource(ds)
+                Report.SetDataSource(DocDiario)
 
-                Dim dtable As DataTable = ds.Tables("DocDiario")
+                CrystalReportViewer1.Visible = True
 
-                dtable = BL_TraDoc.get_TraDoc_Procesos(ReqTraDoc)
-
-                'CrystalReportViewer1.Visible = True
-                'Report.SetDataSource(dtable)
-
-                'CrystalReportViewer1.ReportSource = Report
+                CrystalReportViewer1.ReportSource = Report
 
             Catch ex As Exception
-                'CrystalReportViewer1.Visible = False
+                CrystalReportViewer1.Visible = False
                 lblError.Text = ex.Message
             End Try
         Else
-            'CrystalReportViewer1.Visible = False
+            CrystalReportViewer1.Visible = False
             lblError.Text = "No hay documentos en esta fecha"
         End If
     End Sub
@@ -69,7 +61,7 @@ Partial Class Forms_frmDocDiarios
     Protected Sub btnBuscar_Click(sender As Object, e As System.EventArgs) Handles btnBuscar.Click
         Try
             Dim Fecha As Date = txtFecha.Text
-            'LoaderData(Fecha)
+            LoaderData(Fecha)
         Catch ex As Exception
             lblError.Text = ex.Message
         End Try

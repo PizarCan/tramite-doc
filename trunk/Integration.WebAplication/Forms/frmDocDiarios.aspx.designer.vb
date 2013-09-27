@@ -77,6 +77,15 @@ Partial Public Class Forms_frmDocDiarios
     Protected WithEvents lnkCerrar As Global.System.Web.UI.WebControls.LinkButton
 
     '''<summary>
+    '''Control CrystalReportViewer1.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents CrystalReportViewer1 As Global.CrystalDecisions.Web.CrystalReportViewer
+
+    '''<summary>
     '''Control lblError.
     '''</summary>
     '''<remarks>

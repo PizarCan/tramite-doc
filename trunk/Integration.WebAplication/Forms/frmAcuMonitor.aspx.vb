@@ -154,7 +154,7 @@ Partial Class Forms_frmAcuMonitor
         Dim nRepTipo As Integer = 1
         Dim cRepComments As String = lblArea.Text
         Response.Write("<script language='javascript'>")
-        Response.Write("window.open('Report/frmPEaDReport.aspx?nRepTipo=" & nRepTipo & "&cPerCodigo=" & cPerCodigo & "&cRepTitle=" & lblPersona.Text.Trim & "&cRepComments=" & cRepComments & "','Documentos_Diarios')")
+        Response.Write("window.open('../Reportes/frmPEaDReport.aspx?nRepTipo=" & nRepTipo & "&cPerCodigo=" & cPerCodigo & "&cRepTitle=" & lblPersona.Text.Trim & "&cRepComments=" & cRepComments & "','Documentos_Diarios')")
         Response.Write("</script>")
     End Sub
 End Class
