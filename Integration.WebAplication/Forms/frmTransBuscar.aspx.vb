@@ -187,7 +187,7 @@ Partial Class Forms_frmTransBuscar
 
         'Dim cRepComments As String = lblArea.Text
         Response.Write("<script language='javascript'>")
-        Response.Write("window.open('Report/frmPEaDReport.aspx?nRepTipo=" & nRepTipo & "&cPerCodigo=" & cPerCodigo & "&nPerRemFiltro=" & nFilTipo & "&nPerRecFiltro=" & IIf(nFilTipo = 0, 1, 0) & "&nPrdCodigo=" & nPrdCodigo & "','Documentos_Diarios')")
+        Response.Write("window.open('../Reportes/frmPEaDReport.aspx?nRepTipo=" & nRepTipo & "&cPerCodigo=" & cPerCodigo & "&nPerRemFiltro=" & nFilTipo & "&nPerRecFiltro=" & IIf(nFilTipo = 0, 1, 0) & "&nPrdCodigo=" & nPrdCodigo & "','Documentos_Diarios')")
         Response.Write("</script>")
     End Sub
 

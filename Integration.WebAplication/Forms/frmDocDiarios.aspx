@@ -1,5 +1,9 @@
-﻿<%@ Page Language="VB" AutoEventWireup="false" Inherits="IntegrationWebAplication.Forms_frmDocDiarios"
+<%@ Page Language="VB" AutoEventWireup="false" Inherits="IntegrationWebAplication.Forms_frmDocDiarios"
     CodeBehind="frmDocDiarios.aspx.vb" %>
+
+ 
+
+<%@ Register assembly="CrystalDecisions.Web, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" namespace="CrystalDecisions.Web" tagprefix="CR" %>
 
  
 
@@ -67,8 +71,13 @@
                     <asp:LinkButton ID="lnkCerrar" runat="server" Width="155px">Cerrar</asp:LinkButton>
                 </td>
                 <td style="width: 450px" align="left" valign="top">
-                     
-                </td>
+                    <CR:CrystalReportViewer ID="CrystalReportViewer1" runat="server" AutoDataBind="True"
+                    
+                        EnableDatabaseLogonPrompt="False" EnableParameterPrompt="False" HasCrystalLogo="False"
+                        HasGotoPageButton="False" HasSearchButton="False" HasToggleGroupTreeButton="False"
+                        ReuseParameterValuesOnRefresh="True" Height="50px"   Width="350px"  
+                         EnableDrillDown="False"  /> 
+                    &nbsp;</td>
             </tr>
             <tr>
                 <td style="width: 150px; text-align: left;">

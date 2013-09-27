@@ -136,7 +136,7 @@
                     </tr>
                 </table>
                 <asp:Button ID="btnMostrar" runat="server" Text="Mostrar" ValidationGroup="Filtro"
-                    Width="108px" CssClass="Boton" /><asp:Button ID="btnImprimir" runat="server" CssClass="Boton"
+                    Width="108px" CssClass="Boton"  /><asp:Button ID="btnImprimir" runat="server" CssClass="Boton"
                         Text="Imprimir" />
             </td>
         </tr>

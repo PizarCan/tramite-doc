@@ -8,11 +8,14 @@ Partial Class Reportes_frmPEaDReport
     Dim Report As New ReportDocument
 
     Protected Sub Page_Load(sender As Object, e As System.EventArgs) Handles Me.Load
-        Try
-            LoaderData()
-        Catch ex As Exception
-            lblError.Text = ex.Message '& "---" & ex.InnerException.Message
-        End Try
+        If Not Page.IsPostBack Then
+            Try
+                LoaderData()
+            Catch ex As Exception
+                lblError.Text = ex.Message '& "---" & ex.InnerException.Message
+            End Try
+        End If
+        
     End Sub
 
     Sub LoaderData(Optional ByVal Print As Integer = 0)
@@ -43,15 +46,15 @@ Partial Class Reportes_frmPEaDReport
                 ReqTraDoc.iOpcion = 2
                 ReqTraDoc.cFecIni = cFecIni
                 ReqTraDoc.cFecFin = cFecFin
-                ReqTraDoc.cPerCodigo = Session("cPerCodigo")
+                ReqTraDoc.cPerCodigo = cPerCodigo
                 Comando = BL_TraDoc.get_TraDoc_Procesos(ReqTraDoc)
 
-                cReportRuta = Server.MapPath("~/Report/rptTDAcuerdos.rpt")
+                cReportRuta = Server.MapPath("../Reportes/rptTDAcuerdos.rpt")
                 'Comando.Load(clsTraDoc.Get_Acuerdos_By_Persona_OR_Fecha(cPerCodigo, cFecIni, cFecFin, MyTrans, Cn))
 
             Case 2
                 ReqTraDoc.iOpcion = 1
-                ReqTraDoc.cPerCodigo = Session("cPerCodigo")
+                ReqTraDoc.cPerCodigo = cPerCodigo
                 ReqTraDoc.nPerRemFiltro = nPerRemFiltro
                 ReqTraDoc.nPerRecFiltro = nPerRecFiltro
                 ReqTraDoc.nDocNumFiltro = 0
@@ -64,7 +67,7 @@ Partial Class Reportes_frmPEaDReport
                 ReqTraDoc.nFilMes = 0
                 Comando = BL_TraDoc.get_TraDoc_Procesos(ReqTraDoc)
 
-                cReportRuta = Server.MapPath("~/Report/rptTDDocBusca.rpt")
+                cReportRuta = Server.MapPath("../Reportes/rptTDDocBusca.rpt")
                 'Comando.Load(clsTraDoc.Get_Busca_Doc_Whit_Filtro(cPerCodigo, nPerRemFiltro, nPerRecFiltro, 0, 0, "", 0, "", nPrdCodigo, 0, 0, MyTrans, Cn))
         End Select
 
@@ -73,8 +76,7 @@ Partial Class Reportes_frmPEaDReport
         Report.SummaryInfo.ReportTitle = cRepTitle
         Report.SummaryInfo.ReportComments = cRepComments
         Report.SetDataSource(Comando)
-
-        'crptPEaDReport.ReportSource = Report
+        CrystalReportViewer1.ReportSource = Report
 
     End Sub
 
