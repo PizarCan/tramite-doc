@@ -1,0 +1,71 @@
+﻿<%@ Master Language="VB" Inherits="IntegrationWebAplication.PageMaster" Codebehind="PageMaster.master.vb" %>
+
+<%@ Register Assembly="DevExpress.Web.v12.2, Version=12.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a"
+    Namespace="DevExpress.Web.ASPxGridView" TagPrefix="dx" %>
+<%@ Register Assembly="DevExpress.Web.v12.2, Version=12.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a"
+    Namespace="DevExpress.Web.ASPxEditors" TagPrefix="dx" %>
+<%@ Register Assembly="CrystalDecisions.Web, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304"
+    Namespace="CrystalDecisions.Web" TagPrefix="CR" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link href="Styles/Estilous.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="scripts/jqueryui/jquery-1.10.2.js"></script>
+    <script type="text/javascript" src="scripts/jqueryui/ui/jquery-ui.js"></script>
+    <link href="scripts/jqueryui/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="scripts/jqueryui/jsGeneral.js"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body style="margin-top: 0">
+    <form id="Form1" method="post" runat="server">
+    <table class="cuadro" cellspacing="0" cellpadding="0" width="770" align="center">
+        <tr style="height: 100px;">
+            <td align="left" colspan="2" class="CabeceraMaster" style="height: 100px;">
+                Sistema de Trámite Documentario
+            </td>
+        </tr>
+        <tr>
+            <td valign="top" width="150">
+                <table width="150" border="0" align="left" cellpadding="0" cellspacing="0">
+                    <% If Session("PerMesaPartes") = False Then
+                            Response.Write("<tr><td width='150' height='35' align='left' valign='middle' class='Menu'><a href='RegDocArea.aspx' target='_self' class='ververde'>Registrar Documento</a></td></tr>")
+                        Else
+                            Response.Write("<tr><td width='150' height='35' align='left' valign='middle' class='Menu'><a href='RegDocumento.aspx' target='_self' class='ververde'>Registrar Documento</a></td></tr>")
+                        End If%>
+                    <tr>
+                        <td height="35" align="left" valign="middle" class="Menu">
+                            <a href="DocPendientes.aspx" target="_self" class="ververde">Documentos Pendientes
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td height="35" align="left" valign="middle" class="Menu">
+                            <a href="Consultas.aspx" target="_self" class="ververde">Buscar Documentos</a>
+                        </td>
+                    </tr>
+                    <% If Session("AcuRegistro") = True Then
+                            Response.Write("<tr><td width='150' height='35' align='left' valign='middle' class='Menu'><a href='frmAcuDirectorio.aspx' target='_self' class='ververde'>Acuerdos Directorio</a></td></tr>")
+                        End If%>
+                    <% If Session("AcuMonitor") = True Then
+                            Response.Write("<tr><td width='150' height='35' align='left' valign='middle' class='Menu'><a href='frmAcuMonitor.aspx' target='_self' class='ververde'>Monitor Acuerdos Directorio</a></td></tr>")
+                        End If%>
+                    <% If Session("RegPersona") = True Then
+                            Response.Write("<tr><td width='150' height='35' align='left' valign='middle' class='Menu'><a href='frmRegistrarPersona.aspx' target='_self' class='ververde'>Registrar Persona Por Área</a></td></tr>")
+                            Response.Write("<tr><td width='150' height='35' align='left' valign='middle' class='Menu'><a href='frmRegistrarPermisos.aspx' target='_self' class='ververde'>Asignar Permisos</a></td></tr>")
+                        End If%>
+                    <% If Session("cPerCodigo") <> "" Then
+                            Response.Write("<tr><td width='150' height='35' align='left' valign='middle'><a href='../LogOut.aspx' target='_self' class='ververde'>Cerrar Sesión</a></td></tr>")
+                        End If%>
+                </table>
+            </td>
+            <td align="justify" width="620">
+                <asp:ContentPlaceHolder ID="contenido" runat="server">
+                </asp:ContentPlaceHolder>
+            </td>
+        </tr>
+    </table>
+    </form>
+</body>
+</html>
