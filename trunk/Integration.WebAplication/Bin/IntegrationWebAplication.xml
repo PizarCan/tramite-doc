@@ -6,15 +6,47 @@ IntegrationWebAplication
 </name>
 </assembly>
 <members>
-<member name="F:IntegrationWebAplication.Reportes_frmPEaDReport.form1">
+<member name="F:IntegrationWebAplication.Forms_ConCopia.Form1">
 	<summary>
-Control form1.
+Control Form1.
 </summary>
 	<remarks>
 Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
-</member><member name="F:IntegrationWebAplication.Reportes_frmPEaDReport.Button1">
+</member><member name="F:IntegrationWebAplication.Forms_ConCopia.txtDestino">
+	<summary>
+Control txtDestino.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_ConCopia.dgNombre2">
+	<summary>
+Control dgNombre2.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_ConCopia.cboInstDestino">
+	<summary>
+Control cboInstDestino.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_ConCopia.cboAreaDestino">
+	<summary>
+Control cboAreaDestino.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_ConCopia.Button1">
 	<summary>
 Control Button1.
 </summary>
@@ -22,7 +54,95 @@ Control Button1.
 Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
-</member><member name="F:IntegrationWebAplication.Reportes_frmPEaDReport.lblError">
+</member><member name="F:IntegrationWebAplication.Forms_ConCopia.btnAgregarCopia">
+	<summary>
+Control btnAgregarCopia.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_ConCopia.btnQuitarCopia">
+	<summary>
+Control btnQuitarCopia.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_ConCopia.lstCopias">
+	<summary>
+Control lstCopias.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_ConCopia.btnConfirmar">
+	<summary>
+Control btnConfirmar.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_ConCopia.btnCerrar">
+	<summary>
+Control btnCerrar.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_DelegarDocumentos.form1">
+	<summary>
+Control form1.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_DelegarDocumentos.txtBuscar">
+	<summary>
+Control txtBuscar.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_DelegarDocumentos.gvPersona">
+	<summary>
+Control gvPersona.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_DelegarDocumentos.lblPerNombre">
+	<summary>
+Control lblPerNombre.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_DelegarDocumentos.lblPerCodigo">
+	<summary>
+Control lblPerCodigo.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_DelegarDocumentos.gvDelegado">
+	<summary>
+Control gvDelegado.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_DelegarDocumentos.lblError">
 	<summary>
 Control lblError.
 </summary>
@@ -30,6 +150,455 @@ Control lblError.
 Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
+</member><member name="F:IntegrationWebAplication.Forms_DelegarDocumentos.btnGrabar">
+	<summary>
+Control btnGrabar.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_DelegarDocumentos.btnEliminar">
+	<summary>
+Control btnEliminar.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_DelegarDocumentos.btnCerrar">
+	<summary>
+Control btnCerrar.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_frmAcuerdos.form1">
+	<summary>
+Control form1.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_frmAcuerdos.lblOfiNumero">
+	<summary>
+Control lblOfiNumero.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_frmAcuerdos.lblAcuNumero">
+	<summary>
+Control lblAcuNumero.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_frmAcuerdos.lblRemite">
+	<summary>
+Control lblRemite.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_frmAcuerdos.lblDestino">
+	<summary>
+Control lblDestino.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_frmAcuerdos.lblPerDesCodigo">
+	<summary>
+Control lblPerDesCodigo.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_frmAcuerdos.lblFecRegistro">
+	<summary>
+Control lblFecRegistro.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_frmAcuerdos.lblFecCumplimiento">
+	<summary>
+Control lblFecCumplimiento.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_frmAcuerdos.lblcDocCodigo">
+	<summary>
+Control lblcDocCodigo.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_frmAcuerdos.lblAsunto">
+	<summary>
+Control lblAsunto.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_frmAcuerdos.lblContenido">
+	<summary>
+Control lblContenido.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_frmAcuerdos.gvAvance">
+	<summary>
+Control gvAvance.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_frmAcuerdos.lblTotAvance">
+	<summary>
+Control lblTotAvance.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_frmAcuerdos.mvAcuerdo">
+	<summary>
+Control mvAcuerdo.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_frmAcuerdos.vewSustentar">
+	<summary>
+Control vewSustentar.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_frmAcuerdos.txtFecha">
+	<summary>
+Control txtFecha.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_frmAcuerdos.RangeValidator2">
+	<summary>
+Control RangeValidator2.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_frmAcuerdos.txtAvance">
+	<summary>
+Control txtAvance.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_frmAcuerdos.RangeValidator1">
+	<summary>
+Control RangeValidator1.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_frmAcuerdos.txtDescripcion">
+	<summary>
+Control txtDescripcion.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_frmAcuerdos.fleArchivo">
+	<summary>
+Control fleArchivo.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_frmAcuerdos.RequiredFieldValidator1">
+	<summary>
+Control RequiredFieldValidator1.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_frmAcuerdos.btnGrabar">
+	<summary>
+Control btnGrabar.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_frmAcuerdos.btnCerrar">
+	<summary>
+Control btnCerrar.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_frmAcuerdos.lblError">
+	<summary>
+Control lblError.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_frmAcuDirectorio.gvAcuerdos">
+	<summary>
+Control gvAcuerdos.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_frmAcuDirectorio.lblError">
+	<summary>
+Control lblError.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_frmDocDiarios.Head1">
+	<summary>
+Control Head1.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_frmDocDiarios.form1">
+	<summary>
+Control form1.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_frmDocDiarios.cldFecha">
+	<summary>
+Control cldFecha.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_frmDocDiarios.txtFecha">
+	<summary>
+Control txtFecha.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_frmDocDiarios.btnBuscar">
+	<summary>
+Control btnBuscar.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_frmDocDiarios.LinkButton1">
+	<summary>
+Control LinkButton1.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_frmDocDiarios.lnkCerrar">
+	<summary>
+Control lnkCerrar.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_frmDocDiarios.lblError">
+	<summary>
+Control lblError.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_DocPendientes.cboPeriodo">
+	<summary>
+Control cboPeriodo.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_DocPendientes.chkDelegado">
+	<summary>
+Control chkDelegado.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_DocPendientes.cboFilMes">
+	<summary>
+Control cboFilMes.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_DocPendientes.chkTransferencia">
+	<summary>
+Control chkTransferencia.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_DocPendientes.gvDocEvaluar">
+	<summary>
+Control gvDocEvaluar.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_DocPendientes.btngrabar">
+	<summary>
+Control btngrabar.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_DocPendientes.gvProDoc">
+	<summary>
+Control gvProDoc.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_DocPendientes.btnGrabar2">
+	<summary>
+Control btnGrabar2.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_DocPendientes.gvCopias">
+	<summary>
+Control gvCopias.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_DocPendientes.btnCopia">
+	<summary>
+Control btnCopia.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_DocPendientes.dgDocDevueltos">
+	<summary>
+Control dgDocDevueltos.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_DocPendientes.gvDevDoc">
+	<summary>
+Control gvDevDoc.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_DocPendientes.btnDocDevGrabar">
+	<summary>
+Control btnDocDevGrabar.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_DocPendientes.lblError">
+	<summary>
+Control lblError.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="P:IntegrationWebAplication.My.MyWebExtension.Application">
+	<summary>
+ Devuelve información sobre la aplicación actual.
+ </summary>
+</member><member name="P:IntegrationWebAplication.My.MyWebExtension.Computer">
+	<summary>
+ Devuelve información sobre el equipo host.
+ </summary>
+</member><member name="P:IntegrationWebAplication.My.MyWebExtension.User">
+	<summary>
+ Devuelve información del usuario web actual.
+ </summary>
+</member><member name="P:IntegrationWebAplication.My.MyWebExtension.Request">
+	<summary>
+ Devuelve un objeto Request.
+ </summary>
+</member><member name="P:IntegrationWebAplication.My.MyWebExtension.Response">
+	<summary>
+ Devuelve un objeto Response.
+ </summary>
+</member><member name="P:IntegrationWebAplication.My.MyWebExtension.Log">
+	<summary>
+ Devuelve el objeto de registro Asp.
+ </summary>
+</member><member name="P:IntegrationWebAplication.My.MyWebExtension.WebServices">
+	<summary>
+ Proporciona acceso a los servicios Web agregados a este proyecto.
+ </summary>
+</member><member name="T:IntegrationWebAplication.My.MyWebExtension">
+	<summary>
+ Módulo usado para definir las propiedades que están disponibles en el espacio de nombres My para proyectos web.
+ </summary>
+	<remarks></remarks>
 </member><member name="T:IntegrationWebAplication.dsReportes.DocDiarioDataTable">
 	<summary>
 Represents the strongly named DataTable class.
@@ -82,15 +651,63 @@ Row event argument class
 	<summary>
 Represents a strongly typed in-memory cache of data.
 </summary>
-</member><member name="F:IntegrationWebAplication.PageMaster.head">
+</member><member name="F:IntegrationWebAplication.Forms_frmRegistrarPermisos.txtBuscar">
 	<summary>
-Control head.
+Control txtBuscar.
 </summary>
 	<remarks>
 Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
-</member><member name="F:IntegrationWebAplication.PageMaster.Form1">
+</member><member name="F:IntegrationWebAplication.Forms_frmRegistrarPermisos.btnBuscar">
+	<summary>
+Control btnBuscar.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_frmRegistrarPermisos.dgNombre">
+	<summary>
+Control dgNombre.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_frmRegistrarPermisos.txtPersona">
+	<summary>
+Control txtPersona.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_frmRegistrarPermisos.lblCodPersona">
+	<summary>
+Control lblCodPersona.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_frmRegistrarPermisos.gvPermisos">
+	<summary>
+Control gvPermisos.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_frmRegistrarPermisos.btnGrabar">
+	<summary>
+Control btnGrabar.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_ReenviarDoc.Form1">
 	<summary>
 Control Form1.
 </summary>
@@ -98,41 +715,137 @@ Control Form1.
 Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
-</member><member name="F:IntegrationWebAplication.PageMaster.contenido">
+</member><member name="F:IntegrationWebAplication.Forms_ReenviarDoc.lblTipoDocumento">
 	<summary>
-Control contenido.
+Control lblTipoDocumento.
 </summary>
 	<remarks>
 Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
-</member><member name="F:IntegrationWebAplication.LogOut.form1">
+</member><member name="F:IntegrationWebAplication.Forms_ReenviarDoc.lblfecha">
 	<summary>
-Control form1.
+Control lblfecha.
 </summary>
 	<remarks>
 Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
-</member><member name="F:IntegrationWebAplication.Login.form1">
+</member><member name="F:IntegrationWebAplication.Forms_ReenviarDoc.lblremitente">
 	<summary>
-Control form1.
+Control lblremitente.
 </summary>
 	<remarks>
 Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
-</member><member name="F:IntegrationWebAplication.Login.lgInicio">
+</member><member name="F:IntegrationWebAplication.Forms_ReenviarDoc.lbldestino">
 	<summary>
-Control lgInicio.
+Control lbldestino.
 </summary>
 	<remarks>
 Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
-</member><member name="F:IntegrationWebAplication.Login.lblError">
+</member><member name="F:IntegrationWebAplication.Forms_ReenviarDoc.lblUO">
 	<summary>
-Control lblError.
+Control lblUO.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_ReenviarDoc.lblasunto">
+	<summary>
+Control lblasunto.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_ReenviarDoc.lbldetalle">
+	<summary>
+Control lbldetalle.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_ReenviarDoc.lblobservacion">
+	<summary>
+Control lblobservacion.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_ReenviarDoc.lblCopias">
+	<summary>
+Control lblCopias.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_ReenviarDoc.txtDestino">
+	<summary>
+Control txtDestino.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_ReenviarDoc.dgNombre2">
+	<summary>
+Control dgNombre2.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_ReenviarDoc.cboInstDestino">
+	<summary>
+Control cboInstDestino.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_ReenviarDoc.cboAreaDestino">
+	<summary>
+Control cboAreaDestino.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_ReenviarDoc.lblDocCodigo">
+	<summary>
+Control lblDocCodigo.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_ReenviarDoc.lblCodPerDestino">
+	<summary>
+Control lblCodPerDestino.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_ReenviarDoc.btnGrabar">
+	<summary>
+Control btnGrabar.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_ReenviarDoc.btncerrar">
+	<summary>
+Control btncerrar.
 </summary>
 	<remarks>
 Campo generado automáticamente.
@@ -242,79 +955,175 @@ Control btnImprimir.
 Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
-</member><member name="F:IntegrationWebAplication.Forms_RegPersona.Form1">
+</member><member name="F:IntegrationWebAplication.Forms_DocDellProveido.form1">
 	<summary>
-Control Form1.
+Control form1.
 </summary>
 	<remarks>
 Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
-</member><member name="F:IntegrationWebAplication.Forms_RegPersona.cboPerTipo">
+</member><member name="F:IntegrationWebAplication.Forms_DocDellProveido.lblFecEmision">
 	<summary>
-Control cboPerTipo.
+Control lblFecEmision.
 </summary>
 	<remarks>
 Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
-</member><member name="F:IntegrationWebAplication.Forms_RegPersona.txtBuscar">
+</member><member name="F:IntegrationWebAplication.Forms_DocDellProveido.lblfecha">
 	<summary>
-Control txtBuscar.
+Control lblfecha.
 </summary>
 	<remarks>
 Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
-</member><member name="F:IntegrationWebAplication.Forms_RegPersona.btnBuscar">
+</member><member name="F:IntegrationWebAplication.Forms_DocDellProveido.lblTipoDocumento">
 	<summary>
-Control btnBuscar.
+Control lblTipoDocumento.
 </summary>
 	<remarks>
 Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
-</member><member name="F:IntegrationWebAplication.Forms_RegPersona.gvPersona">
+</member><member name="F:IntegrationWebAplication.Forms_DocDellProveido.lblNumero">
 	<summary>
-Control gvPersona.
+Control lblNumero.
 </summary>
 	<remarks>
 Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
-</member><member name="F:IntegrationWebAplication.Forms_RegPersona.txtApellido">
+</member><member name="F:IntegrationWebAplication.Forms_DocDellProveido.lblItem">
 	<summary>
-Control txtApellido.
+Control lblItem.
 </summary>
 	<remarks>
 Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
-</member><member name="F:IntegrationWebAplication.Forms_RegPersona.txtNombre">
+</member><member name="F:IntegrationWebAplication.Forms_DocDellProveido.lblremitente">
 	<summary>
-Control txtNombre.
+Control lblremitente.
 </summary>
 	<remarks>
 Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
-</member><member name="F:IntegrationWebAplication.Forms_RegPersona.cboRegion">
+</member><member name="F:IntegrationWebAplication.Forms_DocDellProveido.lbldestino">
 	<summary>
-Control cboRegion.
+Control lbldestino.
 </summary>
 	<remarks>
 Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
-</member><member name="F:IntegrationWebAplication.Forms_RegPersona.cboProvincia">
+</member><member name="F:IntegrationWebAplication.Forms_DocDellProveido.lblUO">
 	<summary>
-Control cboProvincia.
+Control lblUO.
 </summary>
 	<remarks>
 Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
-</member><member name="F:IntegrationWebAplication.Forms_RegPersona.btnGrabar">
+</member><member name="F:IntegrationWebAplication.Forms_DocDellProveido.lblasunto">
+	<summary>
+Control lblasunto.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_DocDellProveido.lbldetalle">
+	<summary>
+Control lbldetalle.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_DocDellProveido.lblobservacion">
+	<summary>
+Control lblobservacion.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_DocDellProveido.lblProveido">
+	<summary>
+Control lblProveido.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_DocDellProveido.lblCopias">
+	<summary>
+Control lblCopias.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_DocDellProveido.txtDestino">
+	<summary>
+Control txtDestino.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_DocDellProveido.dgNombre2">
+	<summary>
+Control dgNombre2.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_DocDellProveido.cboInstDestino">
+	<summary>
+Control cboInstDestino.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_DocDellProveido.cboAreaDestino">
+	<summary>
+Control cboAreaDestino.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_DocDellProveido.txtProveido">
+	<summary>
+Control txtProveido.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_DocDellProveido.lblError">
+	<summary>
+Control lblError.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_DocDellProveido.lblnDocPerEdiTipo">
+	<summary>
+Control lblnDocPerEdiTipo.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_DocDellProveido.btnGrabar">
 	<summary>
 Control btnGrabar.
 </summary>
@@ -322,7 +1131,703 @@ Control btnGrabar.
 Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
-</member><member name="F:IntegrationWebAplication.Forms_RegPersona.btnCancelar">
+</member><member name="F:IntegrationWebAplication.Forms_DocDellProveido.btnImprimir">
+	<summary>
+Control btnImprimir.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_DocDellProveido.btncerrar">
+	<summary>
+Control btncerrar.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_DocDellProveido.lblPerRecibe">
+	<summary>
+Control lblPerRecibe.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_DocDellProveido.lblCodPerDestino">
+	<summary>
+Control lblCodPerDestino.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_DocDellProveido.lblDocCodigo">
+	<summary>
+Control lblDocCodigo.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_frmDocDiario.form1">
+	<summary>
+Control form1.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_frmDocDiario.cldFecha">
+	<summary>
+Control cldFecha.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_frmDocDiario.txtFecha">
+	<summary>
+Control txtFecha.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_frmDocDiario.btnBuscar">
+	<summary>
+Control btnBuscar.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_frmDocDiario.LinkButton1">
+	<summary>
+Control LinkButton1.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_frmDocDiario.lnkCerrar">
+	<summary>
+Control lnkCerrar.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_frmDocDiario.lblError">
+	<summary>
+Control lblError.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_frmRegistrarPersona.txtBuscar">
+	<summary>
+Control txtBuscar.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_frmRegistrarPersona.btnBuscar">
+	<summary>
+Control btnBuscar.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_frmRegistrarPersona.dgNombre">
+	<summary>
+Control dgNombre.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_frmRegistrarPersona.cboTipoPersona">
+	<summary>
+Control cboTipoPersona.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_frmRegistrarPersona.txtApellido">
+	<summary>
+Control txtApellido.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_frmRegistrarPersona.txtNombre">
+	<summary>
+Control txtNombre.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_frmRegistrarPersona.cboDocumento">
+	<summary>
+Control cboDocumento.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_frmRegistrarPersona.txtNroDoc">
+	<summary>
+Control txtNroDoc.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_frmRegistrarPersona.txtDireccion">
+	<summary>
+Control txtDireccion.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_frmRegistrarPersona.cboRegion">
+	<summary>
+Control cboRegion.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_frmRegistrarPersona.cboProvincia">
+	<summary>
+Control cboProvincia.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_frmRegistrarPersona.ddlInst">
+	<summary>
+Control ddlInst.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_frmRegistrarPersona.ddlArea">
+	<summary>
+Control ddlArea.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_frmRegistrarPersona.lblCodSeleccionado">
+	<summary>
+Control lblCodSeleccionado.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_frmRegistrarPersona.lblnPerDirCodigo">
+	<summary>
+Control lblnPerDirCodigo.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_frmRegistrarPersona.btnGrabar">
+	<summary>
+Control btnGrabar.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_frmRegistrarPersona.btnLimpiar">
+	<summary>
+Control btnLimpiar.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_frmRegistrarPersona.lblError">
+	<summary>
+Control lblError.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.reportes.Head1">
+	<summary>
+Control Head1.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.reportes.form1">
+	<summary>
+Control form1.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.reportes.hf_tiporeporte">
+	<summary>
+Control hf_tiporeporte.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.reportes.hf_valores">
+	<summary>
+Control hf_valores.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_frmAcuAsociar.form1">
+	<summary>
+Control form1.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_frmAcuAsociar.txtNumDocumento">
+	<summary>
+Control txtNumDocumento.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_frmAcuAsociar.txtBuscar">
+	<summary>
+Control txtBuscar.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_frmAcuAsociar.gvAcuerdos">
+	<summary>
+Control gvAcuerdos.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_frmAcuAsociar.txtAcuerdo">
+	<summary>
+Control txtAcuerdo.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_frmAcuAsociar.txtFecAcuerdo">
+	<summary>
+Control txtFecAcuerdo.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_frmAcuAsociar.txtAsociar">
+	<summary>
+Control txtAsociar.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_frmAcuAsociar.RangeValidator1">
+	<summary>
+Control RangeValidator1.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_frmAcuAsociar.RequiredFieldValidator1">
+	<summary>
+Control RequiredFieldValidator1.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_frmAcuAsociar.txtNuevo">
+	<summary>
+Control txtNuevo.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_frmAcuAsociar.txtSalir">
+	<summary>
+Control txtSalir.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_frmAcuAsociar.lblError">
+	<summary>
+Control lblError.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_frmAcuMonitor.rbnUsuario">
+	<summary>
+Control rbnUsuario.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_frmAcuMonitor.rbnFecha">
+	<summary>
+Control rbnFecha.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_frmAcuMonitor.txtBuscar">
+	<summary>
+Control txtBuscar.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_frmAcuMonitor.btnBuscar">
+	<summary>
+Control btnBuscar.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_frmAcuMonitor.lblPersona">
+	<summary>
+Control lblPersona.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_frmAcuMonitor.lblcPerCodigo">
+	<summary>
+Control lblcPerCodigo.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_frmAcuMonitor.lblArea">
+	<summary>
+Control lblArea.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_frmAcuMonitor.gvPersona">
+	<summary>
+Control gvPersona.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_frmAcuMonitor.txtFecIni">
+	<summary>
+Control txtFecIni.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_frmAcuMonitor.txtFecFin">
+	<summary>
+Control txtFecFin.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_frmAcuMonitor.RangeValidator1">
+	<summary>
+Control RangeValidator1.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_frmAcuMonitor.RangeValidator2">
+	<summary>
+Control RangeValidator2.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_frmAcuMonitor.btnMostrar">
+	<summary>
+Control btnMostrar.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_frmAcuMonitor.btnImprimir">
+	<summary>
+Control btnImprimir.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_frmAcuMonitor.gvAcuerdos">
+	<summary>
+Control gvAcuerdos.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_frmAcuMonitor.lblError">
+	<summary>
+Control lblError.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_RegDocumento.lblusuario">
+	<summary>
+Control lblusuario.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_RegDocumento.cboUO">
+	<summary>
+Control cboUO.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_RegDocumento.cboTipDoc">
+	<summary>
+Control cboTipDoc.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_RegDocumento.txtNumDocumento">
+	<summary>
+Control txtNumDocumento.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_RegDocumento.txtFecha">
+	<summary>
+Control txtFecha.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_RegDocumento.CompareValidator1">
+	<summary>
+Control CompareValidator1.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_RegDocumento.Button2">
+	<summary>
+Control Button2.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_RegDocumento.btnCrearPersona">
+	<summary>
+Control btnCrearPersona.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_RegDocumento.txtNombre">
+	<summary>
+Control txtNombre.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_RegDocumento.dgNombre">
+	<summary>
+Control dgNombre.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_RegDocumento.txtPerRemite">
+	<summary>
+Control txtPerRemite.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_RegDocumento.txtDestino">
+	<summary>
+Control txtDestino.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_RegDocumento.dgNombre2">
+	<summary>
+Control dgNombre2.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_RegDocumento.cboInstDestino">
+	<summary>
+Control cboInstDestino.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_RegDocumento.cboAreaDestino">
+	<summary>
+Control cboAreaDestino.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_RegDocumento.lblCodPerDestino">
+	<summary>
+Control lblCodPerDestino.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_RegDocumento.lblCodPerRemite">
+	<summary>
+Control lblCodPerRemite.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_RegDocumento.lblCodPerRegistra">
+	<summary>
+Control lblCodPerRegistra.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_RegDocumento.txtAsunto">
+	<summary>
+Control txtAsunto.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_RegDocumento.txtDetalle">
+	<summary>
+Control txtDetalle.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_RegDocumento.txtObservacion">
+	<summary>
+Control txtObservacion.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_RegDocumento.btnImprimir">
+	<summary>
+Control btnImprimir.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_RegDocumento.Button3">
+	<summary>
+Control Button3.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_RegDocumento.btnNuevo">
+	<summary>
+Control btnNuevo.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_RegDocumento.btnGrabar">
+	<summary>
+Control btnGrabar.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_RegDocumento.btnCancelar">
 	<summary>
 Control btnCancelar.
 </summary>
@@ -330,9 +1835,585 @@ Control btnCancelar.
 Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
-</member><member name="F:IntegrationWebAplication.Forms_RegPersona.lblError">
+</member><member name="F:IntegrationWebAplication.Forms_RegDocumento.btnConCopia">
+	<summary>
+Control btnConCopia.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Reportes_frmPEaDReport.form1">
+	<summary>
+Control form1.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Reportes_frmPEaDReport.Button1">
+	<summary>
+Control Button1.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Reportes_frmPEaDReport.lblError">
 	<summary>
 Control lblError.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.LogOut.form1">
+	<summary>
+Control form1.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_frmDonwFile.form1">
+	<summary>
+Control form1.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_Consultas.cboTipDoc">
+	<summary>
+Control cboTipDoc.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_Consultas.cboPeriodo">
+	<summary>
+Control cboPeriodo.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_Consultas.rbtPerRemite">
+	<summary>
+Control rbtPerRemite.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_Consultas.rbtPerDestino">
+	<summary>
+Control rbtPerDestino.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_Consultas.txtPerRemite">
+	<summary>
+Control txtPerRemite.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_Consultas.dgNombre">
+	<summary>
+Control dgNombre.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_Consultas.cboFilMes">
+	<summary>
+Control cboFilMes.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_Consultas.rbtItem">
+	<summary>
+Control rbtItem.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_Consultas.rbtAsunto">
+	<summary>
+Control rbtAsunto.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_Consultas.rbtNumDocumneto">
+	<summary>
+Control rbtNumDocumneto.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_Consultas.txtAsunto">
+	<summary>
+Control txtAsunto.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_Consultas.lblPerRemiteCodigo">
+	<summary>
+Control lblPerRemiteCodigo.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_Consultas.Button1">
+	<summary>
+Control Button1.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_Consultas.btnBuscar">
+	<summary>
+Control btnBuscar.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_Consultas.btnImprimir">
+	<summary>
+Control btnImprimir.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_Consultas.lblMessage">
+	<summary>
+Control lblMessage.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_Consultas.dgBuscar">
+	<summary>
+Control dgBuscar.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_Consultas.gvConsultas">
+	<summary>
+Control gvConsultas.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_Consultas.lblError">
+	<summary>
+Control lblError.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_Consultas.lblUltimoDoc">
+	<summary>
+Control lblUltimoDoc.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_frmDocTransferencia.form1">
+	<summary>
+Control form1.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_frmDocTransferencia.txtPerOrigen">
+	<summary>
+Control txtPerOrigen.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_frmDocTransferencia.gvPerOrigen">
+	<summary>
+Control gvPerOrigen.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_frmDocTransferencia.lblPerOriCodigo">
+	<summary>
+Control lblPerOriCodigo.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_frmDocTransferencia.cboOrigen">
+	<summary>
+Control cboOrigen.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_frmDocTransferencia.txtPerDestino">
+	<summary>
+Control txtPerDestino.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_frmDocTransferencia.gvPerDestino">
+	<summary>
+Control gvPerDestino.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_frmDocTransferencia.lblPerDesCodigo">
+	<summary>
+Control lblPerDesCodigo.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_frmDocTransferencia.cboDestino">
+	<summary>
+Control cboDestino.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_frmDocTransferencia.Button1">
+	<summary>
+Control Button1.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_frmDocTransferencia.btnCargar">
+	<summary>
+Control btnCargar.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_frmDocTransferencia.btnGrabar">
+	<summary>
+Control btnGrabar.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_frmDocTransferencia.gvDetalle">
+	<summary>
+Control gvDetalle.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_frmDocTransferencia.lblError">
+	<summary>
+Control lblError.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_frmMisDocumentos.gvDocEnviado">
+	<summary>
+Control gvDocEnviado.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_frmMisDocumentos.gvDocRecibido">
+	<summary>
+Control gvDocRecibido.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_frmMisDocumentos.lblError">
+	<summary>
+Control lblError.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_frmTransBuscar.cboTipDoc">
+	<summary>
+Control cboTipDoc.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_frmTransBuscar.cboPeriodo">
+	<summary>
+Control cboPeriodo.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_frmTransBuscar.rbtPerRemite">
+	<summary>
+Control rbtPerRemite.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_frmTransBuscar.rbtPerDestino">
+	<summary>
+Control rbtPerDestino.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_frmTransBuscar.txtPerRemite">
+	<summary>
+Control txtPerRemite.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_frmTransBuscar.dgNombre">
+	<summary>
+Control dgNombre.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_frmTransBuscar.cboFilMes">
+	<summary>
+Control cboFilMes.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_frmTransBuscar.rbtItem">
+	<summary>
+Control rbtItem.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_frmTransBuscar.rbtAsunto">
+	<summary>
+Control rbtAsunto.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_frmTransBuscar.rbtNumDocumneto">
+	<summary>
+Control rbtNumDocumneto.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_frmTransBuscar.txtAsunto">
+	<summary>
+Control txtAsunto.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_frmTransBuscar.lblPerRemiteCodigo">
+	<summary>
+Control lblPerRemiteCodigo.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_frmTransBuscar.Button1">
+	<summary>
+Control Button1.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_frmTransBuscar.btnBuscar">
+	<summary>
+Control btnBuscar.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_frmTransBuscar.btnImprimir">
+	<summary>
+Control btnImprimir.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_frmTransBuscar.lblMessage">
+	<summary>
+Control lblMessage.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_frmTransBuscar.dgBuscar">
+	<summary>
+Control dgBuscar.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_frmTransBuscar.gvConsultas">
+	<summary>
+Control gvConsultas.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_frmTransBuscar.lblError">
+	<summary>
+Control lblError.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_frmTransBuscar.lblUltimoDoc">
+	<summary>
+Control lblUltimoDoc.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.PageMaster.head">
+	<summary>
+Control head.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.PageMaster.Form1">
+	<summary>
+Control Form1.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.PageMaster.contenido">
+	<summary>
+Control contenido.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_Adm_Papeletas.form1">
+	<summary>
+Control form1.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_Adm_Papeletas.ScriptManager1">
+	<summary>
+Control ScriptManager1.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_Adm_Papeletas.UpdatePanel1">
+	<summary>
+Control UpdatePanel1.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_Adm_Papeletas.GvPapRRhh">
+	<summary>
+Control GvPapRRhh.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_Adm_Papeletas.CmdAprobarRRhh">
+	<summary>
+Control CmdAprobarRRhh.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_Adm_Papeletas.CmdRechazar">
+	<summary>
+Control CmdRechazar.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_Adm_Papeletas.lbler2">
+	<summary>
+Control lbler2.
 </summary>
 	<remarks>
 Campo generado automáticamente.
@@ -922,7 +3003,31 @@ Control lblCodPerDestino.
 Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
-</member><member name="F:IntegrationWebAplication.Forms_ReenviarDoc.Form1">
+</member><member name="F:IntegrationWebAplication.Login.form1">
+	<summary>
+Control form1.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Login.lgInicio">
+	<summary>
+Control lgInicio.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Login.lblError">
+	<summary>
+Control lblError.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_RegPersona.Form1">
 	<summary>
 Control Form1.
 </summary>
@@ -930,303 +3035,15 @@ Control Form1.
 Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
-</member><member name="F:IntegrationWebAplication.Forms_ReenviarDoc.lblTipoDocumento">
+</member><member name="F:IntegrationWebAplication.Forms_RegPersona.cboPerTipo">
 	<summary>
-Control lblTipoDocumento.
+Control cboPerTipo.
 </summary>
 	<remarks>
 Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
-</member><member name="F:IntegrationWebAplication.Forms_ReenviarDoc.lblfecha">
-	<summary>
-Control lblfecha.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_ReenviarDoc.lblremitente">
-	<summary>
-Control lblremitente.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_ReenviarDoc.lbldestino">
-	<summary>
-Control lbldestino.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_ReenviarDoc.lblUO">
-	<summary>
-Control lblUO.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_ReenviarDoc.lblasunto">
-	<summary>
-Control lblasunto.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_ReenviarDoc.lbldetalle">
-	<summary>
-Control lbldetalle.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_ReenviarDoc.lblobservacion">
-	<summary>
-Control lblobservacion.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_ReenviarDoc.lblCopias">
-	<summary>
-Control lblCopias.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_ReenviarDoc.txtDestino">
-	<summary>
-Control txtDestino.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_ReenviarDoc.dgNombre2">
-	<summary>
-Control dgNombre2.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_ReenviarDoc.cboInstDestino">
-	<summary>
-Control cboInstDestino.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_ReenviarDoc.cboAreaDestino">
-	<summary>
-Control cboAreaDestino.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_ReenviarDoc.lblDocCodigo">
-	<summary>
-Control lblDocCodigo.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_ReenviarDoc.lblCodPerDestino">
-	<summary>
-Control lblCodPerDestino.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_ReenviarDoc.btnGrabar">
-	<summary>
-Control btnGrabar.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_ReenviarDoc.btncerrar">
-	<summary>
-Control btncerrar.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_frmTransBuscar.cboTipDoc">
-	<summary>
-Control cboTipDoc.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_frmTransBuscar.cboPeriodo">
-	<summary>
-Control cboPeriodo.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_frmTransBuscar.rbtPerRemite">
-	<summary>
-Control rbtPerRemite.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_frmTransBuscar.rbtPerDestino">
-	<summary>
-Control rbtPerDestino.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_frmTransBuscar.txtPerRemite">
-	<summary>
-Control txtPerRemite.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_frmTransBuscar.dgNombre">
-	<summary>
-Control dgNombre.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_frmTransBuscar.cboFilMes">
-	<summary>
-Control cboFilMes.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_frmTransBuscar.rbtItem">
-	<summary>
-Control rbtItem.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_frmTransBuscar.rbtAsunto">
-	<summary>
-Control rbtAsunto.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_frmTransBuscar.rbtNumDocumneto">
-	<summary>
-Control rbtNumDocumneto.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_frmTransBuscar.txtAsunto">
-	<summary>
-Control txtAsunto.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_frmTransBuscar.lblPerRemiteCodigo">
-	<summary>
-Control lblPerRemiteCodigo.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_frmTransBuscar.Button1">
-	<summary>
-Control Button1.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_frmTransBuscar.btnBuscar">
-	<summary>
-Control btnBuscar.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_frmTransBuscar.btnImprimir">
-	<summary>
-Control btnImprimir.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_frmTransBuscar.lblMessage">
-	<summary>
-Control lblMessage.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_frmTransBuscar.dgBuscar">
-	<summary>
-Control dgBuscar.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_frmTransBuscar.gvConsultas">
-	<summary>
-Control gvConsultas.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_frmTransBuscar.lblError">
-	<summary>
-Control lblError.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_frmTransBuscar.lblUltimoDoc">
-	<summary>
-Control lblUltimoDoc.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_frmRegistrarPersona.txtBuscar">
+</member><member name="F:IntegrationWebAplication.Forms_RegPersona.txtBuscar">
 	<summary>
 Control txtBuscar.
 </summary>
@@ -1234,7 +3051,7 @@ Control txtBuscar.
 Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
-</member><member name="F:IntegrationWebAplication.Forms_frmRegistrarPersona.btnBuscar">
+</member><member name="F:IntegrationWebAplication.Forms_RegPersona.btnBuscar">
 	<summary>
 Control btnBuscar.
 </summary>
@@ -1242,511 +3059,7 @@ Control btnBuscar.
 Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
-</member><member name="F:IntegrationWebAplication.Forms_frmRegistrarPersona.dgNombre">
-	<summary>
-Control dgNombre.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_frmRegistrarPersona.cboTipoPersona">
-	<summary>
-Control cboTipoPersona.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_frmRegistrarPersona.txtApellido">
-	<summary>
-Control txtApellido.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_frmRegistrarPersona.txtNombre">
-	<summary>
-Control txtNombre.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_frmRegistrarPersona.cboDocumento">
-	<summary>
-Control cboDocumento.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_frmRegistrarPersona.txtNroDoc">
-	<summary>
-Control txtNroDoc.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_frmRegistrarPersona.txtDireccion">
-	<summary>
-Control txtDireccion.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_frmRegistrarPersona.cboRegion">
-	<summary>
-Control cboRegion.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_frmRegistrarPersona.cboProvincia">
-	<summary>
-Control cboProvincia.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_frmRegistrarPersona.ddlInst">
-	<summary>
-Control ddlInst.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_frmRegistrarPersona.ddlArea">
-	<summary>
-Control ddlArea.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_frmRegistrarPersona.lblCodSeleccionado">
-	<summary>
-Control lblCodSeleccionado.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_frmRegistrarPersona.lblnPerDirCodigo">
-	<summary>
-Control lblnPerDirCodigo.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_frmRegistrarPersona.btnGrabar">
-	<summary>
-Control btnGrabar.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_frmRegistrarPersona.btnLimpiar">
-	<summary>
-Control btnLimpiar.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_frmRegistrarPersona.lblError">
-	<summary>
-Control lblError.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_frmRegistrarPermisos.txtBuscar">
-	<summary>
-Control txtBuscar.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_frmRegistrarPermisos.btnBuscar">
-	<summary>
-Control btnBuscar.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_frmRegistrarPermisos.dgNombre">
-	<summary>
-Control dgNombre.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_frmRegistrarPermisos.txtPersona">
-	<summary>
-Control txtPersona.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_frmRegistrarPermisos.lblCodPersona">
-	<summary>
-Control lblCodPersona.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_frmRegistrarPermisos.gvPermisos">
-	<summary>
-Control gvPermisos.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_frmRegistrarPermisos.btnGrabar">
-	<summary>
-Control btnGrabar.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_frmMisDocumentos.gvDocEnviado">
-	<summary>
-Control gvDocEnviado.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_frmMisDocumentos.gvDocRecibido">
-	<summary>
-Control gvDocRecibido.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_frmMisDocumentos.lblError">
-	<summary>
-Control lblError.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_frmDonwFile.form1">
-	<summary>
-Control form1.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_frmDocTransferencia.form1">
-	<summary>
-Control form1.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_frmDocTransferencia.txtPerOrigen">
-	<summary>
-Control txtPerOrigen.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_frmDocTransferencia.gvPerOrigen">
-	<summary>
-Control gvPerOrigen.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_frmDocTransferencia.lblPerOriCodigo">
-	<summary>
-Control lblPerOriCodigo.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_frmDocTransferencia.cboOrigen">
-	<summary>
-Control cboOrigen.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_frmDocTransferencia.txtPerDestino">
-	<summary>
-Control txtPerDestino.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_frmDocTransferencia.gvPerDestino">
-	<summary>
-Control gvPerDestino.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_frmDocTransferencia.lblPerDesCodigo">
-	<summary>
-Control lblPerDesCodigo.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_frmDocTransferencia.cboDestino">
-	<summary>
-Control cboDestino.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_frmDocTransferencia.Button1">
-	<summary>
-Control Button1.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_frmDocTransferencia.btnCargar">
-	<summary>
-Control btnCargar.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_frmDocTransferencia.btnGrabar">
-	<summary>
-Control btnGrabar.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_frmDocTransferencia.gvDetalle">
-	<summary>
-Control gvDetalle.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_frmDocTransferencia.lblError">
-	<summary>
-Control lblError.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_frmDocDiarios.Head1">
-	<summary>
-Control Head1.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_frmDocDiarios.form1">
-	<summary>
-Control form1.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_frmDocDiarios.cldFecha">
-	<summary>
-Control cldFecha.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_frmDocDiarios.txtFecha">
-	<summary>
-Control txtFecha.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_frmDocDiarios.btnBuscar">
-	<summary>
-Control btnBuscar.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_frmDocDiarios.LinkButton1">
-	<summary>
-Control LinkButton1.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_frmDocDiarios.lnkCerrar">
-	<summary>
-Control lnkCerrar.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_frmDocDiarios.lblError">
-	<summary>
-Control lblError.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_frmDocDiario.form1">
-	<summary>
-Control form1.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_frmDocDiario.cldFecha">
-	<summary>
-Control cldFecha.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_frmDocDiario.txtFecha">
-	<summary>
-Control txtFecha.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_frmDocDiario.btnBuscar">
-	<summary>
-Control btnBuscar.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_frmDocDiario.LinkButton1">
-	<summary>
-Control LinkButton1.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_frmDocDiario.lnkCerrar">
-	<summary>
-Control lnkCerrar.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_frmDocDiario.lblError">
-	<summary>
-Control lblError.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_frmAcuMonitor.rbnUsuario">
-	<summary>
-Control rbnUsuario.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_frmAcuMonitor.rbnFecha">
-	<summary>
-Control rbnFecha.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_frmAcuMonitor.txtBuscar">
-	<summary>
-Control txtBuscar.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_frmAcuMonitor.btnBuscar">
-	<summary>
-Control btnBuscar.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_frmAcuMonitor.lblPersona">
-	<summary>
-Control lblPersona.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_frmAcuMonitor.lblcPerCodigo">
-	<summary>
-Control lblcPerCodigo.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_frmAcuMonitor.lblArea">
-	<summary>
-Control lblArea.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_frmAcuMonitor.gvPersona">
+</member><member name="F:IntegrationWebAplication.Forms_RegPersona.gvPersona">
 	<summary>
 Control gvPersona.
 </summary>
@@ -1754,247 +3067,39 @@ Control gvPersona.
 Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
-</member><member name="F:IntegrationWebAplication.Forms_frmAcuMonitor.txtFecIni">
+</member><member name="F:IntegrationWebAplication.Forms_RegPersona.txtApellido">
 	<summary>
-Control txtFecIni.
+Control txtApellido.
 </summary>
 	<remarks>
 Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
-</member><member name="F:IntegrationWebAplication.Forms_frmAcuMonitor.txtFecFin">
+</member><member name="F:IntegrationWebAplication.Forms_RegPersona.txtNombre">
 	<summary>
-Control txtFecFin.
+Control txtNombre.
 </summary>
 	<remarks>
 Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
-</member><member name="F:IntegrationWebAplication.Forms_frmAcuMonitor.RangeValidator1">
+</member><member name="F:IntegrationWebAplication.Forms_RegPersona.cboRegion">
 	<summary>
-Control RangeValidator1.
+Control cboRegion.
 </summary>
 	<remarks>
 Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
-</member><member name="F:IntegrationWebAplication.Forms_frmAcuMonitor.RangeValidator2">
+</member><member name="F:IntegrationWebAplication.Forms_RegPersona.cboProvincia">
 	<summary>
-Control RangeValidator2.
+Control cboProvincia.
 </summary>
 	<remarks>
 Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
-</member><member name="F:IntegrationWebAplication.Forms_frmAcuMonitor.btnMostrar">
-	<summary>
-Control btnMostrar.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_frmAcuMonitor.btnImprimir">
-	<summary>
-Control btnImprimir.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_frmAcuMonitor.gvAcuerdos">
-	<summary>
-Control gvAcuerdos.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_frmAcuMonitor.lblError">
-	<summary>
-Control lblError.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_frmAcuerdos.form1">
-	<summary>
-Control form1.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_frmAcuerdos.lblOfiNumero">
-	<summary>
-Control lblOfiNumero.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_frmAcuerdos.lblAcuNumero">
-	<summary>
-Control lblAcuNumero.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_frmAcuerdos.lblRemite">
-	<summary>
-Control lblRemite.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_frmAcuerdos.lblDestino">
-	<summary>
-Control lblDestino.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_frmAcuerdos.lblPerDesCodigo">
-	<summary>
-Control lblPerDesCodigo.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_frmAcuerdos.lblFecRegistro">
-	<summary>
-Control lblFecRegistro.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_frmAcuerdos.lblFecCumplimiento">
-	<summary>
-Control lblFecCumplimiento.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_frmAcuerdos.lblcDocCodigo">
-	<summary>
-Control lblcDocCodigo.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_frmAcuerdos.lblAsunto">
-	<summary>
-Control lblAsunto.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_frmAcuerdos.lblContenido">
-	<summary>
-Control lblContenido.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_frmAcuerdos.gvAvance">
-	<summary>
-Control gvAvance.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_frmAcuerdos.lblTotAvance">
-	<summary>
-Control lblTotAvance.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_frmAcuerdos.mvAcuerdo">
-	<summary>
-Control mvAcuerdo.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_frmAcuerdos.vewSustentar">
-	<summary>
-Control vewSustentar.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_frmAcuerdos.txtFecha">
-	<summary>
-Control txtFecha.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_frmAcuerdos.RangeValidator2">
-	<summary>
-Control RangeValidator2.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_frmAcuerdos.txtAvance">
-	<summary>
-Control txtAvance.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_frmAcuerdos.RangeValidator1">
-	<summary>
-Control RangeValidator1.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_frmAcuerdos.txtDescripcion">
-	<summary>
-Control txtDescripcion.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_frmAcuerdos.fleArchivo">
-	<summary>
-Control fleArchivo.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_frmAcuerdos.RequiredFieldValidator1">
-	<summary>
-Control RequiredFieldValidator1.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_frmAcuerdos.btnGrabar">
+</member><member name="F:IntegrationWebAplication.Forms_RegPersona.btnGrabar">
 	<summary>
 Control btnGrabar.
 </summary>
@@ -2002,457 +3107,17 @@ Control btnGrabar.
 Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
-</member><member name="F:IntegrationWebAplication.Forms_frmAcuerdos.btnCerrar">
+</member><member name="F:IntegrationWebAplication.Forms_RegPersona.btnCancelar">
 	<summary>
-Control btnCerrar.
+Control btnCancelar.
 </summary>
 	<remarks>
 Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
-</member><member name="F:IntegrationWebAplication.Forms_frmAcuerdos.lblError">
+</member><member name="F:IntegrationWebAplication.Forms_RegPersona.lblError">
 	<summary>
 Control lblError.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_frmAcuDirectorio.gvAcuerdos">
-	<summary>
-Control gvAcuerdos.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_frmAcuDirectorio.lblError">
-	<summary>
-Control lblError.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_frmAcuAsociar.form1">
-	<summary>
-Control form1.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_frmAcuAsociar.txtNumDocumento">
-	<summary>
-Control txtNumDocumento.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_frmAcuAsociar.txtBuscar">
-	<summary>
-Control txtBuscar.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_frmAcuAsociar.gvAcuerdos">
-	<summary>
-Control gvAcuerdos.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_frmAcuAsociar.txtAcuerdo">
-	<summary>
-Control txtAcuerdo.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_frmAcuAsociar.txtFecAcuerdo">
-	<summary>
-Control txtFecAcuerdo.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_frmAcuAsociar.txtAsociar">
-	<summary>
-Control txtAsociar.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_frmAcuAsociar.RangeValidator1">
-	<summary>
-Control RangeValidator1.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_frmAcuAsociar.RequiredFieldValidator1">
-	<summary>
-Control RequiredFieldValidator1.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_frmAcuAsociar.txtNuevo">
-	<summary>
-Control txtNuevo.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_frmAcuAsociar.txtSalir">
-	<summary>
-Control txtSalir.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_frmAcuAsociar.lblError">
-	<summary>
-Control lblError.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_DocPendientes.cboPeriodo">
-	<summary>
-Control cboPeriodo.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_DocPendientes.chkDelegado">
-	<summary>
-Control chkDelegado.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_DocPendientes.cboFilMes">
-	<summary>
-Control cboFilMes.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_DocPendientes.chkTransferencia">
-	<summary>
-Control chkTransferencia.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_DocPendientes.gvDocEvaluar">
-	<summary>
-Control gvDocEvaluar.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_DocPendientes.btngrabar">
-	<summary>
-Control btngrabar.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_DocPendientes.gvProDoc">
-	<summary>
-Control gvProDoc.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_DocPendientes.btnGrabar2">
-	<summary>
-Control btnGrabar2.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_DocPendientes.gvCopias">
-	<summary>
-Control gvCopias.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_DocPendientes.btnCopia">
-	<summary>
-Control btnCopia.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_DocPendientes.dgDocDevueltos">
-	<summary>
-Control dgDocDevueltos.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_DocPendientes.gvDevDoc">
-	<summary>
-Control gvDevDoc.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_DocPendientes.btnDocDevGrabar">
-	<summary>
-Control btnDocDevGrabar.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_DocPendientes.lblError">
-	<summary>
-Control lblError.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_DocDellProveido.form1">
-	<summary>
-Control form1.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_DocDellProveido.lblFecEmision">
-	<summary>
-Control lblFecEmision.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_DocDellProveido.lblfecha">
-	<summary>
-Control lblfecha.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_DocDellProveido.lblTipoDocumento">
-	<summary>
-Control lblTipoDocumento.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_DocDellProveido.lblNumero">
-	<summary>
-Control lblNumero.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_DocDellProveido.lblItem">
-	<summary>
-Control lblItem.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_DocDellProveido.lblremitente">
-	<summary>
-Control lblremitente.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_DocDellProveido.lbldestino">
-	<summary>
-Control lbldestino.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_DocDellProveido.lblUO">
-	<summary>
-Control lblUO.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_DocDellProveido.lblasunto">
-	<summary>
-Control lblasunto.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_DocDellProveido.lbldetalle">
-	<summary>
-Control lbldetalle.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_DocDellProveido.lblobservacion">
-	<summary>
-Control lblobservacion.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_DocDellProveido.lblProveido">
-	<summary>
-Control lblProveido.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_DocDellProveido.lblCopias">
-	<summary>
-Control lblCopias.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_DocDellProveido.txtDestino">
-	<summary>
-Control txtDestino.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_DocDellProveido.dgNombre2">
-	<summary>
-Control dgNombre2.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_DocDellProveido.cboInstDestino">
-	<summary>
-Control cboInstDestino.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_DocDellProveido.cboAreaDestino">
-	<summary>
-Control cboAreaDestino.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_DocDellProveido.txtProveido">
-	<summary>
-Control txtProveido.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_DocDellProveido.lblError">
-	<summary>
-Control lblError.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_DocDellProveido.lblnDocPerEdiTipo">
-	<summary>
-Control lblnDocPerEdiTipo.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_DocDellProveido.btnGrabar">
-	<summary>
-Control btnGrabar.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_DocDellProveido.btnImprimir">
-	<summary>
-Control btnImprimir.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_DocDellProveido.btncerrar">
-	<summary>
-Control btncerrar.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_DocDellProveido.lblPerRecibe">
-	<summary>
-Control lblPerRecibe.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_DocDellProveido.lblCodPerDestino">
-	<summary>
-Control lblCodPerDestino.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_DocDellProveido.lblDocCodigo">
-	<summary>
-Control lblDocCodigo.
 </summary>
 	<remarks>
 Campo generado automáticamente.
@@ -2610,671 +3275,6 @@ Control btncerrar.
 Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
-</member><member name="F:IntegrationWebAplication.Forms_DelegarDocumentos.form1">
-	<summary>
-Control form1.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_DelegarDocumentos.txtBuscar">
-	<summary>
-Control txtBuscar.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_DelegarDocumentos.gvPersona">
-	<summary>
-Control gvPersona.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_DelegarDocumentos.lblPerNombre">
-	<summary>
-Control lblPerNombre.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_DelegarDocumentos.lblPerCodigo">
-	<summary>
-Control lblPerCodigo.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_DelegarDocumentos.gvDelegado">
-	<summary>
-Control gvDelegado.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_DelegarDocumentos.lblError">
-	<summary>
-Control lblError.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_DelegarDocumentos.btnGrabar">
-	<summary>
-Control btnGrabar.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_DelegarDocumentos.btnEliminar">
-	<summary>
-Control btnEliminar.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_DelegarDocumentos.btnCerrar">
-	<summary>
-Control btnCerrar.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_Consultas.cboTipDoc">
-	<summary>
-Control cboTipDoc.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_Consultas.cboPeriodo">
-	<summary>
-Control cboPeriodo.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_Consultas.rbtPerRemite">
-	<summary>
-Control rbtPerRemite.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_Consultas.rbtPerDestino">
-	<summary>
-Control rbtPerDestino.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_Consultas.txtPerRemite">
-	<summary>
-Control txtPerRemite.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_Consultas.dgNombre">
-	<summary>
-Control dgNombre.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_Consultas.cboFilMes">
-	<summary>
-Control cboFilMes.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_Consultas.rbtItem">
-	<summary>
-Control rbtItem.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_Consultas.rbtAsunto">
-	<summary>
-Control rbtAsunto.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_Consultas.rbtNumDocumneto">
-	<summary>
-Control rbtNumDocumneto.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_Consultas.txtAsunto">
-	<summary>
-Control txtAsunto.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_Consultas.lblPerRemiteCodigo">
-	<summary>
-Control lblPerRemiteCodigo.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_Consultas.Button1">
-	<summary>
-Control Button1.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_Consultas.btnBuscar">
-	<summary>
-Control btnBuscar.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_Consultas.btnImprimir">
-	<summary>
-Control btnImprimir.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_Consultas.lblMessage">
-	<summary>
-Control lblMessage.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_Consultas.dgBuscar">
-	<summary>
-Control dgBuscar.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_Consultas.gvConsultas">
-	<summary>
-Control gvConsultas.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_Consultas.lblError">
-	<summary>
-Control lblError.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_Consultas.lblUltimoDoc">
-	<summary>
-Control lblUltimoDoc.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_ConCopia.Form1">
-	<summary>
-Control Form1.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_ConCopia.txtDestino">
-	<summary>
-Control txtDestino.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_ConCopia.dgNombre2">
-	<summary>
-Control dgNombre2.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_ConCopia.cboInstDestino">
-	<summary>
-Control cboInstDestino.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_ConCopia.cboAreaDestino">
-	<summary>
-Control cboAreaDestino.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_ConCopia.Button1">
-	<summary>
-Control Button1.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_ConCopia.btnAgregarCopia">
-	<summary>
-Control btnAgregarCopia.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_ConCopia.btnQuitarCopia">
-	<summary>
-Control btnQuitarCopia.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_ConCopia.lstCopias">
-	<summary>
-Control lstCopias.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_ConCopia.btnConfirmar">
-	<summary>
-Control btnConfirmar.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_ConCopia.btnCerrar">
-	<summary>
-Control btnCerrar.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_Adm_Papeletas.form1">
-	<summary>
-Control form1.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_Adm_Papeletas.ScriptManager1">
-	<summary>
-Control ScriptManager1.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_Adm_Papeletas.UpdatePanel1">
-	<summary>
-Control UpdatePanel1.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_Adm_Papeletas.GvPapRRhh">
-	<summary>
-Control GvPapRRhh.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_Adm_Papeletas.CmdAprobarRRhh">
-	<summary>
-Control CmdAprobarRRhh.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_Adm_Papeletas.CmdRechazar">
-	<summary>
-Control CmdRechazar.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_Adm_Papeletas.lbler2">
-	<summary>
-Control lbler2.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_RegDocumento.lblusuario">
-	<summary>
-Control lblusuario.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_RegDocumento.cboUO">
-	<summary>
-Control cboUO.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_RegDocumento.cboTipDoc">
-	<summary>
-Control cboTipDoc.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_RegDocumento.txtNumDocumento">
-	<summary>
-Control txtNumDocumento.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_RegDocumento.txtFecha">
-	<summary>
-Control txtFecha.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_RegDocumento.CompareValidator1">
-	<summary>
-Control CompareValidator1.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_RegDocumento.Button2">
-	<summary>
-Control Button2.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_RegDocumento.btnCrearPersona">
-	<summary>
-Control btnCrearPersona.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_RegDocumento.txtNombre">
-	<summary>
-Control txtNombre.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_RegDocumento.dgNombre">
-	<summary>
-Control dgNombre.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_RegDocumento.txtPerRemite">
-	<summary>
-Control txtPerRemite.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_RegDocumento.txtDestino">
-	<summary>
-Control txtDestino.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_RegDocumento.dgNombre2">
-	<summary>
-Control dgNombre2.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_RegDocumento.cboInstDestino">
-	<summary>
-Control cboInstDestino.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_RegDocumento.cboAreaDestino">
-	<summary>
-Control cboAreaDestino.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_RegDocumento.lblCodPerDestino">
-	<summary>
-Control lblCodPerDestino.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_RegDocumento.lblCodPerRemite">
-	<summary>
-Control lblCodPerRemite.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_RegDocumento.lblCodPerRegistra">
-	<summary>
-Control lblCodPerRegistra.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_RegDocumento.txtAsunto">
-	<summary>
-Control txtAsunto.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_RegDocumento.txtDetalle">
-	<summary>
-Control txtDetalle.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_RegDocumento.txtObservacion">
-	<summary>
-Control txtObservacion.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_RegDocumento.btnImprimir">
-	<summary>
-Control btnImprimir.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_RegDocumento.Button3">
-	<summary>
-Control Button3.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_RegDocumento.btnNuevo">
-	<summary>
-Control btnNuevo.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_RegDocumento.btnGrabar">
-	<summary>
-Control btnGrabar.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_RegDocumento.btnCancelar">
-	<summary>
-Control btnCancelar.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.Forms_RegDocumento.btnConCopia">
-	<summary>
-Control btnConCopia.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.reportes.Head1">
-	<summary>
-Control Head1.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.reportes.form1">
-	<summary>
-Control form1.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.reportes.hf_tiporeporte">
-	<summary>
-Control hf_tiporeporte.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="F:IntegrationWebAplication.reportes.hf_valores">
-	<summary>
-Control hf_valores.
-</summary>
-	<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member><member name="P:IntegrationWebAplication.My.MyWebExtension.Application">
-	<summary>
- Devuelve información sobre la aplicación actual.
- </summary>
-</member><member name="P:IntegrationWebAplication.My.MyWebExtension.Computer">
-	<summary>
- Devuelve información sobre el equipo host.
- </summary>
-</member><member name="P:IntegrationWebAplication.My.MyWebExtension.User">
-	<summary>
- Devuelve información del usuario web actual.
- </summary>
-</member><member name="P:IntegrationWebAplication.My.MyWebExtension.Request">
-	<summary>
- Devuelve un objeto Request.
- </summary>
-</member><member name="P:IntegrationWebAplication.My.MyWebExtension.Response">
-	<summary>
- Devuelve un objeto Response.
- </summary>
-</member><member name="P:IntegrationWebAplication.My.MyWebExtension.Log">
-	<summary>
- Devuelve el objeto de registro Asp.
- </summary>
-</member><member name="P:IntegrationWebAplication.My.MyWebExtension.WebServices">
-	<summary>
- Proporciona acceso a los servicios Web agregados a este proyecto.
- </summary>
-</member><member name="T:IntegrationWebAplication.My.MyWebExtension">
-	<summary>
- Módulo usado para definir las propiedades que están disponibles en el espacio de nombres My para proyectos web.
- </summary>
-	<remarks></remarks>
 </member>
 </members>
 </doc>

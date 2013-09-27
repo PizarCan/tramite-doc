@@ -1,30 +1,15 @@
-﻿<%@ Page Language="VB" AutoEventWireup="false" Inherits="IntegrationWebAplication.Forms_frmDocDiarios" Codebehind="frmDocDiarios.aspx.vb" %>
+﻿<%@ Page Language="VB" AutoEventWireup="false" Inherits="IntegrationWebAplication.Forms_frmDocDiarios"
+    CodeBehind="frmDocDiarios.aspx.vb" %>
+
  
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
     <title>Documentos Diarios</title>
     <link href="../Styles/Estilous.css" rel="stylesheet" type="text/css" />
+    
 
-     <script type="text/javascript">
-         $(function () {
-             $('#btnBus').click(function () {
-                     $('#contienereporte').html('');
-                     var variables = '';
-                     popupImprimir('Prueba Reporte', variables);
-                 
-             });
-             $('#btnBuscar').click(function () {
-                 if ($.trim($('#cPerApellido').val()) != "") {
-                     var variables = 'IdLlave' + '|' + $.trim($('#cPerApellido').val()) + '-' + 'valor2';
-                     cargaurl('contienereporte', '/contenedoriframe.aspx', '/reportes.aspx', '99%', '500px', variables);
-                 }
-                 else {
-                     alert("ingresar apellido");
-                 }
-             });
-         });
-    </script>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -82,7 +67,7 @@
                     <asp:LinkButton ID="lnkCerrar" runat="server" Width="155px">Cerrar</asp:LinkButton>
                 </td>
                 <td style="width: 450px" align="left" valign="top">
-                    
+                     
                 </td>
             </tr>
             <tr>

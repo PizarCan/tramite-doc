@@ -29,7 +29,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Integration.BL", "Integrati
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Integration.DAService", "Integration.DAService\Integration.DAService.csproj", "{381DAA73-F188-4B47-BADC-88B1265C1101}"
 EndProject
-Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Integration.WebAplication", "IntegrationWebAplication\Integration.WebAplication.vbproj", "{724ACD56-8F52-4D7F-BAA1-9F7411C93FA9}"
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Integration.WebAplication", "Integration.WebAplication\Integration.WebAplication.vbproj", "{724ACD56-8F52-4D7F-BAA1-9F7411C93FA9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
