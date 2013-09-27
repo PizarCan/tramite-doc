@@ -29,27 +29,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Integration.BL", "Integrati
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Integration.DAService", "Integration.DAService\Integration.DAService.csproj", "{381DAA73-F188-4B47-BADC-88B1265C1101}"
 EndProject
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Integration.WebAplication", "Integration.WebAplication\", "{4E5315A4-4575-46A4-83F3-5D9F8F59548A}"
-	ProjectSection(WebsiteProperties) = preProject
-		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
-		ProjectReferences = "{B3B11ABC-5F97-4A78-BA7E-863EEB94D877}|Integration.BE.dll;{2D489151-55C0-4B5B-A2BD-8551FC7C7561}|Integration.BL.dll;{381DAA73-F188-4B47-BADC-88B1265C1101}|Integration.DAService.dll;{0C91D6EF-8BAA-4180-AE15-315F26FD535D}|Integration.DAConfiguration.dll;"
-		Debug.AspNetCompiler.VirtualPath = "/Integration.WebAplication"
-		Debug.AspNetCompiler.PhysicalPath = "Integration.WebAplication\"
-		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\Integration.WebAplication\"
-		Debug.AspNetCompiler.Updateable = "true"
-		Debug.AspNetCompiler.ForceOverwrite = "true"
-		Debug.AspNetCompiler.FixedNames = "false"
-		Debug.AspNetCompiler.Debug = "True"
-		Release.AspNetCompiler.VirtualPath = "/Integration.WebAplication"
-		Release.AspNetCompiler.PhysicalPath = "Integration.WebAplication\"
-		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\Integration.WebAplication\"
-		Release.AspNetCompiler.Updateable = "true"
-		Release.AspNetCompiler.ForceOverwrite = "true"
-		Release.AspNetCompiler.FixedNames = "false"
-		Release.AspNetCompiler.Debug = "False"
-		VWDPort = "64558"
-		DefaultWebSiteLanguage = "Visual C#"
-	EndProjectSection
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Integration.WebAplication", "IntegrationWebAplication\Integration.WebAplication.vbproj", "{724ACD56-8F52-4D7F-BAA1-9F7411C93FA9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -151,16 +131,16 @@ Global
 		{381DAA73-F188-4B47-BADC-88B1265C1101}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{381DAA73-F188-4B47-BADC-88B1265C1101}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{381DAA73-F188-4B47-BADC-88B1265C1101}.Release|x86.ActiveCfg = Release|Any CPU
-		{4E5315A4-4575-46A4-83F3-5D9F8F59548A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4E5315A4-4575-46A4-83F3-5D9F8F59548A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4E5315A4-4575-46A4-83F3-5D9F8F59548A}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
-		{4E5315A4-4575-46A4-83F3-5D9F8F59548A}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
-		{4E5315A4-4575-46A4-83F3-5D9F8F59548A}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{4E5315A4-4575-46A4-83F3-5D9F8F59548A}.Release|Any CPU.ActiveCfg = Debug|Any CPU
-		{4E5315A4-4575-46A4-83F3-5D9F8F59548A}.Release|Any CPU.Build.0 = Debug|Any CPU
-		{4E5315A4-4575-46A4-83F3-5D9F8F59548A}.Release|Mixed Platforms.ActiveCfg = Debug|Any CPU
-		{4E5315A4-4575-46A4-83F3-5D9F8F59548A}.Release|Mixed Platforms.Build.0 = Debug|Any CPU
-		{4E5315A4-4575-46A4-83F3-5D9F8F59548A}.Release|x86.ActiveCfg = Debug|Any CPU
+		{724ACD56-8F52-4D7F-BAA1-9F7411C93FA9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{724ACD56-8F52-4D7F-BAA1-9F7411C93FA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{724ACD56-8F52-4D7F-BAA1-9F7411C93FA9}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{724ACD56-8F52-4D7F-BAA1-9F7411C93FA9}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{724ACD56-8F52-4D7F-BAA1-9F7411C93FA9}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{724ACD56-8F52-4D7F-BAA1-9F7411C93FA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{724ACD56-8F52-4D7F-BAA1-9F7411C93FA9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{724ACD56-8F52-4D7F-BAA1-9F7411C93FA9}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{724ACD56-8F52-4D7F-BAA1-9F7411C93FA9}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{724ACD56-8F52-4D7F-BAA1-9F7411C93FA9}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -173,7 +153,7 @@ Global
 		{22A8D6B2-8E6F-4A82-8791-0DF93C5709A9} = {3A2BA842-686E-4F36-B9A1-A792906E2FD3}
 		{497A87D7-5D17-4AEA-A267-A9521D8120A8} = {3A2BA842-686E-4F36-B9A1-A792906E2FD3}
 		{4CF7BD05-E718-4466-A919-131B7DA0E164} = {3A2BA842-686E-4F36-B9A1-A792906E2FD3}
-		{4E5315A4-4575-46A4-83F3-5D9F8F59548A} = {03AEB8E7-59F2-4049-B953-B3912762347E}
+		{724ACD56-8F52-4D7F-BAA1-9F7411C93FA9} = {03AEB8E7-59F2-4049-B953-B3912762347E}
 		{B3B11ABC-5F97-4A78-BA7E-863EEB94D877} = {A8DE08D1-7A7E-408E-8A29-694D0C057E27}
 		{2D489151-55C0-4B5B-A2BD-8551FC7C7561} = {A8DE08D1-7A7E-408E-8A29-694D0C057E27}
 	EndGlobalSection

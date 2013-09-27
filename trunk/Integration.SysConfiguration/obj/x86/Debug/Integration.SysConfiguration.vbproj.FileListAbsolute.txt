@@ -22,6 +22,7 @@ E:\Proyectos\Tramite documentario\IntegrationSystem\Integration.SysConfiguration
 E:\Proyectos\Tramite documentario\IntegrationSystem\Integration.SysConfiguration\obj\x86\Debug\Integration.SysConfiguration.FrmWizRegServer.resources
 E:\Proyectos\Tramite documentario\IntegrationSystem\Integration.SysConfiguration\obj\x86\Debug\Integration.SysConfiguration.Resources.resources
 E:\Proyectos\Tramite documentario\IntegrationSystem\Integration.SysConfiguration\obj\x86\Debug\Integration.SysConfiguration.vbproj.GenerateResource.Cache
+E:\Proyectos\Tramite documentario\IntegrationSystem\Integration.SysConfiguration\obj\x86\Debug\Integration.SysConfiguration.exe.licenses
 E:\Proyectos\Tramite documentario\IntegrationSystem\Integration.SysConfiguration\obj\x86\Debug\Integration.SysConfiguration.exe
 E:\Proyectos\Tramite documentario\IntegrationSystem\Integration.SysConfiguration\obj\x86\Debug\Integration.SysConfiguration.xml
 E:\Proyectos\Tramite documentario\IntegrationSystem\Integration.SysConfiguration\obj\x86\Debug\Integration.SysConfiguration.pdb
