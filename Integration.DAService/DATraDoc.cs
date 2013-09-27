@@ -48,7 +48,9 @@ namespace Integration.DAService
                         cm.Parameters.AddWithValue("cDocPerTipo", Request.cDocPerTipo);
                         cm.Parameters.AddWithValue("cFecIni", Request.cFecIni);
                         cm.Parameters.AddWithValue("cPerJurCodigo", Request.cPerJurCodigo);
+                        cm.Parameters.AddWithValue("nUniOrgCodigo", Request.nUniOrgCodigo);
                         cm.Connection = cn;
+                        
                         using (SqlDataReader dr = cm.ExecuteReader())
                         { 
                             Rs.Load(dr);

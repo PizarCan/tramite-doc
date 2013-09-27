@@ -901,6 +901,113 @@ namespace Integration.DAService
             return Item;
         }
 
+        public Boolean setDocMotivo(BE_Req_Documento Request)
+        {
+            Boolean Item = new Boolean();
+            try
+            {
+                clsConection Obj = new clsConection();
+                string Cadena = Obj.GetConexionString("Naylamp");
+
+                using (SqlConnection cn = new SqlConnection(Cadena))
+                {
+                    cn.Open();
+
+                    using (SqlCommand cm = new SqlCommand())
+                    {
+                        cm.CommandText = "sp_set_DocMotivo";
+                        cm.CommandType = CommandType.StoredProcedure;
+                        cm.Parameters.AddWithValue("cDocCodigo", Request.cDocCodigo);
+                        cm.Parameters.AddWithValue("nDocMotivo", Request.nDocMotivo);
+                        cm.Parameters.AddWithValue("nDocMotTipo", Request.nDocMotTipo);
+                        cm.Connection = cn;
+                        using (SqlDataReader dr = cm.ExecuteReader())
+                        {
+                            Item = true;
+                        }
+
+                    }
+                }
+
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            return Item;
+        }
+
+        public Boolean setDocPeriodo(BE_Req_Documento Request)
+        {
+            Boolean Item = new Boolean();
+            try
+            {
+                clsConection Obj = new clsConection();
+                string Cadena = Obj.GetConexionString("Naylamp");
+
+                using (SqlConnection cn = new SqlConnection(Cadena))
+                {
+                    cn.Open();
+
+                    using (SqlCommand cm = new SqlCommand())
+                    {
+                        cm.CommandText = "sp_set_DocPeriodo";
+                        cm.CommandType = CommandType.StoredProcedure;
+                        cm.Parameters.AddWithValue("cDocCodigo", Request.cDocCodigo);
+                        cm.Parameters.AddWithValue("nPrdIni", Request.nPrdIni);
+                        cm.Parameters.AddWithValue("nPrdFin", Request.nPrdFin);
+                        cm.Connection = cn;
+                        using (SqlDataReader dr = cm.ExecuteReader())
+                        {
+                            Item = true;
+                        }
+
+                    }
+                }
+
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            return Item;
+        }
+
+        public Boolean setDocRef(BE_Req_Documento Request)
+        {
+            Boolean Item = new Boolean();
+            try
+            {
+                clsConection Obj = new clsConection();
+                string Cadena = Obj.GetConexionString("Naylamp");
+
+                using (SqlConnection cn = new SqlConnection(Cadena))
+                {
+                    cn.Open();
+
+                    using (SqlCommand cm = new SqlCommand())
+                    {
+                        cm.CommandText = "sp_set_DocRef";
+                        cm.CommandType = CommandType.StoredProcedure;
+                        cm.Parameters.AddWithValue("cDocCodigo", Request.cDocCodigo);
+                        cm.Parameters.AddWithValue("cDocRefCodigo", Request.cDocRefCodigo);
+                        cm.Connection = cn;
+                        using (SqlDataReader dr = cm.ExecuteReader())
+                        {
+                            Item = true;
+                        }
+
+                    }
+                }
+
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            return Item;
+        }
+    
         #endregion
 
         #region upd

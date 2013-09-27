@@ -340,11 +340,7 @@ namespace Integration.DAService
                             if (codigo.Equals(""))
                             {
                                 codigo = Request.cPerCodigo;
-                            }
-                            else
-                            {
-                                codigo += Request.cPerCodigo;
-                            }
+                            } 
                         }
 
                     }

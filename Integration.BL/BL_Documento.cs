@@ -151,5 +151,20 @@ namespace Integration.BL
             DADocumento ObjDocumento = new DADocumento();
             return ObjDocumento.setDocUniOrg(Request);
         }
+        public Boolean setDocMotivo(BE_Req_Documento Request)
+        {
+            DADocumento ObjDocumento = new DADocumento();
+            return ObjDocumento.setDocMotivo(Request);
+        }
+        public Boolean setDocPeriodo(BE_Req_Documento Request)
+        {
+            DADocumento ObjDocumento = new DADocumento();
+            return ObjDocumento.setDocPeriodo(Request);
+        }
+        public Boolean setDocRef(BE_Req_Documento Request)
+        {
+            DADocumento ObjDocumento = new DADocumento();
+            return ObjDocumento.setDocRef(Request);
+        }
     }
 }
