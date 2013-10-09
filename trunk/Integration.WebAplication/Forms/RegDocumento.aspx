@@ -65,7 +65,7 @@
                                 ControlToValidate="txtFecha" Type="Date" Display="Dynamic" ErrorMessage="CompareValidator">Fecha Incorrecta</asp:CompareValidator>
                         </td>
                         <td>
-                            <asp:Button ID="Button2" runat="server" Width="0px" Text="'"></asp:Button><asp:Button
+                            <asp:Button ID="Button2" runat="server" Width="0px" Text=""></asp:Button><asp:Button
                                 ID="btnCrearPersona" runat="server" Width="70px" Text="Persona" Visible="False"
                                 CssClass="Boton"></asp:Button>
                         </td>
@@ -175,6 +175,14 @@
                             <asp:TextBox ID="txtObservacion" runat="server" Width="408px" Height="42px" TextMode="MultiLine"></asp:TextBox>
                         </td>
                     </tr>
+                    <tr>
+                        <td width="135" class="CeldaEtiqueta">
+                            Adjuntar Archivo :
+                        </td>
+                        <td>
+                            <asp:FileUpload ID="fleDoc" runat="server" CssClass="Boton" Width="201px" />
+                        </td>
+                    </tr>
                 </table>
             </td>
         </tr>
@@ -184,14 +192,14 @@
                     <tr>
                         <td align="left" width="135">
                             <asp:Button ID="btnImprimir" runat="server" Text="Doc. Diarios" CssClass="Boton" />
-                            <asp:Button ID="Button3" runat="server" Width="0px" Text="'" Visible="False"></asp:Button>
+                            <asp:Button ID="Button3" runat="server" Width="16px" Text="'" Visible="False"></asp:Button>
                         </td>
                         <td style="width: 103px">
                             <asp:Button ID="btnNuevo" TabIndex="1" runat="server" Width="110px" Text="Nuevo"
                                 Enabled="false" CssClass="Boton"></asp:Button>
                         </td>
                         <td style="width: 81px">
-                            <asp:Button ID="btnGrabar" runat="server" Width="110px" Text="Grabar" Enabled="False"
+                            <asp:Button ID="btnGrabar" runat="server" Width="110px" Text="Grabar" 
                                 CssClass="Boton"></asp:Button>
                         </td>
                         <td style="width: 81px">
@@ -200,7 +208,7 @@
                         </td>
                         <td>
                             <asp:Button ID="btnConCopia" runat="server" Width="120px" Text="Con Copia a :" Height="23px"
-                                Enabled="true" CssClass="Boton"></asp:Button>
+                                Enabled="false" CssClass="Boton"></asp:Button>
                         </td>
                     </tr>
                 </table>

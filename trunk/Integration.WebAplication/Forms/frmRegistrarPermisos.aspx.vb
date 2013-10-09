@@ -12,12 +12,12 @@ Partial Class Forms_frmRegistrarPermisos
 
     Protected Sub Page_Load(sender As Object, e As System.EventArgs) Handles Me.Load
         If Not IsPostBack Then
-            MostrarPermisos()
         End If
 
     End Sub
 
     Sub MostrarPermisos()
+        Panelpermisos.Visible = True
         Dim ReqPer As BE_Req_Interface = New BE_Req_Interface()
         Dim ObjPer As BL_Interface = New BL_Interface()
         Dim Data As DataTable = New DataTable()
@@ -48,18 +48,25 @@ Partial Class Forms_frmRegistrarPermisos
                 dgNombre.DataBind()
                 Ocultar(False)
                 If Rs.Rows.Count = 1 Then
+                    txtPersona.Visible = True
                     txtPersona.Text = dgNombre.Items(0).Cells(2).Text
                     lblCodPersona.Text = dgNombre.Items(0).Cells(1).Text
                     CargarPermisos(lblCodPersona.Text)
                     Ocultar(True)
+                Else
+                    txtPersona.Visible = False
+                    Panelpermisos.Visible = False
                 End If
+
             Else
                 Response.Write("No Hay Registros")
+                txtPersona.Visible = False
             End If
         End If
     End Sub
 
     Protected Sub dgNombre_SelectedIndexChanged(sender As Object, e As System.EventArgs) Handles dgNombre.SelectedIndexChanged
+        txtPersona.Visible = True
         txtPersona.Text = dgNombre.SelectedItem.Cells(2).Text
         lblCodPersona.Text = dgNombre.SelectedItem.Cells(1).Text
         CargarPermisos(lblCodPersona.Text)
@@ -73,6 +80,7 @@ Partial Class Forms_frmRegistrarPermisos
         End If
     End Sub
     Sub CargarPermisos(ByVal Codigo As String)
+        MostrarPermisos()
         Dim ObjPU As BL_PerUsuGruAcc = New BL_PerUsuGruAcc()
         Dim ReqPermisos As BE_Req_PerUsuGruAcc = New BE_Req_PerUsuGruAcc()
         Dim ListaPermisos As New List(Of BE_Res_PerUsuGruAcc)

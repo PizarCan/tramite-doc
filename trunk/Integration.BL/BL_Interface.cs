@@ -25,5 +25,24 @@ namespace Integration.BL
             return ObjInterface.getInterfaceBycIntJerarquia(Request);
 
         }
+
+        public Boolean InsInterface(BE_Req_Interface Request)
+        {
+            DAInterface ObjInterface = new DAInterface();
+            return ObjInterface.InsInterface(Request);
+        }
+
+        public Boolean UpdInterface(BE_Req_Interface Request)
+        {
+            DAInterface ObjInterface = new DAInterface();
+            return ObjInterface.UpdInterface(Request);
+        }
+
+        public BE_Res_Interface getNewCodigoInterface(BE_Req_Interface Request)
+        {
+            DAInterface ObjInterface = new DAInterface();
+            return ObjInterface.getNewCodigoInterface(Request);
+        }
+
     }
 }

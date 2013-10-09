@@ -59,6 +59,15 @@ Partial Public Class Forms_frmRegistrarPermisos
     Protected WithEvents lblCodPersona As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
+    '''Control Panelpermisos.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents Panelpermisos As Global.System.Web.UI.WebControls.Panel
+
+    '''<summary>
     '''Control gvPermisos.
     '''</summary>
     '''<remarks>

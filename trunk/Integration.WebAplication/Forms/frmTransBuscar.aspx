@@ -90,7 +90,7 @@
                         </td>
                         <td align="right" colspan="3" style="text-align: right">
                             <asp:Label ID="lblPerRemiteCodigo" runat="server" Visible="False" Width="101px"></asp:Label><asp:Button
-                                ID="Button1" runat="server" Height="0px" Text="Button" Width="0px" /><asp:Button
+                                ID="Button1" runat="server" Height="0px" Text="Button" Width="0px" Visible="false" /><asp:Button
                                     ID="btnBuscar" runat="server" CssClass="Boton" Text="Buscar" Width="130px" />
                             <asp:Button ID="btnImprimir" runat="server" CssClass="Boton" Text="Imprimir" />
                         </td>

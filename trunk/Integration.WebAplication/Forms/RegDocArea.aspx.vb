@@ -221,9 +221,6 @@ Partial Class Forms_RegDocArea
                 txtNumDocumento.Text = GeneraNumero(cboUniOrgP.SelectedValue, cboTipDoc.SelectedValue)
             End If
 
-
-
-
             Select Case cboTipDoc.SelectedValue
                 Case DocTipo.gnDocMultiple
                     MV.ActiveViewIndex = 0
@@ -353,7 +350,7 @@ Partial Class Forms_RegDocArea
             Dim ObjPersona As BL_Persona = New BL_Persona()
             ReqPersona.cPerCodigo = Session("cPerCodigo")
             Dim dt As DataTable = ObjPersona.GetDelegados_BycPerCodigo(ReqPersona)
-            If dt.Rows.Count > 1 Then
+            If dt.Rows.Count > 0 Then
                 cboDelegado.DataTextField = "Delegado"
                 cboDelegado.DataValueField = "cPerCodigo"
                 cboDelegado.DataSource = dt
@@ -574,7 +571,7 @@ Partial Class Forms_RegDocArea
         ReqTraDoc.cPerCodigo = Session("cPerCodigo")
         dt = BL_TraDoc.get_TraDoc_Procesos(ReqTraDoc)
 
-        If dt.Rows.Count > 1 Then
+        If dt.Rows.Count > 0 Then
             lblMail.Text = dt.Rows(0).Item("cPerMaiNombre").ToString
             lblMail.ForeColor = Drawing.Color.Black
         End If

@@ -209,10 +209,10 @@ Partial Class Forms_DocPendientes
             DesRuta(DocTipo, cDesRuta, ArcName, ArchName)
 
             lnkButon = CType(Row.FindControl("lnkDoc"), LinkButton)
-            lnkButon.OnClientClick = "javascript:(abre('Proveido.aspx?CodDocumento=" & gvDocEvaluar.DataKeys(Row.RowIndex).Values("cDocCodigo") & "&TipoDocumento=" & DocTipo & "&DocumentoEstado=0&PerRemCodigo=" & PerRemCodigo & "&PerDesCodigo=" & PerDesCodigo & "','Documentos'));"
+            lnkButon.OnClientClick = "javascript:(abre('DocDellProveido.aspx?CodDocumento=" & gvDocEvaluar.DataKeys(Row.RowIndex).Values("cDocCodigo") & "&TipoDocumento=" & DocTipo & "&DocumentoEstado=0&PerRemCodigo=" & PerRemCodigo & "&PerDesCodigo=" & PerDesCodigo & "','Documentos'));"
 
             imgArchivo = CType(Row.FindControl("imgArchivo"), ImageButton)
-            imgArch = CType(Row.FindControl("imgArch"), ImageButton)
+            imgArch = CType(Row.FindControl("imgArchivo"), ImageButton)
 
             If Not ArcName Is String.Empty Then
                 imgArchivo.OnClientClick = "javascript:(abre('frmDonwFile.aspx?ArcRuta=" & cDesRuta & "&ArcName=" & ArcName & "','Documentos'));"
@@ -243,7 +243,7 @@ Partial Class Forms_DocPendientes
             lnkButon.OnClientClick = "javascript:(abre('DocDellProveido.aspx?CodDocumento=" & gvProDoc.DataKeys(Row.RowIndex).Values("cDocCodigo") & "&Visible=0" & "','Documentos'));"
 
             imgArchivo = CType(Row.FindControl("imgArchivo"), ImageButton)
-            imgArch = CType(Row.FindControl("imgArch"), ImageButton)
+            imgArch = CType(Row.FindControl("imgArchivo"), ImageButton)
             If Not ArcName Is String.Empty Then
                 imgArchivo.OnClientClick = "javascript:(abre('frmDonwFile.aspx?ArcRuta=" & cDesRuta & "&ArcName=" & ArcName & "','Documentos'));"
             Else
@@ -275,7 +275,7 @@ Partial Class Forms_DocPendientes
             lnkButon.OnClientClick = "javascript:(abre('DetalleDocumento.aspx?CodDocumento=" & gvCopias.DataKeys(Row.RowIndex).Values("cDocCodigo") & "&TipoDocumento=" & DocTipo & "&DocumentoEstado=0&CodDestino=" & PerDesCodigo & "&cPerCopCodigo=" & cPerCopCodigo & "','Documentos'));"
 
             imgArchivo = CType(Row.FindControl("imgArchivo"), ImageButton)
-            imgArch = CType(Row.FindControl("imgArch"), ImageButton)
+            imgArch = CType(Row.FindControl("imgArchivo"), ImageButton)
 
             If Not ArcName Is String.Empty Then
                 imgArchivo.OnClientClick = "javascript:(abre('frmDonwFile.aspx?ArcRuta=" & cDesRuta & "&ArcName=" & ArcName & "','Documentos'));"

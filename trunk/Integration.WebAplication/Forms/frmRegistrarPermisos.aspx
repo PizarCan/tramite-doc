@@ -10,7 +10,7 @@
     <table style="width: 650px; height: 134px" cellspacing="0" cellpadding="0" align="center"
         border="0">
         <tr>
-            <td colspan="3" align="center" style="width: 524px" class="CabeceraTabla">
+            <td colspan="2" align="center" style="width: 524px" class="CabeceraTabla">
                 <font face="Verdana">ASIGNACIÓN DE PERMISOS<br />
                 </font>
             </td>
@@ -19,7 +19,7 @@
             <td align="left" style="width: 131px" class="CeldaEtiqueta">
                 Buscar Persona
             </td>
-            <td align="left" colspan="3" style="width: 364px">
+            <td align="left" style="width: 364px">
                 <asp:TextBox ID="txtBuscar" runat="server" Width="305px"></asp:TextBox><asp:Button
                     ID="btnBuscar" runat="server" Text="Buscar" Width="56px" CssClass="Boton" />
             </td>
@@ -27,7 +27,7 @@
         <tr>
             <td align="left" style="width: 131px">
             </td>
-            <td align="left" colspan="3" style="width: 364px">
+            <td align="left" style="width: 364px">
                 <div style="width: 508px; height: 150px; overflow: auto">
                     <asp:DataGrid ID="dgNombre" runat="server" Width="440px" Height="56px" Font-Size="8pt"
                         BackColor="White" Font-Names="Courier New" GridLines="None" BorderColor="White"
@@ -43,15 +43,17 @@
                         <PagerStyle Visible="False" PageButtonCount="3"></PagerStyle>
                     </asp:DataGrid>
                     <br />
-                    <asp:TextBox ID="txtPersona" runat="server" Width="288px"></asp:TextBox>
+                    <asp:TextBox ID="txtPersona" runat="server" Visible="false" Width="288px"></asp:TextBox>
                     <asp:Label ID="lblCodPersona" runat="server" Visible="False"></asp:Label>
                 </div>
             </td>
         </tr>
+           <asp:Panel ID="Panelpermisos" Visible="false" runat="server">
         <tr>
             <td>
             </td>
             <td align="left" colspan="3" style="width: 364px">
+             
                 <asp:GridView ID="gvPermisos" Font-Names="Verdana" Font-Size="8pt" runat="server"
                     AutoGenerateColumns="False">
                     <Columns>
@@ -64,6 +66,7 @@
                         <asp:BoundField DataField="cIntDescripcion" HeaderText="Descripción" />
                     </Columns>
                 </asp:GridView>
+                
             </td>
         </tr>
         <tr>
@@ -74,5 +77,6 @@
                 </asp:Button><font face="Verdana"></font>
             </td>
         </tr>
+        </asp:Panel>
     </table>
 </asp:Content>

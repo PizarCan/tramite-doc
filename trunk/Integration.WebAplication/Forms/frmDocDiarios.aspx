@@ -3,7 +3,8 @@
 
  
 
-<%@ Register assembly="CrystalDecisions.Web, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" namespace="CrystalDecisions.Web" tagprefix="CR" %>
+<%@ Register assembly="CrystalDecisions.Web, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" 
+namespace="CrystalDecisions.Web" tagprefix="CR" %>
 
  
 
@@ -76,7 +77,7 @@
                         EnableDatabaseLogonPrompt="False" EnableParameterPrompt="False" HasCrystalLogo="False"
                         HasGotoPageButton="False" HasSearchButton="False" HasToggleGroupTreeButton="False"
                         ReuseParameterValuesOnRefresh="True" Height="50px"   Width="350px"  
-                         EnableDrillDown="False"  /> 
+                         EnableDrillDown="False"  ToolPanelView="None" /> 
                     &nbsp;</td>
             </tr>
             <tr>
