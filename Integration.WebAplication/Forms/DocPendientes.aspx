@@ -60,13 +60,7 @@
                                 <asp:ImageButton ID="imgArchivo" runat="server" AlternateText="No" ImageUrl="~/Imagenes/Descargar.gif"
                                     ToolTip="Descargar Archivo" />
                             </ItemTemplate>
-                        </asp:TemplateField>
-                        <asp:TemplateField HeaderImageUrl="~/Imagenes/Descargas.gif">
-                            <ItemTemplate>
-                                <asp:ImageButton ID="imgArch" runat="server" AlternateText="No" ImageUrl="~/Imagenes/Descargar.gif"
-                                    ToolTip="Descargar Archivo" />
-                            </ItemTemplate>
-                        </asp:TemplateField>
+                        </asp:TemplateField> 
                     </Columns>
                     <RowStyle CssClass="FilaGrid" />
                     <SelectedRowStyle CssClass="CeldaEtiqueta" />
@@ -113,13 +107,7 @@
                                 <asp:ImageButton ID="imgArchivo" runat="server" AlternateText="No" ImageUrl="~/Imagenes/Descargar.gif"
                                     ToolTip="Descargar Archivo" />
                             </ItemTemplate>
-                        </asp:TemplateField>
-                        <asp:TemplateField HeaderImageUrl="~/Imagenes/Descargas.gif">
-                            <ItemTemplate>
-                                <asp:ImageButton ID="imgArch" runat="server" AlternateText="No" ImageUrl="~/Imagenes/Descargar.gif"
-                                    ToolTip="Descargar Archivo" />
-                            </ItemTemplate>
-                        </asp:TemplateField>
+                        </asp:TemplateField> 
                     </Columns>
                     <SelectedRowStyle CssClass="CeldaEtiqueta" />
                     <HeaderStyle CssClass="CabeceraGrid" />
@@ -157,13 +145,7 @@
                                 <asp:ImageButton ID="imgArchivo" runat="server" AlternateText="No" ImageUrl="~/Imagenes/Descargar.gif"
                                     ToolTip="Descargar Archivo" />
                             </ItemTemplate>
-                        </asp:TemplateField>
-                        <asp:TemplateField HeaderImageUrl="~/Imagenes/Descargas.gif">
-                            <ItemTemplate>
-                                <asp:ImageButton ID="imgArch" runat="server" AlternateText="No" ImageUrl="~/Imagenes/Descargar.gif"
-                                    ToolTip="Descargar Archivo" />
-                            </ItemTemplate>
-                        </asp:TemplateField>
+                        </asp:TemplateField> 
                         <asp:TemplateField HeaderText="/">
                             <ItemTemplate>
                                 <asp:CheckBox ID="chkEstado" runat="server" />

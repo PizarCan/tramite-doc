@@ -6,7 +6,111 @@ IntegrationWebAplication
 </name>
 </assembly>
 <members>
-<member name="F:IntegrationWebAplication.Forms_ConCopia.Form1">
+<member name="F:IntegrationWebAplication.FrmRegArea.Panel1">
+	<summary>
+Control Panel1.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.FrmRegArea.GVInterface">
+	<summary>
+Control GVInterface.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.FrmRegArea.btnNuevo">
+	<summary>
+Control btnNuevo.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.FrmRegArea.btnEditar">
+	<summary>
+Control btnEditar.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.FrmRegArea.lblopcion">
+	<summary>
+Control lblopcion.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.FrmRegArea.lblcPerJuridica">
+	<summary>
+Control lblcPerJuridica.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.FrmRegArea.PanelEditar">
+	<summary>
+Control PanelEditar.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.FrmRegArea.TxtnIntCodigo">
+	<summary>
+Control TxtnIntCodigo.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.FrmRegArea.TxtcIntJerarquia">
+	<summary>
+Control TxtcIntJerarquia.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.FrmRegArea.TxtcIntNombre">
+	<summary>
+Control TxtcIntNombre.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.FrmRegArea.TxtcIntDescripcion">
+	<summary>
+Control TxtcIntDescripcion.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.FrmRegArea.btnGuardar">
+	<summary>
+Control btnGuardar.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.FrmRegArea.btnCancelar">
+	<summary>
+Control btnCancelar.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_ConCopia.Form1">
 	<summary>
 Control Form1.
 </summary>
@@ -694,6 +798,14 @@ Para modificarlo, mueva la declaración del campo del archivo del diseñador al 
 </member><member name="F:IntegrationWebAplication.Forms_frmRegistrarPermisos.lblCodPersona">
 	<summary>
 Control lblCodPersona.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_frmRegistrarPermisos.Panelpermisos">
+	<summary>
+Control Panelpermisos.
 </summary>
 	<remarks>
 Campo generado automáticamente.
@@ -1798,6 +1910,14 @@ Para modificarlo, mueva la declaración del campo del archivo del diseñador al 
 </member><member name="F:IntegrationWebAplication.Forms_RegDocumento.txtObservacion">
 	<summary>
 Control txtObservacion.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:IntegrationWebAplication.Forms_RegDocumento.fleDoc">
+	<summary>
+Control fleDoc.
 </summary>
 	<remarks>
 Campo generado automáticamente.

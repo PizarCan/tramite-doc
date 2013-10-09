@@ -203,6 +203,15 @@ Partial Public Class Forms_RegDocumento
     Protected WithEvents txtObservacion As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
+    '''Control fleDoc.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents fleDoc As Global.System.Web.UI.WebControls.FileUpload
+
+    '''<summary>
     '''Control btnImprimir.
     '''</summary>
     '''<remarks>

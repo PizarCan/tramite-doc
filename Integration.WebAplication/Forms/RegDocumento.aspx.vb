@@ -1,7 +1,7 @@
 ﻿Imports System.Data.SqlClient
 Imports System.Data
 Imports Integration.BL
-Imports Integration.Conection 
+Imports Integration.Conection
 Imports Integration.BE.Login
 Imports Integration.BE.UniOrgPerExt
 Imports Integration.BE.Constante
@@ -107,7 +107,7 @@ Partial Class Forms_RegDocumento
         cboAreaDestino.Items.Clear()
         txtDestino.Text = ""
         txtNombre.Text = ""
-        btnGrabar.Enabled = False
+        btnGrabar.Enabled = True
         btnConCopia.Enabled = False
     End Sub
 
@@ -322,13 +322,45 @@ Partial Class Forms_RegDocumento
                 registra = True
             End If
 
-            'Clase.objTransanccion(406304, Session("cPerCodigo"), MyTrans, cn, "Doc:" & NewCodDoc & "Destino:" & lblCodPerDestino.Text)
 
+            '*********Guardar Archivo**********
+            Dim clsManejador As New clsManejadorDatos
+
+            Dim SW As Boolean = False
+
+            If fleDoc.HasFile Then 'Archivo 1
+
+                Dim ArcName As String = String.Empty
+                Dim Extension As String = String.Empty
+
+                Extension = System.IO.Path.GetExtension(fleDoc.FileName)
+                ArcName = Replace(Replace(Format(Date.Now, "yyyyMMdd HH:MM:ss"), ":", ""), " ", "") & Extension
+                SW = clsManejador.obj_UpFiles(fleDoc, RutDoc & lblCodPerDestino.Text, ArcName)
+
+                If SW = False Then
+                    ReqDocumento.nDocLinNum = 1
+                    ReqDocumento.cDocLinUrl = ArcName
+                    ReqDocumento.nDocLinTipo = 1
+                    ReqDocumento.nDocLinGrupo = 1
+                    registra = objBLDoc.setDocLink(ReqDocumento)
+
+                Else
+
+                    Response.Write("<script language='javascript'>")
+                    Response.Write("alert ('No Se Completo La Tranzacción')")
+                    Response.Write("</script>")
+                    Exit Sub
+                End If
+            End If
 
             If registra Then
                 Response.Write("<script language='javascript'>")
                 Response.Write("alert ('Documento Enviado')")
                 Response.Write("</script>")
+                btnGrabar.Enabled = False
+                btnCancelar.Enabled = False
+                btnNuevo.Enabled = True
+                btnConCopia.Enabled = True
             Else
                 Response.Write("<script language='javascript'>")
                 Response.Write("alert ('No Se Completo La Tranzacción')")

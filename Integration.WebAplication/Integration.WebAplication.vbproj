@@ -112,6 +112,7 @@
     <Content Include="Forms\frmDocTransferencia.aspx" />
     <Content Include="Forms\frmDonwFile.aspx" />
     <Content Include="Forms\frmMisDocumentos.aspx" />
+    <Content Include="Forms\FrmRegArea.aspx" />
     <Content Include="Forms\frmRegistrarPermisos.aspx" />
     <Content Include="Forms\frmRegistrarPersona.aspx" />
     <Content Include="Forms\frmTransBuscar.aspx" />
@@ -279,6 +280,13 @@
     <Compile Include="Forms\frmMisDocumentos.aspx.vb">
       <DependentUpon>frmMisDocumentos.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmRegArea.aspx.designer.vb">
+      <DependentUpon>FrmRegArea.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmRegArea.aspx.vb">
+      <DependentUpon>FrmRegArea.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Forms\frmRegistrarPermisos.aspx.designer.vb">
       <DependentUpon>frmRegistrarPermisos.aspx</DependentUpon>

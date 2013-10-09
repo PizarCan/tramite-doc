@@ -35,12 +35,6 @@
                                     ToolTip="Descargar Archivo" />
                             </ItemTemplate>
                         </asp:TemplateField>
-                        <asp:TemplateField HeaderImageUrl="~/Imagenes/Descargas.gif">
-                            <ItemTemplate>
-                                <asp:ImageButton ID="imgArch" runat="server" AlternateText="No" ImageUrl="~/Imagenes/Descargar.gif"
-                                    ToolTip="Descargar Archivo" />
-                            </ItemTemplate>
-                        </asp:TemplateField>
                     </Columns>
                     <RowStyle CssClass="FilaGrid" />
                     <SelectedRowStyle CssClass="CeldaEtiqueta" />

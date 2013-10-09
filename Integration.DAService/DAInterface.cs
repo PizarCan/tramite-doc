@@ -91,5 +91,135 @@ namespace Integration.DAService
             }
             return Item;
         }
+
+        public BE_Res_Interface getNewCodigoInterface(BE_Req_Interface Request)
+        {
+            BE_Res_Interface Item = new BE_Res_Interface();
+            try
+            {
+                clsConection Obj = new clsConection();
+                string Cadena = Obj.GetConexionString("Naylamp");
+
+                using (SqlConnection cn = new SqlConnection(Cadena))
+                {
+                    cn.Open();
+
+                    using (SqlCommand cm = new SqlCommand())
+                    {
+                        cm.CommandText = "Sp_Get_NewCodigoInterface";
+                        cm.CommandType = CommandType.StoredProcedure;
+                        cm.Parameters.AddWithValue("nIntClase", Request.nIntClase);
+                        cm.Connection = cn;
+                        using (SqlDataReader dr = cm.ExecuteReader())
+                        {
+                            while (dr.Read())
+                            {
+                                Item.nIntCodigo = dr.GetInt32(dr.GetOrdinal("nIntCodigo"));
+                            }
+                        }
+
+                    }
+                }
+
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            return Item;
+        }
+
+
+        public Boolean UpdInterface(BE_Req_Interface Request)
+        {
+            Boolean Item = new Boolean();
+            try
+            {
+                clsConection Obj = new clsConection();
+                string Cadena = Obj.GetConexionString("Naylamp");
+
+                using (SqlConnection cn = new SqlConnection(Cadena))
+                {
+                    cn.Open();
+
+                    using (SqlCommand cm = new SqlCommand())
+                    {
+                        cm.CommandText = "Sp_Upd_Interface";
+                        cm.CommandType = CommandType.StoredProcedure;
+                        cm.Parameters.AddWithValue("nIntCodigo", Request.nIntCodigo);
+                        cm.Parameters.AddWithValue("nIntClase", Request.nIntClase);
+                        cm.Parameters.AddWithValue("cIntJerarquia", Request.cIntJerarquia);
+                        cm.Parameters.AddWithValue("cIntNombre", Request.cIntNombre);
+                        cm.Parameters.AddWithValue("cIntDescripcion", Request.cIntDescripcion);
+                        cm.Parameters.AddWithValue("nIntTipo", Request.nIntTipo);
+                        cm.Connection = cn;
+                        if (cm.ExecuteNonQuery() >= 0)
+                        {
+                            Item = true;
+                        }
+                        else
+                        {
+                            Item = false;
+                        }
+
+                    }
+                }
+
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+
+            return Item;
+
+        }
+
+        public Boolean InsInterface(BE_Req_Interface Request)
+        {
+            Boolean Item = new Boolean();
+            try
+            {
+                clsConection Obj = new clsConection();
+                string Cadena = Obj.GetConexionString("Naylamp");
+
+                using (SqlConnection cn = new SqlConnection(Cadena))
+                {
+                    cn.Open();
+
+                    using (SqlCommand cm = new SqlCommand())
+                    {
+                        cm.CommandText = "Sp_Ins_Interface";
+                        cm.CommandType = CommandType.StoredProcedure;
+                        cm.Parameters.AddWithValue("nIntCodigo", Request.nIntCodigo);
+                        cm.Parameters.AddWithValue("nIntClase", Request.nIntClase);
+                        cm.Parameters.AddWithValue("cIntJerarquia", Request.cIntJerarquia);
+                        cm.Parameters.AddWithValue("cIntNombre", Request.cIntNombre);
+                        cm.Parameters.AddWithValue("cIntDescripcion", Request.cIntDescripcion);
+                        cm.Parameters.AddWithValue("nIntTipo", Request.nIntTipo);
+                        cm.Connection = cn;
+                        if (cm.ExecuteNonQuery() >= 0)
+                        {
+                            Item = true;
+                        }
+                        else
+                        {
+                            Item = false;
+                        }
+
+                    }
+                }
+
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+
+            return Item;
+
+        }
+
+
     }
 }

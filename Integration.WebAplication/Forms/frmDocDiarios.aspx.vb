@@ -42,11 +42,8 @@ Partial Class Forms_frmDocDiarios
                 Report.Close()
                 Report.Load(ReportRuta)
                 Report.SetDataSource(DocDiario)
-
                 CrystalReportViewer1.Visible = True
-
                 CrystalReportViewer1.ReportSource = Report
-
             Catch ex As Exception
                 CrystalReportViewer1.Visible = False
                 lblError.Text = ex.Message
